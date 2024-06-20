@@ -2,6 +2,7 @@
 
 * {
     box-sizing: border-box;
+
     img {
         height: auto;
         max-width: 100%;
@@ -11,110 +12,170 @@
         height: 100%;
         width: 100%;
         background-color: #fff;
-        font-family: "Shippori Mincho B1",serif, "Yu Gothic", sans-serif;
+        font-family: "Shippori Mincho B1", serif, "Yu Gothic", sans-serif;
+
         .l-container {
             .pt {
                 @include vw(padding-top, 20, 1055, 1055);
             }
-            .header-block {
-                .top-block {
+
+            .header {
+                .top {
                     @include PC {
                         box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.4);
                     }
+
                     background-color: #F8F8F8;
-                    .logo-block {
+
+                    .logo {
                         @include PC {
-                            @include vw(padding-top,15, 1366, 1366);
-                            @include vw(padding-bottom,15, 1366, 1366);
+                            @include vw(padding-top, 15, 1366, 1366);
+                            @include vw(padding-bottom, 15, 1366, 1366);
                         }
+
                         img {
                             margin: 0 auto;
+
                             @include PC {
-                                @include vw(width,60, 1366, 1366);
+                                @include vw(width, 60, 1366, 1366);
                             }
                         }
                     }
                 }
-                .mv-block {
+
+                .mv {
                     background-image: url('../img/mv_morning.png');
-                    width: 100%; 
-                    background-size: contain; 
+                    width: 100%;
+                    background-size: contain;
                     background-position: top;
                     background-repeat: no-repeat;
+
                     img {
                         margin: 0 auto;
+
                         @include PC {
                             width: 100%;
                         }
                     }
                 }
             }
+
             .main {
-                background-image: url('../img/img_menu_arc.png');
-                width: 100%; 
-                background-size: contain; 
+                background-image: url('../img/bg.jpg');
+                width: 100%;
+                background-size: cover;
                 background-position: top;
                 background-repeat: no-repeat;
-                .menu-top {
-                    position: relative;
-                    max-width: 755px;
-                    margin-left: auto;
-                    margin-right: auto;
-                    .menu-btn-lunch {
-                        @include PC {
-                            // position: absolute;
-                            position: relative;
-                            z-index: 50;
-                            @include vw(top,30, 755, 755);
-                            left: 50%;
-                            transform: translateX(-50%);
-                            @include vw(width,110,755,755);
-                        }
-                    }
-                    .btn-blocks {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        @include vw(padding-top,125, 755, 755);
-                        position: relative;
-                        .menu-btn-morning {
-                            @include PC {
-                                @include vw(width,110, 755,755);
-                                @include vw(margin-right,245, 755, 755);
-                            }
-                            &:before {
-                                content: '';
-                                opacity: 1;
-                                background: #BC9E9E;
-                                position: absolute;
-                                border-radius: 50%;
-                                @include vw(width,20, 755,755);
-                                @include vw(height,20, 755,755);
-                                @include vw(top,90, 755,755);
-                                @include vw(left,-110, 755,755);
-                            }
-                        }
-                        .menu-btn-dinner {
-                            @include PC {
-                                @include vw(width,110, 755, 755);
-                                @include vw(margin-left,245, 755, 755);
-                            }
-                        }
-                    }
-                }
+
                 .section-block {
-                    background: #F8F8F8;
+                    .btn-box {
+                        text-align: center;
+                        padding-top: 15px;
+
+                        .btn-top {
+                            .lunch {
+                                display: block;
+                                color: #9B565A;
+                                line-height: 1.0;
+                                margin-left: auto;
+                                margin-inline-end: auto;
+
+                                @include PC {
+                                    @include vw(width, 105, 1366, 1366);
+                                }
+
+                                .main-text {
+                                    font-weight: bold;
+
+                                    @include PC {
+                                        @include vw(font-size, 30, 1366, 1366);
+                                    }
+                                }
+
+                                .sub-text {
+                                    @include PC {
+                                        @include vw(font-size, 18, 1366, 1366);
+                                    }
+                                }
+                            }
+                        }
+                        .btn-bottom-inner {
+                            display: flex;
+                            justify-content: space-between;
+                            max-width: 1090px;
+                            margin-left: auto;
+                            margin-right: auto;
+                            @include PC {
+                                @include vw(padding-top, 35, 1366, 1366);
+                            }
+                            .morning {
+                                display: block;
+                                color: #BC9E9E;
+                                line-height: 1.0;
+                                margin-left: auto;
+                                margin-inline-end: auto;
+
+                                @include PC {
+                                    @include vw(width, 105, 1366, 1366);
+                                }
+
+                                .main-text {
+                                    font-weight: bold;
+
+                                    @include PC {
+                                        @include vw(font-size, 30, 1366, 1366);
+                                    }
+                                }
+
+                                .sub-text {
+                                    @include PC {
+                                        @include vw(font-size, 18, 1366, 1366);
+                                    }
+                                }
+                            }
+                            .dinner {
+                                display: block;
+                                color: #490E2A;
+                                line-height: 1.0;
+                                margin-left: auto;
+                                margin-inline-end: auto;
+
+                                @include PC {
+                                    @include vw(width, 105, 1366, 1366);
+                                }
+
+                                .main-text {
+                                    font-weight: bold;
+
+                                    @include PC {
+                                        @include vw(font-size, 30, 1366, 1366);
+                                    }
+                                }
+
+                                .sub-text {
+                                    @include PC {
+                                        @include vw(font-size, 18, 1366, 1366);
+                                    }
+                                }
+                            }
+                        }
+                    }
+
                     .menu-list {
-                        @include vw(padding-top,50, 1110, 1110);
+                        @include vw(padding-top, 50, 1110, 1110);
+
                         .menu-list-inner {
                             max-width: 1110px;
                             margin: 0 auto;
+
                             .item-block {
                                 display: flex;
                                 justify-content: space-between;
                                 align-items: center;
-                                .item{
+
+                                .item {
                                     box-shadow: 2px 3px 6px 0px rgba(0, 0, 0, 0.4);
+
                                     .link {
                                         @include PC {
                                             display: block;
@@ -122,12 +183,12 @@
                                             font-weight: bold;
                                             text-align: center;
                                             color: #fff;
-                                            @include vw(width,130, 1110, 1110);
-                                            @include vw(padding-top,10, 1110, 1110);
-                                            @include vw(padding-bottom,10, 1110, 1110);
-                                            @include vw(padding-left,25, 1110, 1110);
-                                            @include vw(padding-right,25, 1110, 1110);
-                                            @include vw(font-size,15, 1110, 1110);
+                                            @include vw(width, 130, 1110, 1110);
+                                            @include vw(padding-top, 10, 1110, 1110);
+                                            @include vw(padding-bottom, 10, 1110, 1110);
+                                            @include vw(padding-left, 25, 1110, 1110);
+                                            @include vw(padding-right, 25, 1110, 1110);
+                                            @include vw(font-size, 15, 1110, 1110);
                                             font-feature-settings: "calt";
                                         }
                                     }
@@ -135,29 +196,35 @@
                             }
                         }
                     }
+
                     .food-list {
-                        @include vw(padding-top,125, 1055, 1055);
+                        @include vw(padding-top, 125, 1055, 1055);
+
                         .food-list-inner {
-                        max-width: 1055px;
-                        margin-left: auto;
-                        margin-right: auto;
+                            max-width: 1055px;
+                            margin-left: auto;
+                            margin-right: auto;
+
                             .food-block {
                                 @include PC {
                                     display: grid;
                                     grid-template-columns: 1fr 1fr 1fr 1fr;
                                     @include vw(gap, 32, 1055, 1055);
                                 }
+
                                 .card {
                                     box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.4);
                                     position: relative;
+
                                     .button {
                                         display: block;
                                         background: #9B565A;
                                         cursor: pointer;
-                                        @include vw(width,240, 1055, 1055);
+                                        @include vw(width, 240, 1055, 1055);
                                     }
+
                                     .hover-block {
-                                        @include vw(font-size,45, 1055, 1055);
+                                        @include vw(font-size, 45, 1055, 1055);
                                         color: #fff;
                                         background: #9B565A;
                                         text-align: center;
@@ -170,6 +237,7 @@
                                         display: flex;
                                         justify-content: center;
                                         align-items: center;
+
                                         &:hover {
                                             opacity: 0.8;
                                             transition: 0.6s;
@@ -178,131 +246,155 @@
                                 }
                             }
                         }
+
                         .btn-block {
                             text-align: center;
-                            @include vw(padding-top,70, 1055, 1055);
+                            @include vw(padding-top, 70, 1055, 1055);
+
                             .link {
                                 background: #000;
                                 color: #fff;
                                 font-weight: bold;
-                                @include vw(width,250, 1055, 1055);
-                                @include vw(padding-top,15, 1055, 1055);
-                                @include vw(padding-bottom,15, 1055, 1055);
-                                @include vw(padding-left,60, 1055, 1055);
-                                @include vw(padding-right,60, 1055, 1055);
+                                @include vw(width, 250, 1055, 1055);
+                                @include vw(padding-top, 15, 1055, 1055);
+                                @include vw(padding-bottom, 15, 1055, 1055);
+                                @include vw(padding-left, 60, 1055, 1055);
+                                @include vw(padding-right, 60, 1055, 1055);
                             }
                         }
                     }
+
                     .message-block {
-                        @include vw(padding-top,530, 1055, 1055);
+                        @include vw(padding-top, 530, 1055, 1055);
                         margin: 0 auto;
                         background-image: url('../img/img_morning_message.png');
-                        width: 750px; 
+                        width: 750px;
                         height: 120px;
-                        background-size: contain; 
+                        background-size: contain;
                         background-position: center;
                         background-repeat: no-repeat;
                     }
                 }
             }
+
             .footer {
                 .link-list {
                     display: flex;
                     color: #fff;
                     align-items: center;
                     background: #B89D9C;
-                    @include vw(font-size,25, 1366, 1366);
-                    @include vw(padding-top,25, 1366, 1366);
-                    @include vw(padding-bottom,25, 1366, 1366);
+                    @include vw(font-size, 25, 1366, 1366);
+                    @include vw(padding-top, 25, 1366, 1366);
+                    @include vw(padding-bottom, 25, 1366, 1366);
+
                     .item {
                         &:first-child {
-                        @include vw(padding-left,155, 1366, 1366);
-                        @include vw(padding-right,120, 1366, 1366);
+                            @include vw(padding-left, 155, 1366, 1366);
+                            @include vw(padding-right, 120, 1366, 1366);
                         }
+
                         &:nth-child(2) {
-                        @include vw(padding-right,120, 1366, 1366);
+                            @include vw(padding-right, 120, 1366, 1366);
                         }
                     }
                 }
             }
-            .modal-block{
+
+            .modal-block {
                 max-width: 1055px;
                 margin-left: auto;
                 margin-right: auto;
                 position: relative;
+
                 .modal-container {
                     box-shadow: 6px 6px 10px 0px rgba(3, 6, 12, 0.3);
                     background-color: #fff;
+
                     @include PC {
                         position: fixed;
                         top: 50%;
                         left: 50%;
                         transform: translate(-50%, -50%);
                         z-index: 1050;
-                        @include vw(width,1058, 1055, 1055);
-                        @include vw(padding-bottom,35, 1055, 1055);
+                        @include vw(width, 1058, 1055, 1055);
+                        @include vw(padding-bottom, 35, 1055, 1055);
                     }
+
                     .modal-block-inner {
                         @include PC {
                             display: flex;
                         }
+
                         img {
                             @include PC {
-                                @include vw(width,300, 1055, 1055);
+                                @include vw(width, 300, 1055, 1055);
                             }
                         }
+
                         .contents-block {
                             @include vw(padding-left, 25, 1055, 1055);
+
                             .txt-block {
                                 display: flex;
                                 align-items: center;
                                 justify-content: space-between;
                                 color: #9B565A;
+
                                 @include PC {
                                     @include vw(width, 300, 1055, 1055);
                                     @include vw(font-size, 23, 1055, 1055);
                                 }
                             }
+
                             .food-ttl-block {
                                 display: flex;
                                 align-items: baseline;
+
                                 h1 {
                                     @include PC {
                                         @include vw(font-size, 63, 1055, 1055)
                                     }
                                 }
+
                                 p {
                                     @include PC {
                                         @include vw(font-size, 15, 1055, 1055);
                                     }
                                 }
                             }
+
                             .address-block {
                                 @include PC {
                                     @include vw(font-size, 20, 1055, 1055);
                                     font-weight: bold;
                                 }
                             }
+
                             .time-block {
                                 @include PC {
                                     color: #9B565A;
                                     @include vw(font-size, 20, 1055, 1055);
                                 }
+
                                 p {
                                     &:nth-child(2) {
-                                    @include vw(padding-top, 10, 1055, 1055);
+                                        @include vw(padding-top, 10, 1055, 1055);
                                     }
                                 }
                             }
+
                             .btn-block {
                                 display: flex;
+
                                 @include PC {
                                     @include vw(padding-top, 23, 1055, 1055);
                                 }
+
                                 .btn {
-                                    &:first-child{
+                                    &:first-child {
                                         @include vw(padding-right, 30, 1055, 1055);
                                     }
+
                                     a {
                                         @include PC {
                                             display: block;
@@ -319,15 +411,18 @@
                             }
                         }
                     }
+
                     .detail-block {
                         .txt-block {
                             display: flex;
                             align-items: center;
+
                             &:nth-child(n+1) {
                                 @include PC {
                                     @include vw(margin-top, 15, 1055, 1055);
                                 }
                             }
+
                             .box_color {
                                 @include PC {
                                     color: #9B565A;
@@ -340,6 +435,7 @@
                                     @include vw(padding-top, 5, 1055, 1055);
                                     @include vw(padding-bottom, 5, 1055, 1055);
                                 }
+
                                 &:nth-child(n+1) {
                                     @include vw(margin-left, 20, 1055, 1055);
                                     @include vw(margin-right, 20, 1055, 1055);
@@ -366,12 +462,14 @@
     overflow-y: scroll;
     opacity: 0;
     visibility: hidden;
+
     &.is-open {
         z-index: 999;
         opacity: 1;
         visibility: visible;
         transition: opacity 1s linear, visibility 1s linear, z-index 1s linear;
     }
+
     .p-modal___bg {
         content: "";
         position: fixed;
@@ -381,6 +479,7 @@
         width: 100%;
         height: 100%;
     }
+
     .p-modal___inner {
         position: relative;
         max-width: 750px;
@@ -390,114 +489,136 @@
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        pointer-events:none;
+        pointer-events: none;
 
 
         .p-modal__body {
             position: relative;
             width: 100%;
             pointer-events: all;
+
             .p-modal___close {
                 position: absolute;
                 right: -159px;
                 top: -260px;
                 display: flex;
                 flex-direction: row-reverse;
+
                 .close-btn {
                     position: relative;
                     cursor: pointer;
                     width: 33px;
                     height: 33px;
                     margin: 0 auto;
+
                     span {
                         position: absolute;
                         background-color: #fff;
                         left: 0;
                         width: 100%;
                         height: 1px;
+
                         &:nth-child(1) {
                             transform: rotate(-45deg);
                         }
+
                         &:nth-child(2) {
                             transform: rotate(45deg);
                         }
                     }
                 }
             }
+
             .p-modal___mv {
                 .modal-container {
                     box-shadow: 6px 6px 10px 0px rgba(3, 6, 12, 0.3);
                     background-color: #fff;
+
                     @include PC {
                         position: fixed;
                         top: 50%;
                         left: 50%;
                         transform: translate(-50%, -50%);
                         z-index: 1050;
-                        @include vw(width,1058, 1055, 1055);
-                        @include vw(padding-bottom,35, 1055, 1055);
+                        @include vw(width, 1058, 1055, 1055);
+                        @include vw(padding-bottom, 35, 1055, 1055);
                     }
+
                     .modal-block-inner {
                         @include PC {
                             display: flex;
                         }
+
                         img {
                             @include PC {
-                                @include vw(width,300, 1055, 1055);
+                                @include vw(width, 300, 1055, 1055);
                             }
                         }
+
                         .contents-block {
                             @include vw(padding-left, 25, 1055, 1055);
+
                             .txt-block {
                                 display: flex;
                                 align-items: center;
                                 justify-content: space-between;
                                 color: #9B565A;
+
                                 @include PC {
                                     @include vw(width, 300, 1055, 1055);
                                     @include vw(font-size, 23, 1055, 1055);
                                 }
                             }
+
                             .food-ttl-block {
                                 display: flex;
                                 align-items: baseline;
+
                                 h1 {
                                     @include PC {
                                         @include vw(font-size, 63, 1055, 1055)
                                     }
                                 }
+
                                 p {
                                     @include PC {
                                         @include vw(font-size, 15, 1055, 1055);
                                     }
                                 }
                             }
+
                             .address-block {
                                 @include PC {
                                     @include vw(font-size, 20, 1055, 1055);
                                     font-weight: bold;
                                 }
                             }
+
                             .time-block {
                                 @include PC {
                                     color: #9B565A;
                                     @include vw(font-size, 20, 1055, 1055);
                                 }
+
                                 p {
                                     &:nth-child(2) {
-                                    @include vw(padding-top, 10, 1055, 1055);
+                                        @include vw(padding-top, 10, 1055, 1055);
                                     }
                                 }
                             }
+
                             .btn-block {
                                 display: flex;
+
                                 @include PC {
                                     @include vw(padding-top, 23, 1055, 1055);
                                 }
+
                                 .btn {
-                                    &:first-child{
+                                    &:first-child {
                                         @include vw(padding-right, 30, 1055, 1055);
                                     }
+
                                     a {
                                         @include PC {
                                             display: block;
@@ -514,15 +635,18 @@
                             }
                         }
                     }
+
                     .detail-block {
                         .txt-block {
                             display: flex;
                             align-items: center;
+
                             &:nth-child(n+1) {
                                 @include PC {
                                     @include vw(margin-top, 15, 1055, 1055);
                                 }
                             }
+
                             .box_color {
                                 @include PC {
                                     color: #9B565A;
@@ -535,6 +659,7 @@
                                     @include vw(padding-top, 5, 1055, 1055);
                                     @include vw(padding-bottom, 5, 1055, 1055);
                                 }
+
                                 &:nth-child(n+1) {
                                     @include vw(margin-left, 20, 1055, 1055);
                                     @include vw(margin-right, 20, 1055, 1055);
