@@ -1,0 +1,35 @@
+@use "../global" as *;
+@include googlefonts_NotoSansJP((400,700));
+@include googlefonts_NotoSerifJP((400,700));
+
+body {
+	min-width: 320px;
+	color: $baseTextColor;
+	font-family: $baseFontFamily;
+	line-height: $baseLineHeight;
+
+	-webkit-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	background-color: #100;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+img {
+	display: block;
+	max-width: 100%;
+}
+picture {
+	display: block;
+}
+.pc {
+	@include SP {
+		display: none!important;
+	}
+}
+.sp {
+	@include PC {
+		display: none!important;
+	}
+}

@@ -1,0 +1,49 @@
+@use '../setting' as *;
+/**
+ * メディアクエリ
+ * @param {string} $mode - max または min
+ * @param {number} $width - 設定値
+ */
+ @mixin mq($mode, $width) {
+	@media screen and (#{$mode}-width : #{$width}px) {
+		@content;
+	}
+}
+
+/**
+ * メディアクエリ PC
+ * @param {number} [$width:$breakpoin] - 設定値
+ */
+@mixin PC($width:$breakpoint + 1) {
+	@include mq(min, $width) {
+		@content;
+	}
+}
+
+/**
+ * メディアクエリ SP
+ * @param {number} [$width:$breakpoin] - 設定値
+ */
+@mixin SP($width:$breakpoint) {
+	@include mq(max, $width) {
+		@content;
+	}
+}
+
+/**
+ * メディアクエリによるIE11ハック
+ */
+@mixin IE {
+	@media screen and (-ms-high-contrast:none){
+		@content;
+	}
+	@media screen and (-ms-high-contrast:active) {
+		@content;
+	}
+	@media screen and (-ms-high-contrast:black-on-white) {
+		@content;
+	}
+	@media screen and (-ms-high-contrast:white-on-black) {
+		@content;
+	}
+}

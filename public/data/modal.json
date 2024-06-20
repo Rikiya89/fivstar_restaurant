@@ -1,0 +1,28 @@
+[
+    {
+        "id": "modal-mv",
+        "imageSrc": "./assets/img/img_food09.jpg",
+        "tags": ["#揚げ物", "#鶏肉", "#人気店"],
+        "title": "イマカツ",
+        "priceRange": "¥1500〜¥3000",
+        "address": "〒104-0061 東京都中央区銀座4丁目13-18",
+        "times": ["11時30分～16時00分", "18時00分～22時00分"],
+        "mapsLink": "https://maps.google.com/your-link-here",
+        "reservationLink": "https://tabelog.com/your-link-here",
+        "details": [
+        {
+            "category": "料理",
+            "description": "人気の鳥かつ"
+        },
+        {
+            "category": "雰囲気",
+            "description": "お手頃・入りやすい"
+        },
+        {
+            "category": "推しポイント",
+            "description": "鳥かつはこんなにジューシなんて！今まで食べていたものはなんだったんですかね？"
+        }
+        ]
+    }
+    
+]

@@ -1,0 +1,33 @@
+/**
+ * 三角形
+ * @param {string} $direction - 三角の向き 上:T / 下:B / 左:L / 右:R
+ * @param {number} $w - 幅
+ * @param {number} $h - 高さ
+ * @param {string} $color - 色
+ */
+ @mixin triangle($direction, $w, $h, $color) {
+	$w : $w + 0px;
+	$h : $h + 0px;
+
+	width: 0;
+	height: 0;
+	border-style: solid;
+
+	@if $direction == 'T' {
+		border-width: 0 ($w / 2) $h ($w / 2);
+		border-color: transparent transparent $color transparent;
+	}
+	@if $direction == 'B' {
+		border-width: $h ($w / 2) 0 ($w / 2);
+		border-color: $color transparent transparent transparent;
+	}
+	@if $direction == 'R' {
+		border-width: ($h / 2) 0 ($h / 2) $w;
+		border-color: transparent transparent transparent $color;
+	}
+	@if $direction == 'L' {
+		border-width: ($h / 2) $w ($h / 2) 0;
+		border-color: transparent $color transparent transparent;
+	}
+	@content;
+}

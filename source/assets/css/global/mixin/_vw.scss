@@ -1,0 +1,23 @@
+/**
+ * VW計算
+ * @param {string} $property  - プロパティ
+ * @param {number} $value - 基準となる値
+ * @param {number} $basewidth - 基準となるウィンドウ幅
+ * @param {number} [$maxwidth:0] - 拡大を停止するウィンドウ幅
+ * @param {number} [$minwidth:0] - 縮小を停止するウィンドウ幅
+ */
+ @mixin vw($property, $value, $basewidth, $maxwidth : 0, $minwidth : 0) {
+	#{$property} : calc($value / $basewidth * 100vw);
+	// #{$property} : calc(#{$value} / #{$basewidth} * 100vw - #{$value} / #{$basewidth} * var(--scrollbar-size-px));
+
+	@if $maxwidth != 0 {
+		@media screen and (min-width:#{$maxwidth}px) {
+			#{$property} : calc($value / $basewidth * $maxwidth * 1px);
+		}
+	}
+	@if $minwidth != 0 {
+		@media screen and (max-width:#{$minwidth}px) {
+			#{$property} : calc($value / $basewidth * $minwidth * 1px);
+		}
+	}
+}

@@ -1,0 +1,29 @@
+/**
+ * ローディングアニメーション
+ * @param {number} $size - 円のサイズ
+ * @param {number} $thickness - 円の枠線の太さ
+ * @param {string} $backcolor - 円の色
+ * @param {string} $forecolor - 円の強調色
+ * @param {string} [$duration=1] - アニメーションのスピード（単位は秒:s）
+ */
+ @mixin loading($size, $thickness, $backcolor, $forecolor, $duration:1) {
+	pointer-events: none;
+	border-radius: 50%;
+	width: $size + 0px;
+	height: $size + 0px;
+	border-style: solid;
+	border-width: $thickness + 0px;
+	border-color: $backcolor;
+	border-top-color: $forecolor;
+	animation: loading $duration + 0s infinite linear;
+
+	@keyframes loading {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+	@content;
+}

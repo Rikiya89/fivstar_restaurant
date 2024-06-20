@@ -1,0 +1,32 @@
+/**
+ * Google Fonts の読み込み
+ * @param {string} $family - フォント名（要URLエンコード）
+ * @param {array} [$weights:(400,700)] - ウェイト
+ */
+ @mixin googlefonts($family, $weights:(400,700)) {
+	$_weight : "";
+
+	@each $weight in $weights {
+		@if $_weight != "" {
+			$_weight : "#{$_weight};";
+		}
+		$_weight : "#{$_weight}#{$weight}";
+	}
+	@import url("https://fonts.googleapis.com/css2?family=#{$family}:wght@#{$_weight}&display=swap");
+}
+
+/**
+ * Noto Sans JP
+ * @param {array} [$weights:(400,700)] - ウェイト
+ */
+@mixin googlefonts_NotoSansJP($weights:(400,700)) {
+	@include googlefonts('Noto+Sans+JP', $weights);
+}
+
+/**
+ * Noto Serif JP
+ * @param {array} [$weights:(400,700)] - ウェイト
+ */
+@mixin googlefonts_NotoSerifJP($weights:(400,700)) {
+	@include googlefonts('Noto+Serif+JP', $weights);
+}
