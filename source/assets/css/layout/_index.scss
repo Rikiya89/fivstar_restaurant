@@ -99,6 +99,9 @@
                                 }
                             }
                         }
+                        .btn-bottom {
+                            position: relative;
+                        }
                         .btn-bottom-inner {
                             display: flex;
                             justify-content: space-between;
@@ -107,13 +110,27 @@
                             margin-right: auto;
                             @include PC {
                                 @include vw(padding-top, 35, 1366, 1366);
+                                &::after {
+                                    @include PC {
+                                        content: '';
+                                        position: absolute;
+                                        background-repeat: no-repeat;
+                                        background: url('../img/triangle.png');
+                                        @include vw(width, 35, 1366, 1366);
+                                        @include vw(height, 30, 1366, 1366);
+                                        @include vw(top, 60, 1366, 1366);
+                                        @include vw(left, 666, 1366, 1366);
+                                    }
+                                }
                             }
                             .morning {
-                                display: block;
                                 color: #BC9E9E;
                                 line-height: 1.0;
                                 margin-left: auto;
-                                margin-inline-end: auto;
+                                margin-right: auto;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
 
                                 @include PC {
                                     @include vw(width, 105, 1366, 1366);
@@ -132,13 +149,24 @@
                                         @include vw(font-size, 18, 1366, 1366);
                                     }
                                 }
+                                &::before {
+                                    content: '';
+                                    position: absolute;
+                                    background: url('../img/morning-circle.png');
+                                    @include vw(width, 15, 1366, 1366);
+                                    @include vw(height, 15, 1366, 1366);
+                                    @include vw(top, 60, 1366, 1366);
+                                    @include vw(left, 527, 1366, 1366);
+                                }
                             }
                             .dinner {
-                                display: block;
                                 color: #490E2A;
                                 line-height: 1.0;
                                 margin-left: auto;
                                 margin-inline-end: auto;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
 
                                 @include PC {
                                     @include vw(width, 105, 1366, 1366);
@@ -165,8 +193,9 @@
                         @include vw(padding-top, 50, 1110, 1110);
 
                         .menu-list-inner {
-                            max-width: 1110px;
-                            margin: 0 auto;
+                            max-width: 1085px;
+                            margin-left: auto;
+                            margin-right: auto;
 
                             .item-block {
                                 display: flex;
@@ -174,22 +203,19 @@
                                 align-items: center;
 
                                 .item {
-                                    box-shadow: 2px 3px 6px 0px rgba(0, 0, 0, 0.4);
-
                                     .link {
                                         @include PC {
                                             display: block;
-                                            background: #9B565A;
+                                            background: #F9F7F7;
                                             font-weight: bold;
                                             text-align: center;
-                                            color: #fff;
-                                            @include vw(width, 130, 1110, 1110);
-                                            @include vw(padding-top, 10, 1110, 1110);
-                                            @include vw(padding-bottom, 10, 1110, 1110);
-                                            @include vw(padding-left, 25, 1110, 1110);
-                                            @include vw(padding-right, 25, 1110, 1110);
-                                            @include vw(font-size, 15, 1110, 1110);
+                                            color: #9B565A;
+                                            border: 2px solid #9B565A;
                                             font-feature-settings: "calt";
+                                            @include vw(width, 130, 1110, 1110);
+                                            @include vw(font-size, 20, 1110, 1110);
+                                            @include vw(padding-top, 20, 1110, 1110);
+                                            @include vw(padding-bottom, 20, 1110, 1110);
                                         }
                                     }
                                 }
@@ -252,6 +278,7 @@
                             @include vw(padding-top, 70, 1055, 1055);
 
                             .link {
+                                font-size: 25px;
                                 background: #000;
                                 color: #fff;
                                 font-weight: bold;
