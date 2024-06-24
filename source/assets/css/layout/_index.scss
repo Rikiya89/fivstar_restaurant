@@ -37,7 +37,7 @@
                             margin: 0 auto;
 
                             @include PC {
-                                @include vw(width, 60, 1366, 1366);
+                                @include vw(width, 108, 1366, 1366);
                             }
                         }
                     }
@@ -74,11 +74,13 @@
 
                         .btn-top {
                             .lunch {
-                                display: block;
                                 color: #9B565A;
                                 line-height: 1.0;
                                 margin-left: auto;
                                 margin-inline-end: auto;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
 
                                 @include PC {
                                     @include vw(width, 105, 1366, 1366);
@@ -114,12 +116,13 @@
                                     @include PC {
                                         content: '';
                                         position: absolute;
-                                        background-repeat: no-repeat;
                                         background: url('../img/triangle.png');
-                                        @include vw(width, 35, 1366, 1366);
-                                        @include vw(height, 30, 1366, 1366);
+                                        width: 35px;
+                                        height: 30px;
+                                        top: 60px;
+                                        left: 50%;
+                                        transform: translateX(-50%);
                                         @include vw(top, 60, 1366, 1366);
-                                        @include vw(left, 666, 1366, 1366);
                                     }
                                 }
                             }
@@ -131,6 +134,7 @@
                                 display: flex;
                                 flex-direction: column;
                                 align-items: center;
+                                position: relative;
 
                                 @include PC {
                                     @include vw(width, 105, 1366, 1366);
@@ -153,11 +157,22 @@
                                     content: '';
                                     position: absolute;
                                     background: url('../img/morning-circle.png');
-                                    @include vw(width, 15, 1366, 1366);
-                                    @include vw(height, 15, 1366, 1366);
-                                    @include vw(top, 60, 1366, 1366);
-                                    @include vw(left, 527, 1366, 1366);
+                                    width: 15px;
+                                    height: 15px;
+                                    top: 60px;
+                                    left: 50%; // Center horizontally
+                                    transform: translateX(-50%);
+                                    display: none; // Initially hidden
+                                    @include vw(width, 15, 1366);
+                                    @include vw(height, 15, 1366);
+                                    @include vw(top, 60, 1366);
+                                    opacity: 1;
                                 }
+
+                                // &:hover::before {
+                                //     opacity: 1;
+                                //     transition: 0.3s ease-in;
+                                // }
                             }
                             .dinner {
                                 color: #490E2A;
