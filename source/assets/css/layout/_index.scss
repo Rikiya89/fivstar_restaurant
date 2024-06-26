@@ -44,18 +44,20 @@
                 }
 
                 .mv {
-                    background-image: url('../img/mv_morning.png');
+                    background-image: url('../img/mv-morning.png');
                     width: 100%;
-                    background-size: contain;
-                    background-position: top;
+                    background-size: cover;
+                    background-position: center center;
                     background-repeat: no-repeat;
-
-                    img {
-                        margin: 0 auto;
-
-                        @include PC {
-                            width: 100%;
-                        }
+                    height: 0;
+                    padding-top: 67%;
+                    opacity: 1;
+                    &.mv-lunch {
+                    background-image: url('../img/mv-lunch.png');
+                    }
+                    &.mv-dinner {
+                    background-image: url('../img/mv_visual.png');
+                    opacity: 1;
                     }
                 }
             }
@@ -380,7 +382,7 @@
                                 display: flex;
                                 align-items: center;
                                 justify-content: space-between;
-                                color: #9B565A;
+                                color: #ACACAC;
 
                                 @include PC {
                                     @include vw(width, 300, 1055, 1055);
@@ -389,9 +391,6 @@
                             }
 
                             .food-ttl-block {
-                                display: flex;
-                                align-items: baseline;
-
                                 h1 {
                                     @include PC {
                                         @include vw(font-size, 63, 1055, 1055)
@@ -402,13 +401,6 @@
                                     @include PC {
                                         @include vw(font-size, 15, 1055, 1055);
                                     }
-                                }
-                            }
-
-                            .address-block {
-                                @include PC {
-                                    @include vw(font-size, 20, 1055, 1055);
-                                    font-weight: bold;
                                 }
                             }
 
@@ -575,6 +567,7 @@
                 .modal-container {
                     box-shadow: 6px 6px 10px 0px rgba(3, 6, 12, 0.3);
                     background-color: #fff;
+                    border: 2px solid #490E2A;
 
                     @include PC {
                         position: fixed;
@@ -593,7 +586,7 @@
 
                         img {
                             @include PC {
-                                @include vw(width, 300, 1055, 1055);
+                                @include vw(width, 320, 1055, 1055);
                             }
                         }
 
@@ -613,9 +606,6 @@
                             }
 
                             .food-ttl-block {
-                                display: flex;
-                                align-items: baseline;
-
                                 h1 {
                                     @include PC {
                                         @include vw(font-size, 63, 1055, 1055)
@@ -624,27 +614,24 @@
 
                                 p {
                                     @include PC {
-                                        @include vw(font-size, 15, 1055, 1055);
+                                        @include vw(font-size, 18, 1055, 1055);
+                                        @include vw(padding-top, 10, 1055, 1055);
                                     }
                                 }
                             }
 
-                            .address-block {
-                                @include PC {
-                                    @include vw(font-size, 20, 1055, 1055);
-                                    font-weight: bold;
-                                }
-                            }
-
                             .time-block {
+                                display: flex;
                                 @include PC {
                                     color: #9B565A;
                                     @include vw(font-size, 20, 1055, 1055);
+                                    @include vw(padding-top, 10, 1055, 1055);
                                 }
 
                                 p {
                                     &:nth-child(2) {
-                                        @include vw(padding-top, 10, 1055, 1055);
+                                        @include vw(padding-left, 10, 1055, 1055);
+                                        @include vw(padding-right, 10, 1055, 1055);
                                     }
                                 }
                             }
@@ -653,7 +640,7 @@
                                 display: flex;
 
                                 @include PC {
-                                    @include vw(padding-top, 23, 1055, 1055);
+                                    @include vw(padding-top, 45, 1055, 1055);
                                 }
 
                                 .btn {
