@@ -19,283 +19,330 @@
                 @include vw(padding-top, 20, 1055, 1055);
             }
 
-            .header {
-                .top {
-                    @include PC {
-                        box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.4);
-                    }
-
-                    background-color: #F8F8F8;
-
-                    .logo {
-                        @include PC {
-                            @include vw(padding-top, 15, 1366, 1366);
-                            @include vw(padding-bottom, 15, 1366, 1366);
-                        }
-
-                        img {
-                            margin: 0 auto;
-
-                            @include PC {
-                                @include vw(width, 60, 1366, 1366);
-                            }
-                        }
-                    }
+            .header-top {
+                background-color: #F8F8F8;
+                @include PC {
+                    box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.4);
                 }
 
-                .mv {
-                    background-image: url('../img/mv_morning.png');
-                    width: 100%;
-                    background-size: contain;
-                    background-position: top;
-                    background-repeat: no-repeat;
+                .header-logo {
+                    @include PC {
+                        @include vw(padding-top, 15, 1366, 1366);
+                        @include vw(padding-bottom, 15, 1366, 1366);
+                    }
+                    @include SP {
+                        @include vw(padding-top, 15, 750, 1366);
+                        @include vw(padding-bottom, 15, 750, 1366);
+                    }
 
                     img {
                         margin: 0 auto;
 
                         @include PC {
-                            width: 100%;
+                            @include vw(width, 90, 1366, 1366);
+                        }
+                        @include SP {
+                            @include vw(width, 60, 750, 1366);
                         }
                     }
                 }
             }
 
-            .main {
-                background-image: url('../img/bg.jpg');
+            .header-mv {
+                background-image: url('../img/mv_morning.png');
                 width: 100%;
-                background-size: cover;
+                background-size: contain;
                 background-position: top;
                 background-repeat: no-repeat;
 
-                .section-block {
-                    .btn-box {
-                        text-align: center;
-                        padding-top: 15px;
-
-                        .btn-top {
-                            .lunch {
-                                display: block;
-                                color: #9B565A;
-                                line-height: 1.0;
-                                margin-left: auto;
-                                margin-inline-end: auto;
-
-                                @include PC {
-                                    @include vw(width, 105, 1366, 1366);
-                                }
-
-                                .main-text {
-                                    font-weight: bold;
-
-                                    @include PC {
-                                        @include vw(font-size, 30, 1366, 1366);
-                                    }
-                                }
-
-                                .sub-text {
-                                    @include PC {
-                                        @include vw(font-size, 18, 1366, 1366);
-                                    }
-                                }
-                            }
-                        }
-                        .btn-bottom-inner {
-                            display: flex;
-                            justify-content: space-between;
-                            max-width: 1090px;
-                            margin-left: auto;
-                            margin-right: auto;
-                            @include PC {
-                                @include vw(padding-top, 35, 1366, 1366);
-                            }
-                            .morning {
-                                display: block;
-                                color: #BC9E9E;
-                                line-height: 1.0;
-                                margin-left: auto;
-                                margin-inline-end: auto;
-
-                                @include PC {
-                                    @include vw(width, 105, 1366, 1366);
-                                }
-
-                                .main-text {
-                                    font-weight: bold;
-
-                                    @include PC {
-                                        @include vw(font-size, 30, 1366, 1366);
-                                    }
-                                }
-
-                                .sub-text {
-                                    @include PC {
-                                        @include vw(font-size, 18, 1366, 1366);
-                                    }
-                                }
-                            }
-                            .dinner {
-                                display: block;
-                                color: #490E2A;
-                                line-height: 1.0;
-                                margin-left: auto;
-                                margin-inline-end: auto;
-
-                                @include PC {
-                                    @include vw(width, 105, 1366, 1366);
-                                }
-
-                                .main-text {
-                                    font-weight: bold;
-
-                                    @include PC {
-                                        @include vw(font-size, 30, 1366, 1366);
-                                    }
-                                }
-
-                                .sub-text {
-                                    @include PC {
-                                        @include vw(font-size, 18, 1366, 1366);
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-                    .menu-list {
-                        @include vw(padding-top, 50, 1110, 1110);
-
-                        .menu-list-inner {
-                            max-width: 1110px;
-                            margin: 0 auto;
-
-                            .item-block {
-                                display: flex;
-                                justify-content: space-between;
-                                align-items: center;
-
-                                .item {
-                                    box-shadow: 2px 3px 6px 0px rgba(0, 0, 0, 0.4);
-
-                                    .link {
-                                        @include PC {
-                                            display: block;
-                                            background: #9B565A;
-                                            font-weight: bold;
-                                            text-align: center;
-                                            color: #fff;
-                                            @include vw(width, 130, 1110, 1110);
-                                            @include vw(padding-top, 10, 1110, 1110);
-                                            @include vw(padding-bottom, 10, 1110, 1110);
-                                            @include vw(padding-left, 25, 1110, 1110);
-                                            @include vw(padding-right, 25, 1110, 1110);
-                                            @include vw(font-size, 15, 1110, 1110);
-                                            font-feature-settings: "calt";
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-                    .food-list {
-                        @include vw(padding-top, 125, 1055, 1055);
-
-                        .food-list-inner {
-                            max-width: 1055px;
-                            margin-left: auto;
-                            margin-right: auto;
-
-                            .food-block {
-                                @include PC {
-                                    display: grid;
-                                    grid-template-columns: 1fr 1fr 1fr 1fr;
-                                    @include vw(gap, 32, 1055, 1055);
-                                }
-
-                                .card {
-                                    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.4);
-                                    position: relative;
-
-                                    .button {
-                                        display: block;
-                                        background: #9B565A;
-                                        cursor: pointer;
-                                        @include vw(width, 240, 1055, 1055);
-                                    }
-
-                                    .hover-block {
-                                        @include vw(font-size, 45, 1055, 1055);
-                                        color: #fff;
-                                        background: #9B565A;
-                                        text-align: center;
-                                        width: 100%;
-                                        position: absolute;
-                                        top: 0;
-                                        left: 0;
-                                        opacity: 0;
-                                        height: 100%;
-                                        display: flex;
-                                        justify-content: center;
-                                        align-items: center;
-
-                                        &:hover {
-                                            opacity: 0.8;
-                                            transition: 0.6s;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-
-                        .btn-block {
-                            text-align: center;
-                            @include vw(padding-top, 70, 1055, 1055);
-
-                            .link {
-                                background: #000;
-                                color: #fff;
-                                font-weight: bold;
-                                @include vw(width, 250, 1055, 1055);
-                                @include vw(padding-top, 15, 1055, 1055);
-                                @include vw(padding-bottom, 15, 1055, 1055);
-                                @include vw(padding-left, 60, 1055, 1055);
-                                @include vw(padding-right, 60, 1055, 1055);
-                            }
-                        }
-                    }
-
-                    .message-block {
-                        @include vw(padding-top, 530, 1055, 1055);
-                        margin: 0 auto;
-                        background-image: url('../img/img_morning_message.png');
-                        width: 750px;
-                        height: 120px;
-                        background-size: contain;
-                        background-position: center;
-                        background-repeat: no-repeat;
-                    }
+                img {
+                    margin: 0 auto;
+                    width: 100%;
                 }
             }
 
-            .footer {
-                .link-list {
+            .main-container {
+                width: 100%;
+                background-position: top;
+                background-repeat: no-repeat;
+                @include PC {
+                    background-image: url('../img/bg-pc.jpg');
+                    background-size: cover;
+                }
+                @include SP {
+                    background-image: url('../img/bg-sp.jpg');
+                    background-size: contain;
+                }
+
+                .btn-box {
+                    text-align: center;
+                    padding-top: 15px;
+                }
+
+                .btn-lunch {
                     display: flex;
-                    color: #fff;
+                    flex-direction: column;
                     align-items: center;
-                    background: #B89D9C;
-                    @include vw(font-size, 25, 1366, 1366);
-                    @include vw(padding-top, 25, 1366, 1366);
-                    @include vw(padding-bottom, 25, 1366, 1366);
+                    color: #9B565A;
+                    line-height: 1.0;
+                    margin-left: auto;
+                    margin-inline-end: auto;
 
-                    .item {
-                        &:first-child {
-                            @include vw(padding-left, 155, 1366, 1366);
-                            @include vw(padding-right, 120, 1366, 1366);
+                    @include PC {
+                        @include vw(width, 145, 1366, 1366);
+                    }
+                    @include SP {
+                        @include vw(width, 110, 750, 1366);
+                    }
+
+                    .btn-main-text {
+                        font-weight: bold;
+
+                        @include PC {
+                            @include vw(font-size, 30, 1366, 1366);
+                        }
+                        @include SP {
+                            @include vw(font-size, 30, 750, 1366);
+                        }
+                    }
+
+                    .btn-sub-text {
+                        @include PC {
+                            @include vw(font-size, 18, 1366, 1366);
+                        }
+                        @include SP {
+                            @include vw(font-size, 22, 750, 1366);
+                        }
+                    }
+                }
+
+                .btn-bottom-inner {
+                    display: flex;
+                    justify-content: space-between;
+                    max-width: 1090px;
+                    margin-left: auto;
+                    margin-right: auto;
+
+                    @include PC {
+                        @include vw(padding-top, 35, 1366, 1366);
+                    }
+                }
+
+                .morning {
+                    color: #B89D9C;
+                }
+
+                .dinner {
+                    color: #490E2A;
+                }
+
+                .morning, .dinner {
+                    display: flex;
+                    line-height: 1.0;
+                    margin-left: auto;
+                    margin-inline-end: auto;
+                    align-items: center;
+                    flex-direction: column;
+
+                    @include PC {
+                        @include vw(width, 145, 1366, 1366);
+                    }
+
+                    @include SP {
+                        @include vw(width, 110, 750, 1366);
+                    }
+
+                    .btn-main-text {
+                        font-weight: bold;
+
+                        @include PC {
+                            @include vw(font-size, 30, 1366, 1366);
+                        }
+                        @include SP {
+                            @include vw(font-size, 30, 750, 1366);
+                        }
+                    }
+
+                    .btn-sub-text {
+                        @include PC {
+                            @include vw(font-size, 18, 1366, 1366);
+                        }
+                        @include SP {
+                            @include vw(font-size, 22, 750, 1366);
+                        }
+                    }
+                }
+
+                .menu-list {
+                    @include vw(padding-top, 50, 1110, 1110);
+
+                    .menu-list-inner {
+                        margin: 0 auto;
+                        @include PC {
+                            max-width: 1090px;
                         }
 
-                        &:nth-child(2) {
-                            @include vw(padding-right, 120, 1366, 1366);
+                        @include SP {
+                            max-width: 630px;
                         }
+
+                        .menu-item-block {
+                            display: flex;
+                            @include PC {
+                                justify-content: space-between;
+                                align-items: center;
+                            }
+                            @include SP {
+                                flex-wrap: wrap;
+                                justify-content: center;
+                            }
+                            .menu-item-link {
+                                &:nth-child(n + 5) {
+                                    @include SP {
+                                        @include vw(margin-top, 10, 630, 630);
+                                    }
+                                }
+                            }
+                            .menu-link {
+                                display: block;
+                                background: #F9F7F7;
+                                font-weight: bold;
+                                font-feature-settings: "calt";
+                                text-align: center;
+                                border: 2px solid #9B565A;
+                                color: #9B565A;
+                                @include PC {
+                                    @include vw(width, 130, 1090, 1090);
+                                    @include vw(font-size, 20, 1090, 1090);
+                                    @include vw(padding-top, 20, 1090, 1090);
+                                    @include vw(padding-bottom, 20, 1090, 1090);
+                                }
+                                @include SP {
+                                    @include vw(width, 130, 630, 630);
+                                    @include vw(font-size, 20, 630, 630);
+                                    @include vw(padding-top, 20, 630, 630);
+                                    @include vw(padding-bottom, 20, 630, 630);
+                                    @include vw(margin-right, 10, 630, 630);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .food-list {
+                    @include vw(padding-top, 90, 1055, 1055);
+
+                    .food-list-inner {
+                        margin-left: auto;
+                        margin-right: auto;
+                        @include PC {
+                            max-width: 1055px;
+                        }
+                        @include SP {
+                            max-width: 640px;
+                        }
+                    }
+
+                    .food-container {
+                        display: grid;
+                        @include PC {
+                            grid-template-columns: 1fr 1fr 1fr 1fr;
+                            @include vw(gap, 30, 1055, 1055);
+                        }
+                        @include SP {
+                            grid-template-columns: 1fr 1fr;
+                            @include vw(gap, 50, 640, 640);
+                        }
+                    }
+
+                    .food-card {
+                        @include PC {
+                            position: relative;
+                        }
+
+                        .button {
+                            @include PC {
+                                display: block;
+                                background: #9B565A;
+                                cursor: pointer;
+                                @include vw(width, 240, 1055, 1055);
+                            }
+                        }
+
+                        .hover-block {
+                            @include PC {
+                                @include vw(font-size, 45, 1055, 1055);
+                                color: #fff;
+                                background: #9B565A;
+                                text-align: center;
+                                width: 100%;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                opacity: 0;
+                                height: 100%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
+
+                            &:hover {
+                                @include PC {
+                                    opacity: 0.8;
+                                    transition: 0.6s;
+                                }
+                            }
+                        }
+                    }
+
+                    .food-btn-block {
+                        text-align: center;
+                        @include vw(padding-top, 70, 1055, 1055);
+
+                        .food-btn-link {
+                            display: block;
+                            margin-left: auto;
+                            margin-right: auto;
+                            background: #000;
+                            color: #fff;
+                            font-weight: bold;
+                            @include vw(width, 250, 1055, 1055);
+                            @include vw(font-size, 25, 1055, 1055);
+                            @include vw(padding-top, 15, 1055, 1055);
+                            @include vw(padding-bottom, 15, 1055, 1055);
+                        }
+                    }
+                }
+
+                .message-block {
+                    margin: 0 auto;
+                    background-size: contain;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    @include vw(padding-top, 630, 1055, 1055);
+                    background-image: url('../img/img_morning_message.png');
+                    @include vw(width, 750, 1055, 1055);
+                    @include vw(min-height, 120, 1055, 1055);
+                }
+            }
+
+            .link-list {
+                display: flex;
+                color: #fff;
+                align-items: center;
+                background: #B89D9C;
+                @include vw(font-size, 25, 1366, 1366);
+                @include vw(padding-top, 25, 1366, 1366);
+                @include vw(padding-bottom, 25, 1366, 1366);
+
+                .link-item {
+                    &:first-child {
+                        @include vw(padding-left, 155, 1366, 1366);
+                        @include vw(padding-right, 120, 1366, 1366);
+                    }
+
+                    &:nth-child(2) {
+                        @include vw(padding-right, 120, 1366, 1366);
                     }
                 }
             }
@@ -305,364 +352,281 @@
                 margin-left: auto;
                 margin-right: auto;
                 position: relative;
+            }
 
-                .modal-container {
-                    box-shadow: 6px 6px 10px 0px rgba(3, 6, 12, 0.3);
-                    background-color: #fff;
+            .modal-container {
+                box-shadow: 6px 6px 10px 0px rgba(3, 6, 12, 0.3);
+                background-color: #fff;
 
+                @include PC {
+                    position: fixed;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: 1050;
+                    @include vw(width, 1058, 1055, 1055);
+                    @include vw(padding-bottom, 35, 1055, 1055);
+                }
+            }
+
+            .modal-block-inner {
+                @include PC {
+                    display: flex;
+                }
+
+                img {
                     @include PC {
-                        position: fixed;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                        z-index: 1050;
-                        @include vw(width, 1058, 1055, 1055);
-                        @include vw(padding-bottom, 35, 1055, 1055);
-                    }
-
-                    .modal-block-inner {
-                        @include PC {
-                            display: flex;
-                        }
-
-                        img {
-                            @include PC {
-                                @include vw(width, 300, 1055, 1055);
-                            }
-                        }
-
-                        .contents-block {
-                            @include vw(padding-left, 25, 1055, 1055);
-
-                            .txt-block {
-                                display: flex;
-                                align-items: center;
-                                justify-content: space-between;
-                                color: #9B565A;
-
-                                @include PC {
-                                    @include vw(width, 300, 1055, 1055);
-                                    @include vw(font-size, 23, 1055, 1055);
-                                }
-                            }
-
-                            .food-ttl-block {
-                                display: flex;
-                                align-items: baseline;
-
-                                h1 {
-                                    @include PC {
-                                        @include vw(font-size, 63, 1055, 1055)
-                                    }
-                                }
-
-                                p {
-                                    @include PC {
-                                        @include vw(font-size, 15, 1055, 1055);
-                                    }
-                                }
-                            }
-
-                            .address-block {
-                                @include PC {
-                                    @include vw(font-size, 20, 1055, 1055);
-                                    font-weight: bold;
-                                }
-                            }
-
-                            .time-block {
-                                @include PC {
-                                    color: #9B565A;
-                                    @include vw(font-size, 20, 1055, 1055);
-                                }
-
-                                p {
-                                    &:nth-child(2) {
-                                        @include vw(padding-top, 10, 1055, 1055);
-                                    }
-                                }
-                            }
-
-                            .btn-block {
-                                display: flex;
-
-                                @include PC {
-                                    @include vw(padding-top, 23, 1055, 1055);
-                                }
-
-                                .btn {
-                                    &:first-child {
-                                        @include vw(padding-right, 30, 1055, 1055);
-                                    }
-
-                                    a {
-                                        @include PC {
-                                            display: block;
-                                            color: #fff;
-                                            background: #000;
-                                            text-align: center;
-                                            @include vw(font-size, 20, 1055, 1055);
-                                            @include vw(width, 210, 1055, 1055);
-                                            @include vw(padding-top, 10, 1055, 1055);
-                                            @include vw(padding-bottom, 10, 1055, 1055);
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-                    .detail-block {
-                        .txt-block {
-                            display: flex;
-                            align-items: center;
-
-                            &:nth-child(n+1) {
-                                @include PC {
-                                    @include vw(margin-top, 15, 1055, 1055);
-                                }
-                            }
-
-                            .box_color {
-                                @include PC {
-                                    color: #9B565A;
-                                    font-weight: bold;
-                                    text-align: center;
-                                    border: 2px solid #9B565A;
-                                    @include vw(width, 140, 1055, 1055);
-                                    @include vw(border-width, 2, 1055, 1055);
-                                    @include vw(font-size, 20, 1055, 1055);
-                                    @include vw(padding-top, 5, 1055, 1055);
-                                    @include vw(padding-bottom, 5, 1055, 1055);
-                                }
-
-                                &:nth-child(n+1) {
-                                    @include vw(margin-left, 20, 1055, 1055);
-                                    @include vw(margin-right, 20, 1055, 1055);
-                                }
-                            }
-                        }
+                        @include vw(width, 300, 1055, 1055);
                     }
                 }
             }
-        }
-    }
-}
 
-.p-modal {
-    position: fixed;
-    display: block;
-    background-color: rgba(0, 0, 0, 0.7);
-    top: 0;
-    left: 0;
-    z-index: -1;
-    letter-spacing: 0.04em;
-    width: 100%;
-    height: 100%;
-    overflow-y: scroll;
-    opacity: 0;
-    visibility: hidden;
+            .contents-block {
+                @include vw(padding-left, 25, 1055, 1055);
+            }
 
-    &.is-open {
-        z-index: 999;
-        opacity: 1;
-        visibility: visible;
-        transition: opacity 1s linear, visibility 1s linear, z-index 1s linear;
-    }
-
-    .p-modal___bg {
-        content: "";
-        position: fixed;
-        top: 0;
-        left: 0;
-        display: block;
-        width: 100%;
-        height: 100%;
-    }
-
-    .p-modal___inner {
-        position: relative;
-        max-width: 750px;
-        height: 100%;
-        margin: 0 auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        pointer-events: none;
-
-
-        .p-modal__body {
-            position: relative;
-            width: 100%;
-            pointer-events: all;
-
-            .p-modal___close {
-                position: absolute;
-                right: -159px;
-                top: -260px;
+            .txt-block {
                 display: flex;
-                flex-direction: row-reverse;
+                align-items: center;
 
-                .close-btn {
-                    position: relative;
-                    cursor: pointer;
-                    width: 33px;
-                    height: 33px;
-                    margin: 0 auto;
+                &:nth-child(n+1) {
+                    @include PC {
+                        @include vw(margin-top, 15, 1055, 1055);
+                    }
+                }
 
-                    span {
-                        position: absolute;
-                        background-color: #fff;
-                        left: 0;
-                        width: 100%;
-                        height: 1px;
+                .box_color {
+                    @include PC {
+                        color: #9B565A;
+                        font-weight: bold;
+                        text-align: center;
+                        border: 2px solid #9B565A;
+                        @include vw(width, 140, 1055, 1055);
+                        @include vw(border-width, 2, 1055, 1055);
+                        @include vw(font-size, 20, 1055, 1055);
+                        @include vw(padding-top, 5, 1055, 1055);
+                        @include vw(padding-bottom, 5, 1055, 1055);
+                    }
 
-                        &:nth-child(1) {
-                            transform: rotate(-45deg);
-                        }
-
-                        &:nth-child(2) {
-                            transform: rotate(45deg);
-                        }
+                    &:nth-child(n+1) {
+                        @include vw(margin-left, 20, 1055, 1055);
+                        @include vw(margin-right, 20, 1055, 1055);
                     }
                 }
             }
 
-            .p-modal___mv {
-                .modal-container {
-                    box-shadow: 6px 6px 10px 0px rgba(3, 6, 12, 0.3);
-                    background-color: #fff;
-
-                    @include PC {
-                        position: fixed;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                        z-index: 1050;
-                        @include vw(width, 1058, 1055, 1055);
-                        @include vw(padding-bottom, 35, 1055, 1055);
-                    }
-
-                    .modal-block-inner {
-                        @include PC {
+            .p-modal {
+                position: fixed;
+                display: block;
+                background-color: rgba(0, 0, 0, 0.7);
+                top: 0;
+                left: 0;
+                z-index: -1;
+                letter-spacing: 0.04em;
+                width: 100%;
+                height: 100%;
+                overflow-y: scroll;
+                opacity: 0;
+                visibility: hidden;
+            
+                &.is-open {
+                    z-index: 999;
+                    opacity: 1;
+                    visibility: visible;
+                    transition: opacity 1s linear, visibility 1s linear, z-index 1s linear;
+                }
+            
+                .p-modal-bg {
+                    content: "";
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+            
+                .p-modal-inner {
+                    position: relative;
+                    max-width: 750px;
+                    height: 100%;
+                    margin: 0 auto;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    pointer-events: none;
+            
+                    .p-modal-body {
+                        position: relative;
+                        width: 100%;
+                        pointer-events: all;
+            
+                        .p-modal-close {
+                            position: absolute;
+                            right: -159px;
+                            top: -260px;
                             display: flex;
-                        }
-
-                        img {
-                            @include PC {
-                                @include vw(width, 300, 1055, 1055);
-                            }
-                        }
-
-                        .contents-block {
-                            @include vw(padding-left, 25, 1055, 1055);
-
-                            .txt-block {
-                                display: flex;
-                                align-items: center;
-                                justify-content: space-between;
-                                color: #9B565A;
-
-                                @include PC {
-                                    @include vw(width, 300, 1055, 1055);
-                                    @include vw(font-size, 23, 1055, 1055);
-                                }
-                            }
-
-                            .food-ttl-block {
-                                display: flex;
-                                align-items: baseline;
-
-                                h1 {
-                                    @include PC {
-                                        @include vw(font-size, 63, 1055, 1055)
+                            flex-direction: row-reverse;
+            
+                            .close-btn {
+                                position: relative;
+                                cursor: pointer;
+                                width: 33px;
+                                height: 33px;
+                                margin: 0 auto;
+            
+                                span {
+                                    position: absolute;
+                                    background-color: #fff;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 1px;
+            
+                                    &:nth-child(1) {
+                                        transform: rotate(-45deg);
                                     }
-                                }
-
-                                p {
-                                    @include PC {
-                                        @include vw(font-size, 15, 1055, 1055);
-                                    }
-                                }
-                            }
-
-                            .address-block {
-                                @include PC {
-                                    @include vw(font-size, 20, 1055, 1055);
-                                    font-weight: bold;
-                                }
-                            }
-
-                            .time-block {
-                                @include PC {
-                                    color: #9B565A;
-                                    @include vw(font-size, 20, 1055, 1055);
-                                }
-
-                                p {
+            
                                     &:nth-child(2) {
-                                        @include vw(padding-top, 10, 1055, 1055);
+                                        transform: rotate(45deg);
                                     }
                                 }
                             }
-
-                            .btn-block {
-                                display: flex;
-
+                        }
+            
+                        .modal-container {
+                            box-shadow: 6px 6px 10px 0px rgba(3, 6, 12, 0.3);
+                            background-color: #fff;
+            
+                            @include PC {
+                                position: fixed;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                z-index: 1050;
+                                @include vw(width, 1058, 1055, 1055);
+                                @include vw(padding-bottom, 35, 1055, 1055);
+                            }
+            
+                            .modal-block-inner {
                                 @include PC {
-                                    @include vw(padding-top, 23, 1055, 1055);
+                                    display: flex;
                                 }
-
-                                .btn {
-                                    &:first-child {
-                                        @include vw(padding-right, 30, 1055, 1055);
+            
+                                img {
+                                    @include PC {
+                                        @include vw(width, 300, 1055, 1055);
                                     }
-
-                                    a {
+                                }
+            
+                                .contents-block {
+                                    @include vw(padding-left, 25, 1055, 1055);
+            
+                                    .modal-text-block {
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: space-between;
+                                        color: #9B565A;
+            
                                         @include PC {
-                                            display: block;
-                                            color: #fff;
-                                            background: #000;
-                                            text-align: center;
+                                            @include vw(width, 300, 1055, 1055);
+                                            @include vw(font-size, 23, 1055, 1055);
+                                        }
+                                    }
+            
+                                    .food-title-block {
+                                        display: flex;
+                                        align-items: baseline;
+            
+                                        .food-title {
+                                            @include PC {
+                                                @include vw(font-size, 63, 1055, 1055)
+                                            }
+                                        }
+            
+                                        .food-price {
+                                            @include PC {
+                                                @include vw(font-size, 15, 1055, 1055);
+                                            }
+                                        }
+                                    }
+            
+                                    .address-block {
+                                        @include PC {
                                             @include vw(font-size, 20, 1055, 1055);
-                                            @include vw(width, 210, 1055, 1055);
-                                            @include vw(padding-top, 10, 1055, 1055);
-                                            @include vw(padding-bottom, 10, 1055, 1055);
+                                            font-weight: bold;
+                                        }
+                                    }
+            
+                                    .time-block {
+                                        @include PC {
+                                            color: #9B565A;
+                                            @include vw(font-size, 20, 1055, 1055);
+                                        }
+            
+                                        .time-text {
+                                            &:nth-child(2) {
+                                                @include vw(padding-top, 10, 1055, 1055);
+                                            }
+                                        }
+                                    }
+            
+                                    .modal-btn-block {
+                                        display: flex;
+            
+                                        @include PC {
+                                            @include vw(padding-top, 23, 1055, 1055);
+                                        }
+            
+                                        .modal-btn {
+                                            &:first-child {
+                                                @include vw(padding-right, 30, 1055, 1055);
+                                            }
+            
+                                            .modal-link {
+                                                @include PC {
+                                                    display: block;
+                                                    color: #fff;
+                                                    background: #000;
+                                                    text-align: center;
+                                                    @include vw(font-size, 20, 1055, 1055);
+                                                    @include vw(width, 210, 1055, 1055);
+                                                    @include vw(padding-top, 10, 1055, 1055);
+                                                    @include vw(padding-bottom, 10, 1055, 1055);
+                                                }
+                                            }
                                         }
                                     }
                                 }
                             }
-                        }
-                    }
-
-                    .detail-block {
-                        .txt-block {
-                            display: flex;
-                            align-items: center;
-
-                            &:nth-child(n+1) {
-                                @include PC {
-                                    @include vw(margin-top, 15, 1055, 1055);
-                                }
-                            }
-
-                            .box_color {
-                                @include PC {
-                                    color: #9B565A;
-                                    font-weight: bold;
-                                    text-align: center;
-                                    border: 2px solid #9B565A;
-                                    @include vw(width, 140, 1055, 1055);
-                                    @include vw(border-width, 2, 1055, 1055);
-                                    @include vw(font-size, 20, 1055, 1055);
-                                    @include vw(padding-top, 5, 1055, 1055);
-                                    @include vw(padding-bottom, 5, 1055, 1055);
-                                }
-
+            
+                            .detail-txt-block {
+                                display: flex;
+                                align-items: center;
+            
                                 &:nth-child(n+1) {
-                                    @include vw(margin-left, 20, 1055, 1055);
-                                    @include vw(margin-right, 20, 1055, 1055);
+                                    @include PC {
+                                        @include vw(margin-top, 15, 1055, 1055);
+                                    }
+                                }
+            
+                                .detail-box-color {
+                                    @include PC {
+                                        color: #9B565A;
+                                        font-weight: bold;
+                                        text-align: center;
+                                        border: 2px solid #9B565A;
+                                        @include vw(width, 140, 1055, 1055);
+                                        @include vw(border-width, 2, 1055, 1055);
+                                        @include vw(font-size, 20, 1055, 1055);
+                                        @include vw(padding-top, 5, 1055, 1055);
+                                        @include vw(padding-bottom, 5, 1055, 1055);
+                                    }
+            
+                                    &:nth-child(n+1) {
+                                        @include vw(margin-left, 20, 1055, 1055);
+                                        @include vw(margin-right, 20, 1055, 1055);
+                                    }
                                 }
                             }
                         }

@@ -16,7 +16,7 @@
 	<meta property="og:title" content="">
 	<meta property="og:description" content="">
 	<meta property="og:image" content="/assets/images/common/ogp.jpg">
-	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:food-card" content="summary_large_image">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<!-- Google Fonts -->
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,78 +34,84 @@
 
 <body>
 	<div class="l-container">
-		<header class="header">
-			<div class="top">
-				<div class="logo">
-					<img src="./assets/img/img_logo.png" alt="">
+		<header class="header-container">
+			<div class="header-top">
+				<div class="header-logo">
+					<picture>
+						<source media="(max-width: 768px)" srcset="./assets/img/img_logo.png">
+						<img src="./assets/img/img_logo.png" alt="">
+					</picture>
 				</div>
 			</div>
-			<div class="mv">
-				<img src="./assets/img/mv_visual.png" alt="">
+			<div class="header-mv">
+				<picture>
+					<source media="(max-width: 768px)" srcset="./assets/img/mv-sp.jpg">
+					<img src="./assets/img/mv-pc.jpg" alt="">
+				</picture>
 			</div>
 		</header>
-		<main class="main">
-			<section class="section-block">
+		<main class="main-container">
+			<section class="menu-container">
 				<div class="btn-box">
 					<div class="btn-top">
-						<a href="" class="lunch">
-							<p class="main-text">LUNCH</p>
-							<p class="sub-text">ランチ</p>
+						<a href="" class="btn-lunch">
+							<p class="btn-main-text">LUNCH</p>
+							<p class="btn-sub-text">ランチ</p>
 						</a>
 					</div>
 					<div class="btn-bottom">
 						<div class="btn-bottom-inner">
 							<a href="" class="morning">
-								<p class="main-text">MORNING</p>
-								<p class="sub-text">モーニング</p>
+								<p class="btn-main-text">MORNING</p>
+								<p class="btn-sub-text">モーニング</p>
 							</a>
 							<a href="" class="dinner">
-								<p class="main-text">DINNER</p>
-								<p class="sub-text">ディナー</p>
+								<p class="btn-main-text">DINNER</p>
+								<p class="btn-sub-text">ディナー</p>
 							</a>
 						</div>
 					</div>
 				</div>
 				<div class="menu-list">
 					<div class="menu-list-inner">
-						<ul class="item-block">
-							<li class="item">
-								<a href="/" class="link">
+						<ul class="menu-item-block">
+							<li class="menu-item-link">
+								<a href="/" class="menu-link">
 									パスタ
 								</a>
 							</li>
-							<li class="item">
-								<a href="/" class="link">
+							<li class="menu-item-link">
+								<a href="/" class="menu-link">
 									野菜
 								</a>
 							</li>
-							<li class="item">
-								<a href="/" class="link">
+							<li class="menu-item-link">
+								<a href="/" class="menu-link">
 									お肉
 								</a>
 							</li>
-							<li class="item">
-								<a href="/" class="link">
+							<li class="menu-item-link">
+								<a href="/" class="menu-link">
 									中華
 								</a>
 							</li>
-							<li class="item">
-								<a href="/" class="link">
+							<li class="menu-item-link">
+								<a href="/" class="menu-link">
 									エスニック
 								</a>
 							</li>
-							<li class="item">
-								<a href="/" class="link">
+							<li class="menu-item-link">
+								<a href="/" class="menu-link">
 									ラーメン
 								</a>
 							</li>
-							<li class="item">
-								<a href="/" class="link">
+							<li class="menu-item-link">
+								<a href="/" class="menu-link">
 									早い
 								</a>
 							</li>
-							<li class="item">
-								<a href="/" class="link">
+							<li class="menu-item-link">
+								<a href="/" class="menu-link">
 									予約可
 								</a>
 							</li>
@@ -113,179 +119,215 @@
 					</div>
 				</div>
 			</section>
-			<section class="section-block">
+			<section class="food-section-container">
 				<div class="food-list">
 					<div class="food-list-inner">
-						<ul class="food-block">
-							<li class="card">
+						<ul class="food-container">
+							<li class="food-card">
 								<a href="/" class="link">
-									<img src="./assets/img/img_food01.jpg" alt="">
+									<picture>
+										<source media="(max-width: 768px)" srcset="./assets/img/img-food01.jpg">
+										<img src="./assets/img/img-food01.jpg" alt="">
+									</picture>
 									<div class="hover-block">
-										<p>肉</p>
+										<p class="food-name">肉</p>
 									</div>
 								</a>
 							</li>
-							<li class="card">
+							<li class="food-card">
 								<a href="/" class="link">
-									<img src="./assets/img/img_food02.jpg" alt="">
+									<picture>
+										<source media="(max-width: 768px)" srcset="./assets/img/img-food02.jpg">
+										<img src="./assets/img/img-food02.jpg" alt="">
+									</picture>
 									<div class="hover-block">
-										<p>肉丼</p>
+										<p class="food-name">肉丼</p>
 									</div>
 								</a>
 							</li>
-							<li class="card">
+							<li class="food-card">
 								<a href="/" class="link">
-									<img src="./assets/img/img_food03.jpg" alt="">
+									<picture>
+										<source media="(max-width: 768px)" srcset="./assets/img/img-food03.jpg">
+										<img src="./assets/img/img-food03.jpg" alt="">
+									</picture>
 									<div class="hover-block">
-										<p>洋風</p>
+										<p class="food-name">洋風</p>
 									</div>
 								</a>
 							</li>
-							<li class="card">
+							<li class="food-card">
 								<a href="/" class="link">
-									<img src="./assets/img/img_food04.jpg" alt="">
+									<picture>
+										<source media="(max-width: 768px)" srcset="./assets/img/img-food04.jpg">
+										<img src="./assets/img/img-food04.jpg" alt="">
+									</picture>
 									<div class="hover-block">
-										<p>エスニック</p>
+										<p class="food-name">エスニック</p>
 									</div>
 								</a>
 							</li>
-							<li class="card">
+							<li class="food-card">
 								<a href="/" class="link">
-									<img src="./assets/img/img_food05.jpg" alt="">
+									<picture>
+										<source media="(max-width: 768px)" srcset="./assets/img/img-food05.jpg">
+										<img src="./assets/img/img-food05.jpg" alt="">
+									</picture>
 									<div class="hover-block">
-										<p>喫茶店</p>
+										<p class="food-name">喫茶店</p>
 									</div>
 								</a>
 							</li>
-							<li class="card">
+							<li class="food-card">
 								<a href="/" class="link">
-									<img src="./assets/img/img_food06.jpg" alt="">
+									<picture>
+										<source media="(max-width: 768px)" srcset="./assets/img/img-food06.jpg">
+										<img src="./assets/img/img-food06.jpg" alt="">
+									</picture>
 									<div class="hover-block">
-										<p>ハンバーグ</p>
+										<p class="food-name">ハンバーグ</p>
 									</div>
 								</a>
 							</li>
-							<li class="card">
+							<li class="food-card">
 								<a href="/" class="link">
-									<img src="./assets/img/img_food07.jpg" alt="">
+									<picture>
+										<source media="(max-width: 768px)" srcset="./assets/img/img-food01.jpg">
+										<img src="./assets/img/img-food01.jpg" alt="">
+									</picture>
 									<div class="hover-block">
-										<p>肉</p>
+										<p class="food-name">肉</p>
 									</div>
 								</a>
 							</li>
-							<li class="card">
+							<li class="food-card">
 								<a href="/" class="link">
-									<img src="./assets/img/img_food08.jpg" alt="">
+									<picture>
+										<source media="(max-width: 768px)" srcset="./assets/img/img-food02.jpg">
+										<img src="./assets/img/img-food02.jpg" alt="">
+									</picture>
 									<div class="hover-block">
-										<p>肉丼</p>
+										<p class="food-name">肉丼</p>
 									</div>
 								</a>
 							</li>
-							<li class="card">
-								<button href="/" class="button js-modal-button"> 
-									<img src="./assets/img/img_food09.jpg" alt="">
+							<li class="food-card">
+								<button href="/" class="button js-modal-button">
+									<picture>
+										<source media="(max-width: 768px)" srcset="./assets/img/img-food07.jpg">
+										<img src="./assets/img/img-food07.jpg" alt="">
+									</picture>
 									<div class="hover-block">
-										<p>揚げ物</p>
+										<p class="food-name">揚げ物</p>
 									</div>
 								</button>
 							</li>
-							<li class="card">
+							<li class="food-card">
 								<button href="/" class="link">
-									<img src="./assets/img/img_food10.jpg" alt="">
+									<picture>
+										<source media="(max-width: 768px)" srcset="./assets/img/img-food03.jpg">
+										<img src="./assets/img/img-food03.jpg" alt="">
+									</picture>
 									<div class="hover-block">
-										<p>洋風</p>
+										<p class="food-name">洋風</p>
 									</div>
 								</button>
 							</li>
-							<li class="card">
+							<li class="food-card">
 								<a href="/" class="link">
-									<img src="./assets/img/img_food11.jpg" alt="">
+									<picture>
+										<source media="(max-width: 768px)" srcset="./assets/img/img-food04.jpg">
+										<img src="./assets/img/img-food04.jpg" alt="">
+									</picture>
 									<div class="hover-block">
-										<p>エスニック</p>
+										<p class="food-name">エスニック</p>
 									</div>
 								</a>
 							</li>
-							<li class="card">
+							<li class="food-card">
 								<a href="/" class="link">
-									<img src="./assets/img/img_food12.jpg" alt="">
+									<picture>
+										<source media="(max-width: 768px)" srcset="./assets/img/img-food05.jpg">
+										<img src="./assets/img/img-food05.jpg" alt="">
+									</picture>
 									<div class="hover-block">
-										<p>肉丼</p>
+										<p class="food-name">喫茶店</p>
 									</div>
 								</a>
 							</li>
 						</ul>
 					</div>
-					<div class="btn-block">
-						<a href="/" class="link">
+					<div class="food-btn-block">
+						<a href="/" class="food-btn-link">
 							さらに表示
 						</a>
 					</div>
 				</div>
 			</section>
-			<section class="section-block">
+			<section class="message-container">
 				<div class="message-block"></div>
 			</section>
 		</main>
-		<footer class="footer">
+		<footer class="footer-container">
 			<ul class="link-list">
-				<li class="item">
+				<li class="link-item">
 					<a href="/" class="link">
-					お問い合わせ	
+					お問い合わせ
 					</a>
 				</li>
-				<li class="item">
+				<li class="link-item">
 					<a href="/" class="link">
-					サイトについて	
+					サイトについて
 					</a>
 				</li>
-				<li class="item">
+				<li class="link-item">
 					<a href="/" class="link">
-					ご利用規約	
+					ご利用規約
 					</a>
 				</li>
 			</ul>
 		</footer>
 		<div class="p-modal js-modal" id="modal-mv">
-			<div class="p-modal___bg"></div>
-			<div class="p-modal___inner">
-				<div class="p-modal__body">
-					<div class="p-modal___close js-close-button">
+			<div class="p-modal-bg"></div>
+			<div class="p-modal-inner">
+				<div class="p-modal-body">
+					<div class="p-modal-close js-close-button">
 						<div class="close-btn">
 							<span></span>
 							<span></span>
 						</div>
 					</div>
-					<div class="p-modal___mv">
+					<div class="p-modal-mv">
 						<div class="modal-container">
 							<div class="modal-block-inner">
 								<div class="img">
 									<img src="./assets/img/img_food09.jpg" alt="">
 								</div>
 								<div class="contents-block pt">
-									<div class="txt-block">
-										<p>#揚げ物</p>
-										<p>#鶏肉</p>
-										<p>#人気店</p>
+									<div class="modal-text-block">
+										<p class="modal-text-item">#揚げ物</p>
+										<p class="modal-text-item">#鶏肉</p>
+										<p class="modal-text-item">#人気店</p>
 									</div>
-									<div class="food-ttl-block pt">
-										<h1>イマカツ</h1>
-										<p>¥1500〜¥3000</p>
+									<div class="food-title-block pt">
+										<h1 class="food-title">イマカツ</h1>
+										<p class="food-price">¥1500〜¥3000</p>
 									</div>
 									<div class="address-block pt">
-										<p>〒104-0061 東京都中央区銀座4丁目13-18</p>
+										<p class="address-text">〒104-0061 東京都中央区銀座4丁目13-18</p>
 									</div>
 									<div class="time-block pt">
-										<p>11時30分～16時00分</p>
-										<p>18時00分～22時00分</p>
+										<p class="time-text">11時30分～16時00分</p>
+										<p class="time-text">18時00分～22時00分</p>
 									</div>
-									<div class="btn-block">
-										<div class="btn">
-											<a href="" class="link">
+									<div class="modal-btn-block">
+										<div class="moda-btn">
+											<a href="" class="modal-link">
 												Google Map
 											</a>
 										</div>
-										<div class="btn">
-											<a href="" class="link">
+										<div class="modal-btn">
+											<a href="" class="modal-link">
 												TABELOGで予約
 											</a>
 										</div>
@@ -293,22 +335,21 @@
 								</div>
 							</div>
 							<div class="detail-block">
-								<div class="txt-block">
-									<p class="box_color">料理</p>
-									<p>人気の鳥かつ</p>
+								<div class="detail-text-block">
+									<p class="detail-box-color">料理</p>
+									<p class="detail-food-name">人気の鳥かつ</p>
 								</div>
-								<div class="txt-block">
+								<div class="detail-text-block">
 									<p class="box_color">雰囲気</p>
-									<p>お手頃・入りやすい</p>
+									<p class="detail-food-name">お手頃・入りやすい</p>
 								</div>
-								<div class="txt-block">
-									<p class="box_color">推しポイント</p>
-									<p>鳥かつはこんなにジューシなんて！今まで食べていたものはなんだったんですかね？</p>
+								<div class="detail-text-block">
+									<p class="detail-box-color">推しポイント</p>
+									<p class="detail-food-name">鳥かつはこんなにジューシなんて！今まで食べていたものはなんだったんですかね？</p>
 								</div>
 							</div>
 						</div>
 					</div>
-
 				</div>
 			</div>
 		</div>
