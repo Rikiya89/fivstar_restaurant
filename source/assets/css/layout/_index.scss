@@ -7,6 +7,7 @@
         @include PC {
             display: none !important;
         }
+
         @include SP {
             display: block !important;
         }
@@ -16,6 +17,7 @@
         @include PC {
             display: flex !important;
         }
+
         @include SP {
             display: none !important;
         }
@@ -32,11 +34,13 @@
         background-color: #fff;
         font-family: "Shippori Mincho B1", serif, "Yu Gothic", sans-serif;
 
-        .l-container {
+        //Top Page Style
+        .l-main-container {
             .pt {
                 @include PC {
                     @include vw(padding-top, 10, 1055, 1055);
                 }
+
                 @include SP {
                     @include vw(padding-top, 20, 750, 750);
                 }
@@ -279,6 +283,7 @@
                     @include PC {
                         @include vw(padding-top, 90, 1055, 1055);
                     }
+
                     @include SP {
                         @include vw(padding-top, 90, 750, 750);
                     }
@@ -362,12 +367,14 @@
                         background: #000;
                         color: #fff;
                         font-weight: bold;
+
                         @include PC {
                             @include vw(width, 250, 1055, 1055);
                             @include vw(font-size, 25, 1055, 1055);
                             @include vw(padding-top, 15, 1055, 1055);
                             @include vw(padding-bottom, 15, 1055, 1055);
                         }
+
                         @include SP {
                             @include vw(width, 300, 640, 640);
                             @include vw(font-size, 30, 640, 640);
@@ -383,14 +390,16 @@
                     background-position: center;
                     background-repeat: no-repeat;
                     background-image: url('../img/img_morning_message.png');
+
                     @include PC {
                         @include vw(padding-top, 630, 1055, 1055);
                         @include vw(width, 750, 1055, 1055);
                         @include vw(min-height, 120, 1055, 1055);
                     }
+
                     @include SP {
                         @include vw(padding-top, 420, 640, 640);
-                        @include vw(width, 630,  640, 640);
+                        @include vw(width, 630, 640, 640);
                     }
                 }
             }
@@ -401,11 +410,13 @@
                     color: #fff;
                     align-items: center;
                     background: #B89D9C;
+
                     @include PC {
                         @include vw(font-size, 25, 1366, 1366);
                         @include vw(padding-top, 25, 1366, 1366);
                         @include vw(padding-bottom, 25, 1366, 1366);
                     }
+
                     @include SP {
                         justify-content: space-around;
                         @include vw(font-size, 25, 750, 750);
@@ -419,6 +430,7 @@
                                 @include vw(padding-left, 155, 1366, 1366);
                                 @include vw(padding-right, 120, 1366, 1366);
                             }
+
                             @include SP {
                                 @include vw(padding-left, 0, 750, 750);
                                 @include vw(padding-right, 0, 750, 750);
@@ -429,6 +441,7 @@
                             @include PC {
                                 @include vw(padding-right, 120, 1366, 1366);
                             }
+
                             @include SP {
                                 @include vw(padding-right, 0, 750, 750);
                             }
@@ -441,6 +454,7 @@
                 @include PC {
                     @include vw(padding-left, 25, 1055, 1055);
                 }
+
                 @include SP {
                     display: contents;
                 }
@@ -548,6 +562,7 @@
 
                 .modal-block-inner {
                     display: flex;
+
                     @include SP {
                         flex-wrap: wrap;
                     }
@@ -556,6 +571,7 @@
                         @include PC {
                             @include vw(width, 300, 1055, 1055);
                         }
+
                         @include SP {
                             @include vw(width, 320, 750, 750);
                         }
@@ -569,7 +585,7 @@
                     display: flex;
                     flex-direction: row-reverse;
 
-                    @include PC{
+                    @include PC {
                         @include vw(right, 9, 1055, 1055);
                         @include vw(top, 21, 1055, 1055);
                     }
@@ -623,6 +639,7 @@
                         @include vw(width, 300, 1055, 1055);
                         @include vw(font-size, 23, 1055, 1055);
                     }
+
                     @include SP {
                         @include vw(width, 290, 750, 750);
                         @include vw(font-size, 20, 750, 750);
@@ -634,10 +651,12 @@
                         @include vw(padding-top, 45, 750, 750);
                         @include vw(padding-left, 40, 750, 750);
                     }
+
                     .food-title {
                         @include PC {
                             @include vw(font-size, 75, 1055, 1055)
                         }
+
                         @include SP {
                             @include vw(font-size, 70, 750, 750);
                             text-align: center;
@@ -648,6 +667,7 @@
                         @include PC {
                             @include vw(font-size, 18, 1055, 1055);
                         }
+
                         @include SP {
                             text-align: center;
                             @include vw(font-size, 25, 750, 750);
@@ -659,10 +679,12 @@
                     color: #9B565A;
                     font-weight: bold;
                     line-height: 1.5;
+
                     @include PC {
                         display: flex;
                         @include vw(font-size, 20, 1055, 1055);
                     }
+
                     @include SP {
                         text-align: center;
                         @include vw(font-size, 25, 750, 750);
@@ -687,16 +709,17 @@
 
                     .modal-btn {
                         @include SP {
-                            @include vw(padding-top, 40,  750, 750);
+                            @include vw(padding-top, 40, 750, 750);
                         }
 
                         &:first-child {
                             @include PC {
                                 @include vw(padding-right, 30, 1055, 1055);
                             }
+
                             @include SP {
-                                @include vw(padding-right, 30,  750, 750);
-                                @include vw(padding-left, 40,  750, 750);
+                                @include vw(padding-right, 30, 750, 750);
+                                @include vw(padding-left, 40, 750, 750);
                             }
                         }
 
@@ -705,17 +728,19 @@
                             color: #fff;
                             background: #000;
                             text-align: center;
+
                             @include PC {
                                 @include vw(font-size, 20, 1055, 1055);
                                 @include vw(width, 210, 1055, 1055);
                                 @include vw(padding-top, 10, 1055, 1055);
                                 @include vw(padding-bottom, 10, 1055, 1055);
                             }
+
                             @include SP {
-                                @include vw(font-size, 30,  750, 750);
-                                @include vw(width, 300,  750, 750);
-                                @include vw(padding-top, 20,  750, 750);
-                                @include vw(padding-bottom, 20,  750, 750);
+                                @include vw(font-size, 30, 750, 750);
+                                @include vw(width, 300, 750, 750);
+                                @include vw(padding-top, 20, 750, 750);
+                                @include vw(padding-bottom, 20, 750, 750);
                             }
                         }
                     }
@@ -749,6 +774,7 @@
                         font-weight: bold;
                         text-align: center;
                         border: 2px solid #9B565A;
+
                         @include PC {
                             @include vw(width, 140, 1055, 1055);
                             @include vw(border-width, 2, 1055, 1055);
@@ -756,12 +782,13 @@
                             @include vw(padding-top, 5, 1055, 1055);
                             @include vw(padding-bottom, 5, 1055, 1055);
                         }
+
                         @include SP {
-                            @include vw(width, 160,  750, 750);
-                            @include vw(border-width, 2,  750, 750);
-                            @include vw(font-size, 24,  750, 750);
-                            @include vw(padding-top, 5,  750, 750);
-                            @include vw(padding-bottom, 5,  750, 750);
+                            @include vw(width, 160, 750, 750);
+                            @include vw(border-width, 2, 750, 750);
+                            @include vw(font-size, 24, 750, 750);
+                            @include vw(padding-top, 5, 750, 750);
+                            @include vw(padding-bottom, 5, 750, 750);
                         }
 
                         &:nth-child(n+1) {
@@ -769,20 +796,237 @@
                                 @include vw(margin-left, 20, 1055, 1055);
                                 @include vw(margin-right, 20, 1055, 1055);
                             }
+
                             @include SP {
-                                @include vw(margin-left, 20,  750, 750);
-                                @include vw(margin-right, 20,  750, 750);
+                                @include vw(margin-left, 20, 750, 750);
+                                @include vw(margin-right, 20, 750, 750);
                             }
                         }
                     }
 
                     .detail-food-text {
                         line-height: 1.5;
+
                         @include PC {
                             @include vw(font-size, 20, 1055, 1055);
                         }
+
                         @include SP {
-                            @include vw(font-size, 30,  750, 750);
+                            @include vw(font-size, 30, 750, 750);
+                        }
+                    }
+                }
+            }
+        }
+
+
+        //From Page Style
+        .l-form-container {
+            .pt {
+                @include PC {
+                    @include vw(padding-top, 10, 1366, 1366);
+                }
+
+                @include SP {
+                    @include vw(padding-top, 20, 750, 750);
+                }
+            }
+
+            .header-top {
+                background-color: #F8F8F8;
+
+                .header-logo {
+                    @include PC {
+                        @include vw(padding-top, 15, 1366, 1366);
+                        @include vw(padding-bottom, 15, 1366, 1366);
+                    }
+
+                    @include SP {
+                        @include vw(padding-top, 30, 750, 1366);
+                        @include vw(padding-bottom, 30, 750, 1366);
+                    }
+
+                    img {
+                        margin: 0 auto;
+
+                        @include PC {
+                            @include vw(width, 90, 1366, 1366);
+                        }
+
+                        @include SP {
+                            @include vw(width, 140, 750, 1366);
+                        }
+                    }
+                }
+            }
+
+            .main-container {
+                .main-container-inner {
+                    margin-left: auto;
+                    margin-right: auto;
+
+                    @include PC {
+                        max-width: 1055px;
+                    }
+                }
+
+                .contact-form {
+                    @include PC {
+                        @include vw(padding-top, 90, 1366, 1366);
+                        @include vw(padding-bottom, 150, 1366, 1366);
+                    }
+                }
+
+                .contact-form-title {
+                    text-align: center;
+                    color: #533d4e;
+
+                    @include PC {
+                        @include vw(font-size, 50, 1366, 1366);
+                        @include vw(margin-bottom, 80, 1366, 1366);
+                    }
+                }
+
+                .form-group-container {
+                    @include PC {
+                        @include vw(margin-bottom, 50, 1366, 1366);
+                    }
+                }
+
+                .form-group-label {
+                    display: block;
+                    margin-bottom: 0.5rem;
+                    color: #9B565A;
+
+                    @include PC {
+                        @include vw(font-size, 30, 1366, 1366);
+                    }
+
+                    .form-group-required {
+                        color: red;
+
+                        @include PC {
+                            @include vw(font-size, 15, 1366, 1366);
+                        }
+                    }
+                }
+
+                .form-group-sup {
+                    color: red;
+                    vertical-align: super;
+
+                    @include PC {
+                        @include vw(font-size, 20, 1366, 1366);
+                    }
+                }
+
+                .form-group-input,
+                .form-group-textarea {
+                    border: 1px solid #ccc;
+
+                    @include PC {
+                        @include vw(font-size, 20, 1366, 1366);
+                        @include vw(padding, 15, 1366, 1366);
+                    }
+                }
+
+                .form-group-textarea {
+                    resize: vertical;
+
+                    @include PC {
+                        @include vw(height, 380, 1366, 1366);
+                    }
+                }
+
+                .form-name-group {
+
+                    .form-group-input,
+                    .form-group-textarea {
+                        @include PC {
+                            @include vw(width, 545, 1366, 1366);
+                        }
+                    }
+                }
+
+                .form-topic-group {
+
+                    .form-group-input,
+                    .form-group-textarea {
+                        @include PC {
+                            @include vw(width, 1015, 1366, 1366);
+                        }
+                    }
+                }
+
+                .form-content-group {
+
+                    .form-group-input,
+                    .form-group-textarea {
+                        @include PC {
+                            @include vw(width, 1015, 1366, 1366);
+                        }
+                    }
+                }
+
+                .form-button {
+                    padding: 1rem;
+                    background-color: #000;
+                    color: #fff;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: background-color 0.3s;
+
+                    @include PC {
+                        @include vw(width, 250, 1366, 1366);
+                    }
+
+                    &:hover {
+                        background-color: #333;
+                    }
+                }
+            }
+
+            .footer-container {
+                .link-list {
+                    display: flex;
+                    color: #fff;
+                    align-items: center;
+                    background: #B89D9C;
+
+                    @include PC {
+                        @include vw(font-size, 25, 1366, 1366);
+                        @include vw(padding-top, 25, 1366, 1366);
+                        @include vw(padding-bottom, 25, 1366, 1366);
+                    }
+
+                    @include SP {
+                        justify-content: space-around;
+                        @include vw(font-size, 25, 750, 750);
+                        @include vw(padding-top, 50, 750, 750);
+                        @include vw(padding-bottom, 50, 750, 750);
+                    }
+                }
+                .link-item {
+                    &:first-child {
+                        @include PC {
+                            @include vw(padding-left, 155, 1366, 1366);
+                            @include vw(padding-right, 120, 1366, 1366);
+                        }
+
+                        @include SP {
+                            @include vw(padding-left, 0, 750, 750);
+                            @include vw(padding-right, 0, 750, 750);
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        @include PC {
+                            @include vw(padding-right, 120, 1366, 1366);
+                        }
+
+                        @include SP {
+                            @include vw(padding-right, 0, 750, 750);
                         }
                     }
                 }

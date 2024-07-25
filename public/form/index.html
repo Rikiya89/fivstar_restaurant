@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<!-- head section -->
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+
+	<title>FiveStar Restaurant</title>
+	<meta name="description" content="FiveStar">
+	<meta name="keywords" content="FiveStar">
+
+	<meta property="og:title" content="">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="/assets/images/common/ogp.jpg">
+	<meta name="twitter:food-card" content="summary_large_image">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1&display=swap" rel="stylesheet">
+	<link rel="icon" href="/assets/images/common/favicon.ico">
+	<link rel="apple-touch-icon" href="/assets/images/common/apple-touch-icon.png">
+
+	<link rel="stylesheet" href="/assets/css/common.css">
+	<!-- Material Icon CDN -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<!-- body section -->
+
+<body>
+	<div class="l-form-container">
+        <header class="header-container">
+            <div class="header-top">
+                <div class="header-logo">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="../assets/img/sp-logo.png">
+                        <img src="../assets/img/pc-logo.png" alt="Logo">
+                    </picture>
+                </div>
+            </div>
+        </header>
+        <main class="main-container">
+			<div class="main-container-inner">
+				<form action="/submit_contact" method="POST" class="contact-form">
+					<h1 class="contact-form-title">お問い合わせフォーム</h1>
+					<div class="form-name-group form-group-container">
+						<label for="name" class="form-group-label">お名前<sup class="form-group-sup">*</sup> <span class="form-group-required">(匿名可)</span></label>
+						<input type="text" id="name" name="name" class="form-group-input" placeholder="例：ファイブスターカフェ" required>
+					</div>
+					<div class="form-topic-group form-group-container">
+						<label for="topic" class="form-group-label">トピック<sup class="form-group-sup">*</sup> </label>
+						<input type="text" id="topic" name="topic" class="form-group-input" placeholder="例：投稿について、タグについて…" required>
+					</div>
+					<div class="form-content-group form-group-container">
+						<label for="content" class="form-group-label">内容<sup class="form-group-sup">*</sup> </label>
+						<textarea id="content" name="content" class="form-group-textarea" placeholder="例：○○タグを追加してください・投稿を送信しましたがまだ反映されていません…" required></textarea>
+					</div>
+					<div class="form-button-container">
+						<button type="submit" class="form-button">送信</button>
+					</div>
+				</form>
+			</div>
+        </main>
+        <footer class="footer-container">
+            <ul class="link-list">
+                <li class="link-item">
+                    <a href="/" class="link">お問い合わせ</a>
+                </li>
+                <li class="link-item">
+                    <a href="/" class="link">サイトについて</a>
+                </li>
+                <li class="link-item">
+                    <a href="/" class="link">ご利用規約</a>
+                </li>
+            </ul>
+        </footer>
+    </div>
+</body>
+
+<script src="assets/js/common.js"></script>
+
+</html>
