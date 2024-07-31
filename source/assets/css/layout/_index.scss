@@ -93,7 +93,6 @@
 
             .main-container {
                 width: 100%;
-                background-position: top;
                 background-repeat: no-repeat;
                 background-size: cover;
 
@@ -108,6 +107,22 @@
                 .btn-box {
                     text-align: center;
                     padding-top: 15px;
+                    position: relative;
+
+                    &::before {
+                        @include PC {
+                            content: '';
+                            position: absolute;
+                            background: url(../img/pc-triangle.png);
+                            bottom: 0;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            @include vw(width, 35, 1366, 1366);
+                            @include vw(height, 30, 1366, 1366);
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                        }
+                    }
                 }
 
                 .btn-lunch {
@@ -819,7 +834,6 @@
             }
         }
 
-
         //From Page Style
         .l-form-container {
             .pt {
@@ -861,12 +875,20 @@
             }
 
             .main-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
                 .main-container-inner {
                     margin-left: auto;
                     margin-right: auto;
 
                     @include PC {
                         max-width: 1055px;
+                    }
+
+                    @include SP {
+                        max-width: 630px;
                     }
                 }
 
@@ -875,21 +897,35 @@
                         @include vw(padding-top, 90, 1366, 1366);
                         @include vw(padding-bottom, 150, 1366, 1366);
                     }
+
+                    @include SP {
+                        @include vw(margin-top, 60, 750, 750);
+                        @include vw(margin-bottom, 150, 750, 750);
+                    }
                 }
 
                 .contact-form-title {
                     text-align: center;
-                    color: #533d4e;
+                    color: #490E2A;
 
                     @include PC {
                         @include vw(font-size, 50, 1366, 1366);
                         @include vw(margin-bottom, 80, 1366, 1366);
+                    }
+
+                    @include SP {
+                        @include vw(font-size, 40, 750, 750);
+                        @include vw(margin-bottom, 90, 750, 750);
                     }
                 }
 
                 .form-group-container {
                     @include PC {
                         @include vw(margin-bottom, 50, 1366, 1366);
+                    }
+
+                    @include SP {
+                        @include vw(margin-bottom, 50, 750, 750);
                     }
                 }
 
@@ -902,11 +938,19 @@
                         @include vw(font-size, 30, 1366, 1366);
                     }
 
+                    @include SP {
+                        @include vw(font-size, 30, 750, 750);
+                    }
+
                     .form-group-required {
                         color: red;
 
                         @include PC {
                             @include vw(font-size, 15, 1366, 1366);
+                        }
+
+                        @include SP {
+                            @include vw(font-size, 20, 750, 750);
                         }
                     }
                 }
@@ -918,6 +962,10 @@
                     @include PC {
                         @include vw(font-size, 20, 1366, 1366);
                     }
+
+                    @include SP {
+                        @include vw(font-size, 20, 750, 750);
+                    }
                 }
 
                 .form-group-input,
@@ -928,6 +976,12 @@
                         @include vw(font-size, 20, 1366, 1366);
                         @include vw(padding, 15, 1366, 1366);
                     }
+
+                    @include SP {
+                        @include vw(font-size, 25, 750, 750);
+                        @include vw(padding, 15, 750, 750);
+                        line-height: calc(41 / 24);
+                    }
                 }
 
                 .form-group-textarea {
@@ -935,6 +989,10 @@
 
                     @include PC {
                         @include vw(height, 380, 1366, 1366);
+                    }
+
+                    @include SP {
+                        @include vw(height, 420, 750, 750);
                     }
                 }
 
@@ -944,6 +1002,10 @@
                     .form-group-textarea {
                         @include PC {
                             @include vw(width, 545, 1366, 1366);
+                        }
+
+                        @include SP {
+                            @include vw(width, 630, 750, 750);
                         }
                     }
                 }
@@ -955,6 +1017,10 @@
                         @include PC {
                             @include vw(width, 1015, 1366, 1366);
                         }
+
+                        @include SP {
+                            @include vw(width, 630, 750, 750);
+                        }
                     }
                 }
 
@@ -965,20 +1031,30 @@
                         @include PC {
                             @include vw(width, 1015, 1366, 1366);
                         }
+
+                        @include SP {
+                            @include vw(width, 630, 750, 750);
+                        }
                     }
                 }
 
                 .form-button {
+                    display: block;
+                    margin: 0 auto;
                     padding: 1rem;
                     background-color: #000;
                     color: #fff;
                     border: none;
-                    border-radius: 5px;
                     cursor: pointer;
                     transition: background-color 0.3s;
 
                     @include PC {
                         @include vw(width, 250, 1366, 1366);
+                    }
+
+                    @include SP {
+                        @include vw(width, 300, 750, 750);
+                        @include vw(font-size, 30, 750, 750);
                     }
 
                     &:hover {
@@ -1007,6 +1083,811 @@
                         @include vw(padding-bottom, 50, 750, 750);
                     }
                 }
+
+                .link-item {
+                    &:first-child {
+                        @include PC {
+                            @include vw(padding-left, 155, 1366, 1366);
+                            @include vw(padding-right, 120, 1366, 1366);
+                        }
+
+                        @include SP {
+                            @include vw(padding-left, 0, 750, 750);
+                            @include vw(padding-right, 0, 750, 750);
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        @include PC {
+                            @include vw(padding-right, 120, 1366, 1366);
+                        }
+
+                        @include SP {
+                            @include vw(padding-right, 0, 750, 750);
+                        }
+                    }
+                }
+            }
+        }
+
+        //About Page Style
+        .l-about-container {
+            .header-top {
+                background-color: #F8F8F8;
+
+                .header-logo {
+                    @include PC {
+                        @include vw(padding-top, 15, 1366, 1366);
+                        @include vw(padding-bottom, 15, 1366, 1366);
+                    }
+
+                    @include SP {
+                        @include vw(padding-top, 30, 750, 1366);
+                        @include vw(padding-bottom, 30, 750, 1366);
+                    }
+
+                    img {
+                        margin: 0 auto;
+
+                        @include PC {
+                            @include vw(width, 90, 1366, 1366);
+                        }
+
+                        @include SP {
+                            @include vw(width, 140, 750, 1366);
+                        }
+                    }
+                }
+            }
+
+            .main-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                .main-container-inner {
+                    margin-left: auto;
+                    margin-right: auto;
+
+                    @include PC {
+                        max-width: 1055px;
+                        @include vw(margin-top, 90, 1366, 1366);
+                        @include vw(margin-bottom, 105, 1366, 1366);
+                    }
+
+                    @include SP {
+                        max-width: 630px;
+                        @include vw(margin-top, 60, 750, 750);
+                    }
+                }
+
+                .about-title {
+                    text-align: center;
+                    color: #490E2A;
+
+                    @include PC {
+                        @include vw(font-size, 50, 1366, 1366);
+                        @include vw(margin-bottom, 125, 1366, 1366);
+                    }
+
+                    @include SP {
+                        @include vw(font-size, 40, 750, 750);
+                        @include vw(margin-bottom, 90, 750, 750);
+                    }
+                }
+
+                .about-quote {
+                    text-align: center;
+                    color: #9B565A;
+
+                    @include PC {
+                        @include vw(font-size, 30, 1366, 1366);
+                        @include vw(margin-bottom, 30, 1366, 1366);
+                    }
+
+                    @include SP {
+                        @include vw(font-size, 25, 750, 750);
+                        @include vw(margin-bottom, 50, 750, 750);
+                    }
+
+                    img {
+                        @include PC {
+                            display: block;
+                            margin: 0 auto;
+                            @include vw(width, 650, 1366, 1366);
+                        }
+                    }
+                }
+
+                .about-description {
+                    text-align: center;
+                    color: #9B565A;
+
+                    @include PC {
+                        @include vw(font-size, 20, 1366, 1366);
+                        @include vw(margin-bottom, 147, 1366, 1366);
+                        line-height: calc(34 / 20);
+                    }
+
+                    @include SP {
+                        @include vw(font-size, 30, 750, 750);
+                        @include vw(margin-bottom, 150, 750, 750);
+                        line-height: calc(42 / 30);
+                    }
+                }
+
+                .project-title {
+                    color: #9B565A;
+
+                    @include PC {
+                        text-align: left;
+                        @include vw(font-size, 30, 1366, 1366);
+                        @include vw(margin-bottom, 30, 1366, 1366);
+                    }
+
+                    @include SP {
+                        text-align: center;
+                        @include vw(font-size, 35, 750, 750);
+                        @include vw(margin-bottom, 50, 750, 750);
+                    }
+                }
+
+                .project-members {
+                    @include PC {
+                        display: flex;
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+                        @include vw(margin-bottom, 50, 1366, 1366);
+                    }
+
+                    @include SP {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        justify-items: center;
+                        @include vw(margin-bottom, 110, 750, 750);
+                    }
+                }
+
+                .member {
+                    text-align: center;
+
+                    @include PC {
+                        @include vw(width, 180, 1366, 1366);
+                    }
+
+                    @include SP {
+                        @include vw(width, 250, 750, 750);
+                    }
+
+                    &:not(:nth-child(4n)) {
+                        @include PC {
+                            @include vw(margin-right, 80, 1366, 1366);
+                        }
+                    }
+
+                    &:nth-child(-n+2) {
+                        @include SP {
+                            @include vw(margin-bottom, 25, 750, 750);
+                        }
+                    }
+                }
+
+                .member-name {
+                    font-weight: bold;
+                    color: #490E2A;
+                    text-align: left;
+
+                    @include PC {
+                        @include vw(font-size, 20, 1366, 1366);
+                        @include vw(margin-top, 5, 1366, 1366);
+                        @include vw(margin-bottom, 10, 1366, 1366);
+                    }
+
+                    @include SP {
+                        @include vw(font-size, 24, 750, 750);
+                        @include vw(margin-top, 15, 750, 750);
+                        @include vw(margin-bottom, 10, 750, 750);
+                    }
+                }
+
+                .member-role {
+                    color: #490E2A;
+                    text-align: left;
+
+                    @include PC {
+                        @include vw(font-size, 15, 1366, 1366);
+                        @include vw(margin-bottom, 10, 1366, 1366);
+                    }
+
+                    @include SP {
+                        @include vw(font-size, 24, 750, 750);
+                        @include vw(margin-bottom, 30, 750, 750);
+                    }
+                }
+
+                .member-description {
+                    color: #490E2A;
+                    text-align: left;
+
+                    @include PC {
+                        @include vw(font-size, 15, 1366, 1366);
+                        @include vw(margin-top, 25, 1366, 1366);
+                        line-height: calc(29 / 17);
+                    }
+
+                    @include SP {
+                        @include vw(font-size, 24, 750, 750);
+                        line-height: calc(41 / 24);
+                    }
+                }
+
+            }
+
+            .footer-container {
+                .link-list {
+                    display: flex;
+                    color: #fff;
+                    align-items: center;
+                    background: #B89D9C;
+
+                    @include PC {
+                        @include vw(font-size, 25, 1366, 1366);
+                        @include vw(padding-top, 25, 1366, 1366);
+                        @include vw(padding-bottom, 25, 1366, 1366);
+                    }
+
+                    @include SP {
+                        justify-content: space-around;
+                        @include vw(font-size, 25, 750, 750);
+                        @include vw(padding-top, 50, 750, 750);
+                        @include vw(padding-bottom, 50, 750, 750);
+                    }
+                }
+
+                .link-item {
+                    &:first-child {
+                        @include PC {
+                            @include vw(padding-left, 155, 1366, 1366);
+                            @include vw(padding-right, 120, 1366, 1366);
+                        }
+
+                        @include SP {
+                            @include vw(padding-left, 0, 750, 750);
+                            @include vw(padding-right, 0, 750, 750);
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        @include PC {
+                            @include vw(padding-right, 120, 1366, 1366);
+                        }
+
+                        @include SP {
+                            @include vw(padding-right, 0, 750, 750);
+                        }
+                    }
+                }
+            }
+        }
+
+        //TOS Page Style
+        .l-tos-container {
+            .header-top {
+                background-color: #F8F8F8;
+
+                .header-logo {
+                    @include PC {
+                        @include vw(padding-top, 15, 1366, 1366);
+                        @include vw(padding-bottom, 15, 1366, 1366);
+                    }
+
+                    @include SP {
+                        @include vw(padding-top, 30, 750, 1366);
+                        @include vw(padding-bottom, 30, 750, 1366);
+                    }
+
+                    img {
+                        margin: 0 auto;
+
+                        @include PC {
+                            @include vw(width, 90, 1366, 1366);
+                        }
+
+                        @include SP {
+                            @include vw(width, 140, 750, 1366);
+                        }
+                    }
+                }
+            }
+
+            .tos-main-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                .tos-container-inner {
+                    margin-left: auto;
+                    margin-right: auto;
+
+                    @include PC {
+                        max-width: 1055px;
+                        @include vw(margin-top, 90, 1366, 1366);
+                        @include vw(margin-bottom, 105, 1366, 1366);
+                    }
+
+                    @include SP {
+                        max-width: 580px;
+                        @include vw(margin-top, 60, 750, 750);
+                        @include vw(margin-bottom, 20, 750, 750);
+                    }
+                }
+
+                .tos-title {
+                    text-align: center;
+                    color: #490E2A;
+
+                    @include PC {
+                        @include vw(font-size, 50, 1366, 1366);
+                        @include vw(margin-bottom, 100, 1366, 1366);
+                    }
+
+                    @include SP {
+                        @include vw(font-size, 40, 750, 750);
+                        @include vw(margin-bottom, 90, 750, 750);
+                        @include vw(width, 580, 750, 750);
+                    }
+                }
+
+                .tos-content-container {
+                    @include SP {
+                        @include vw(width, 580, 750, 750);
+                    }
+                }
+
+                .tos-contents-title {
+                    color: #9B565A;
+                    font-weight: bold;
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    @include PC {
+                        @include vw(font-size, 30, 1366, 1366);
+                        @include vw(margin-bottom, 20, 1366, 1366);
+                        cursor: default;
+                    }
+
+                    @include SP {
+                        @include vw(font-size, 30, 750, 750);
+                        @include vw(margin-bottom, 15, 750, 750);
+                    }
+                }
+
+                .accordion-icon {
+                    @include SP {
+                        border-radius: 50%;
+                        background-color: #9B565A;
+                        position: relative;
+                        transition: transform 0.3s;
+                        @include vw(width, 24, 750, 750);
+                        @include vw(height, 24, 750, 750);
+                    }
+
+                    &::before,
+                    &::after {
+                        @include SP {
+                            content: '';
+                            position: absolute;
+                            background-color: white;
+                        }
+                    }
+
+                    &::before {
+                        @include SP {
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            @include vw(width, 12, 750, 750);
+                            @include vw(height, 2, 750, 750);
+                        }
+                    }
+
+                    &::after {
+                        @include SP {
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            @include vw(width, 12, 750, 750);
+                            @include vw(height, 2, 750, 750);
+                        }
+                    }
+
+                    &.open {
+                        &::after {
+                            @include SP {
+                                width: 0;
+                            }
+                        }
+                    }
+                }
+
+                .tos-contents {
+                    color: #9B565A;
+                    display: none;
+
+                    @include PC {
+                        display: block;
+                        @include vw(font-size, 20, 1366, 1366);
+                        @include vw(margin-bottom, 90, 1366, 1366);
+                        line-height: calc(34 / 20);
+                    }
+
+                    @include SP {
+                        @include vw(font-size, 24, 750, 750);
+                        @include vw(margin-bottom, 60, 750, 750);
+                        line-height: calc(34 / 20);
+                    }
+                }
+            }
+
+            .footer-container {
+                .link-list {
+                    display: flex;
+                    color: #fff;
+                    align-items: center;
+                    background: #B89D9C;
+
+                    @include PC {
+                        @include vw(font-size, 25, 1366, 1366);
+                        @include vw(padding-top, 25, 1366, 1366);
+                        @include vw(padding-bottom, 25, 1366, 1366);
+                    }
+
+                    @include SP {
+                        justify-content: space-around;
+                        @include vw(font-size, 25, 750, 750);
+                        @include vw(padding-top, 50, 750, 750);
+                        @include vw(padding-bottom, 50, 750, 750);
+                    }
+                }
+
+                .link-item {
+                    &:first-child {
+                        @include PC {
+                            @include vw(padding-left, 155, 1366, 1366);
+                            @include vw(padding-right, 120, 1366, 1366);
+                        }
+
+                        @include SP {
+                            @include vw(padding-left, 0, 750, 750);
+                            @include vw(padding-right, 0, 750, 750);
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        @include PC {
+                            @include vw(padding-right, 120, 1366, 1366);
+                        }
+
+                        @include SP {
+                            @include vw(padding-right, 0, 750, 750);
+                        }
+                    }
+                }
+            }
+        }
+
+        //Post Page Style
+        .l-post-container {
+            .header-top {
+                background-color: #F8F8F8;
+
+                .header-logo {
+                    @include PC {
+                        @include vw(padding-top, 15, 1366, 1366);
+                        @include vw(padding-bottom, 15, 1366, 1366);
+                    }
+
+                    @include SP {
+                        @include vw(padding-top, 30, 750, 1366);
+                        @include vw(padding-bottom, 30, 750, 1366);
+                    }
+
+                    img {
+                        margin: 0 auto;
+
+                        @include PC {
+                            @include vw(width, 90, 1366, 1366);
+                        }
+
+                        @include SP {
+                            @include vw(width, 140, 750, 1366);
+                        }
+                    }
+                }
+            }
+
+            .post-main-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                .post-container-inner {
+                    margin-left: auto;
+                    margin-right: auto;
+
+                    @include PC {
+                        max-width: 1055px;
+                        @include vw(margin-top, 90, 1366, 1366);
+                        @include vw(margin-bottom, 105, 1366, 1366);
+                    }
+
+                    @include SP {
+                        max-width: 580px;
+                        @include vw(margin-top, 60, 750, 750);
+                        @include vw(margin-bottom, 20, 750, 750);
+                    }
+                }
+
+                .post-title {
+                    text-align: center;
+                    color: #490E2A;
+
+                    @include PC {
+                        @include vw(font-size, 50, 1366, 1366);
+                        @include vw(margin-bottom, 80, 1366, 1366);
+                    }
+
+                    @include SP {
+                        @include vw(font-size, 40, 750, 750);
+                        @include vw(margin-bottom, 90, 750, 750);
+                    }
+                }
+
+                .form-group {
+                    @include PC {
+                        @include vw(margin-bottom, 50, 1366, 1366);
+                    }
+
+                    &.tag-container {
+                        @include PC {
+                            max-width: 990px;
+                            margin: 0 auto;
+                        }
+                    }
+
+                    .required-red {
+                        @include PC {
+                            @include vw(font-size, 20, 1366, 1366);
+                            color: #FF000F;
+                        }
+                    }
+
+                    .tag-maximum {
+                        @include PC {
+                            @include vw(font-size, 15, 1366, 1366);
+                        }
+                    }
+                }
+
+                .post-label {
+                    color: #9B565A;
+                    display: block;
+
+                    @include PC {
+                        @include vw(font-size, 30, 1366, 1366);
+                        @include vw(margin-bottom, 15, 1366, 1366);
+                    }
+                }
+
+                input[type="text"],
+                input[type="url"],
+                input[type="file"] {
+                    width: 100%;
+                    padding: 10px;
+                    border: 1px solid #9B565A;
+
+                    @include PC {
+                        @include vw(font-size, 16, 1366, 1366);
+                    }
+
+                    @include SP {
+                        @include vw(font-size, 14, 750, 750);
+                    }
+                }
+
+                .store-name {
+                    max-width: 545px;
+                }
+
+                .radio-group {
+                    display: flex;
+                    align-items: center;
+
+                    .radio-group-label {
+                        display: flex;
+                        align-items: center;
+                        cursor: pointer;
+                        color: #9B565A;
+
+                        @include PC {
+                            @include vw(margin-right, 20, 1366, 1366);
+                            @include vw(font-size, 24, 1366, 1366);
+                        }
+
+                        input {
+                            display: none; // Hide the default input
+                        }
+
+                        &::before {
+                            content: '';
+                            display: inline-block;
+                            width: 16px;
+                            height: 16px;
+                            margin-right: 5px;
+                            border: 1px solid #9B565A;
+                            border-radius: 50%;
+                            background-color: transparent;
+
+                            @include PC {
+                                @include vw(width, 16, 1366, 1366);
+                                @include vw(height, 16, 1366, 1366);
+                            }
+
+                            @include SP {
+                                @include vw(width, 14, 750, 750);
+                                @include vw(height, 14, 750, 750);
+                            }
+                        }
+
+                        input:checked+&::before {
+                            background-color: #9B565A;
+                        }
+                    }
+                }
+
+                .tag-group {
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    label {
+                        display: flex;
+                        align-items: center;
+                        margin-right: 15px;
+                        margin-bottom: 10px;
+                        border: 1px solid #9B565A;
+                        cursor: pointer;
+                        color: #9B565A;
+
+                        @include PC {
+                            @include vw(padding, 15, 1366, 1366);
+                            @include vw(font-size, 24, 1366, 1366);
+                        }
+
+                        input {
+                            display: none;
+                        }
+
+                        input:checked+& {
+                            background-color: #9B565A;
+                            color: white;
+                        }
+                    }
+                }
+
+                .image-upload-group {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    span {
+                        margin: 0 20px;
+                        color: #9B565A;
+                        font-size: 24px;
+
+                        @include PC {
+                            @include vw(font-size, 24, 1366, 1366);
+                        }
+
+                        @include SP {
+                            @include vw(font-size, 20, 750, 750);
+                        }
+                    }
+                }
+
+                .image-uploader-container {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    @include PC {
+                        @include vw(margin-bottom, 10, 1366, 1366);
+                    }
+                }
+
+                .image-upload-title {
+                    font-weight: bold;
+                    text-align: center;
+                    color: #9B565A;
+                    @include PC {
+                        @include vw(margin-bottom, 10, 1366, 1366);
+                        @include vw(font-size, 25, 1366, 1366);
+                        @include vw(width, 370, 1366, 1366);
+                    }
+                }
+
+                .image-upload {
+                    border: 2px solid #707070;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    @include PC {
+                        @include vw(width, 250, 1366, 1366);
+                        @include vw(height, 250, 1366, 1366);
+                    }
+
+                    input[type="file"] {
+                        width: 100%;
+                        height: 100%;
+                        opacity: 0;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        cursor: pointer;
+                    }
+                }
+
+                .image-upload-label {
+                    color: #707070;
+                    @include PC {
+                        @include vw(font-size, 135, 1366, 1366);
+                    }
+                }
+
+                .submit-button {
+                    background-color: #000;
+                    color: #fff;
+                    border: none;
+                    cursor: pointer;
+                    display: block;
+                    margin: 0 auto;
+
+                    @include PC {
+                        @include vw(font-size, 25, 1366, 1366);
+                        @include vw(padding-top, 15, 1366, 1366);
+                        @include vw(padding-bottom, 15, 1366, 1366);
+                        @include vw(padding-left, 50, 1366, 1366);
+                        @include vw(padding-right, 50, 1366, 1366);
+                    }
+
+                    @include SP {
+                        @include vw(font-size, 14, 750, 750);
+                    }
+                }
+            }
+
+            .footer-container {
+                .link-list {
+                    display: flex;
+                    color: #fff;
+                    align-items: center;
+                    background: #B89D9C;
+
+                    @include PC {
+                        @include vw(font-size, 25, 1366, 1366);
+                        @include vw(padding-top, 25, 1366, 1366);
+                        @include vw(padding-bottom, 25, 1366, 1366);
+                    }
+
+                    @include SP {
+                        justify-content: space-around;
+                        @include vw(font-size, 25, 750, 750);
+                        @include vw(padding-top, 50, 750, 750);
+                        @include vw(padding-bottom, 50, 750, 750);
+                    }
+                }
+
                 .link-item {
                     &:first-child {
                         @include PC {

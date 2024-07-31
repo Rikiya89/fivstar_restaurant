@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<!-- head section -->
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+
+	<title>FiveStar Restaurant</title>
+	<meta name="description" content="FiveStar">
+	<meta name="keywords" content="FiveStar">
+
+	<meta property="og:title" content="">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="/assets/images/common/ogp.jpg">
+	<meta name="twitter:food-card" content="summary_large_image">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1&display=swap" rel="stylesheet">
+	<link rel="icon" href="/assets/images/common/favicon.ico">
+	<link rel="apple-touch-icon" href="/assets/images/common/apple-touch-icon.png">
+
+	<link rel="stylesheet" href="/assets/css/common.css">
+	<!-- Material Icon CDN -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<!-- body section -->
+
+<body>
+    <div class="l-post-container">
+        <header class="header-container">
+            <div class="header-top">
+                <div class="header-logo">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="../assets/img/sp-logo.png">
+                        <img src="../assets/img/pc-logo.png" alt="Logo">
+                    </picture>
+                </div>
+            </div>
+        </header>
+        <main class="post-main-container">
+            <div class="post-container-inner">
+                <h1 class="post-title">投稿送信フォーム</h1>
+                <form action="#" method="post" class="post-form">
+                    <div class="form-group">
+                        <label for="store-name" class="post-label">店舗名<sup class="required-red">*</sup></label>
+                        <input type="text" class="store-name" name="store-name" placeholder="例：ファイブスターカフェ" required style="max-width: 545px;">
+                    </div>
+                    <div class="form-group">
+                        <label class="post-label">タイプ<sup class="required-red">*</sup></label>
+                        <div class="radio-group">
+                            <input type="radio" id="type-morning" name="type" value="morning" required>
+                            <label for="type-morning" class="radio-group-label">モーニング</label>
+                            <input type="radio" id="type-lunch" name="type" value="lunch">
+                            <label for="type-lunch" class="radio-group-label">ランチ</label>
+                            <input type="radio" id="type-dinner" name="type" value="dinner">
+                            <label for="type-dinner" class="radio-group-label">ディナー</label>
+                        </div>
+                    </div>
+                    <div class="form-group tag-container">
+                        <label class="post-label">タグを選択<sup class="required-red">*</sup> <span class="tag-maximum">(4つまで)</span></label>
+                        <div class="tag-group">
+                            <input type="checkbox" id="tag-italian" name="tags" value="イタリアン">
+                            <label for="tag-italian">#イタリアン</label>
+                            <input type="checkbox" id="tag-french" name="tags" value="フレンチ">
+                            <label for="tag-french">#フレンチ</label>
+                            <input type="checkbox" id="tag-chinese" name="tags" value="中華">
+                            <label for="tag-chinese">#中華</label>
+                            <input type="checkbox" id="tag-japanese" name="tags" value="和食">
+                            <label for="tag-japanese">#和食</label>
+                            <input type="checkbox" id="tag-ethnic" name="tags" value="エスニック">
+                            <label for="tag-ethnic">#エスニック</label>
+                            <input type="checkbox" id="tag-korean" name="tags" value="韓国料理">
+                            <label for="tag-korean">#韓国料理</label>
+                            <input type="checkbox" id="tag-cafe" name="tags" value="カフェ">
+                            <label for="tag-cafe">#カフェ</label>
+                            <input type="checkbox" id="tag-specialty" name="tags" value="専門店">
+                            <label for="tag-specialty">#専門店</label>
+                            <input type="checkbox" id="tag-izakaya" name="tags" value="居酒屋">
+                            <label for="tag-izakaya">#居酒屋</label>
+                            <input type="checkbox" id="tag-bar" name="tags" value="バー">
+                            <label for="tag-bar">#バー</label>
+                            <input type="checkbox" id="tag-tea" name="tags" value="喫茶店">
+                            <label for="tag-tea">#喫茶店</label>
+                            <input type="checkbox" id="tag-set-meal" name="tags" value="定食">
+                            <label for="tag-set-meal">#定食</label>
+                            <input type="checkbox" id="tag-ramen" name="tags" value="ラーメン">
+                            <label for="tag-ramen">#ラーメン</label>
+                            <input type="checkbox" id="tag-curry" name="tags" value="カレー">
+                            <label for="tag-curry">#カレー</label>
+                            <input type="checkbox" id="tag-steak" name="tags" value="ステーキ">
+                            <label for="tag-steak">#ステーキ</label>
+                            <input type="checkbox" id="tag-fish" name="tags" value="魚料理">
+                            <label for="tag-fish">#魚料理</label>
+                            <input type="checkbox" id="tag-meat" name="tags" value="肉料理">
+                            <label for="tag-meat">#肉料理</label>
+                            <input type="checkbox" id="tag-yakiniku" name="tags" value="焼肉">
+                            <label for="tag-yakiniku">#焼肉</label>
+                            <input type="checkbox" id="tag-sushi" name="tags" value="寿司">
+                            <label for="tag-sushi">#寿司</label>
+                            <input type="checkbox" id="tag-katsu" name="tags" value="かつ">
+                            <label for="tag-katsu">#かつ</label>
+                            <input type="checkbox" id="tag-udon" name="tags" value="うどん">
+                            <label for="tag-udon">#うどん</label>
+                            <input type="checkbox" id="tag-soba" name="tags" value="そば">
+                            <label for="tag-soba">#そば</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="dish" class="post-label">料理<sup class="required-red">*</sup></label>
+                        <input type="text" id="dish" name="dish" placeholder="例：鰻丼, 鰻定食">
+                    </div>
+                    <div class="form-group">
+                        <label for="recommendation" class="post-label">推しポイント<sup class="required-red">*</sup></label>
+                        <input type="text" id="recommendation" name="recommendation" placeholder="例：うなぎなのに安くて、美味しい！お昼で予約ができて便利です。" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="atmosphere" class="post-label">雰囲気</label>
+                        <input type="text" id="atmosphere" name="atmosphere" placeholder="例：老舗のような雰囲気、アットホームな雰囲気、立ち食い...">
+                    </div>
+                    <div class="form-group">
+                        <label for="google-map-link" class="post-label">Google Map link</label>
+                        <input type="url" id="google-map-link" name="google-map-link">
+                    </div>
+                    <div class="form-group image-upload-group">
+                        <div class="image-uploader-container">
+                            <label class="image-upload-title">画像をアップロード</label>
+                            <div class="image-upload">
+                                <input type="file" name="image-upload" id="image-upload">
+                                <label for="image-upload" class="image-upload-label">+</label>
+                            </div>
+                        </div>
+                        <span>OR</span>
+                        <div class="image-uploader-container">
+                            <label class="image-upload-title">デフォルトサムネイルを選択</label>
+                            <div class="image-upload">
+                                <input type="file" name="default-thumbnail" id="default-thumbnail">
+                                <label for="default-thumbnail" class="image-upload-label">+</label>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="submit-button">投稿を送信する</button>
+                </form>
+            </div>
+        </main>
+        <footer class="footer-container">
+            <ul class="link-list">
+                <li class="link-item"><a href="/" class="link">お問い合わせ</a></li>
+                <li class="link-item"><a href="/" class="link">サイトについて</a></li>
+                <li class="link-item"><a href="/" class="link">ご利用規約</a></li>
+            </ul>
+        </footer>
+    </div>
+</body>
+
+<script src="/assets/js/common.js"></script>
+
+</html>
