@@ -50,7 +50,7 @@
                 <form action="#" method="post" class="post-form">
                     <div class="form-group">
                         <label for="store-name" class="post-label">店舗名<sup class="required-red">*</sup></label>
-                        <input type="text" class="store-name" name="store-name" placeholder="例：ファイブスターカフェ" required style="max-width: 545px;">
+                        <input type="text" class="store-name" name="store-name" placeholder="例：ファイブスターカフェ" required >
                     </div>
                     <div class="form-group">
                         <label class="post-label">タイプ<sup class="required-red">*</sup></label>
@@ -67,49 +67,49 @@
                         <label class="post-label">タグを選択<sup class="required-red">*</sup> <span class="tag-maximum">(4つまで)</span></label>
                         <div class="tag-group">
                             <input type="checkbox" id="tag-italian" name="tags" value="イタリアン">
-                            <label for="tag-italian">#イタリアン</label>
+                            <label for="tag-italian" class="tag-food-title">#イタリアン</label>
                             <input type="checkbox" id="tag-french" name="tags" value="フレンチ">
-                            <label for="tag-french">#フレンチ</label>
+                            <label for="tag-french" class="tag-food-title">#フレンチ</label>
                             <input type="checkbox" id="tag-chinese" name="tags" value="中華">
-                            <label for="tag-chinese">#中華</label>
+                            <label for="tag-chinese" class="tag-food-title">#中華</label>
                             <input type="checkbox" id="tag-japanese" name="tags" value="和食">
-                            <label for="tag-japanese">#和食</label>
+                            <label for="tag-japanese" class="tag-food-title">#和食</label>
                             <input type="checkbox" id="tag-ethnic" name="tags" value="エスニック">
-                            <label for="tag-ethnic">#エスニック</label>
+                            <label for="tag-ethnic" class="tag-food-title">#エスニック</label>
                             <input type="checkbox" id="tag-korean" name="tags" value="韓国料理">
-                            <label for="tag-korean">#韓国料理</label>
+                            <label for="tag-korean" class="tag-food-title">#韓国料理</label>
                             <input type="checkbox" id="tag-cafe" name="tags" value="カフェ">
-                            <label for="tag-cafe">#カフェ</label>
+                            <label for="tag-cafe" class="tag-food-title">#カフェ</label>
                             <input type="checkbox" id="tag-specialty" name="tags" value="専門店">
-                            <label for="tag-specialty">#専門店</label>
+                            <label for="tag-specialty" class="tag-food-title">#専門店</label>
                             <input type="checkbox" id="tag-izakaya" name="tags" value="居酒屋">
-                            <label for="tag-izakaya">#居酒屋</label>
+                            <label for="tag-izakaya" class="tag-food-title">#居酒屋</label>
                             <input type="checkbox" id="tag-bar" name="tags" value="バー">
-                            <label for="tag-bar">#バー</label>
+                            <label for="tag-bar" class="tag-food-title">#バー</label>
                             <input type="checkbox" id="tag-tea" name="tags" value="喫茶店">
-                            <label for="tag-tea">#喫茶店</label>
+                            <label for="tag-tea" class="tag-food-title">#喫茶店</label>
                             <input type="checkbox" id="tag-set-meal" name="tags" value="定食">
-                            <label for="tag-set-meal">#定食</label>
+                            <label for="tag-set-meal" class="tag-food-title">#定食</label>
                             <input type="checkbox" id="tag-ramen" name="tags" value="ラーメン">
-                            <label for="tag-ramen">#ラーメン</label>
+                            <label for="tag-ramen" class="tag-food-title">#ラーメン</label>
                             <input type="checkbox" id="tag-curry" name="tags" value="カレー">
-                            <label for="tag-curry">#カレー</label>
+                            <label for="tag-curry" class="tag-food-title">#カレー</label>
                             <input type="checkbox" id="tag-steak" name="tags" value="ステーキ">
-                            <label for="tag-steak">#ステーキ</label>
+                            <label for="tag-steak" class="tag-food-title">#ステーキ</label>
                             <input type="checkbox" id="tag-fish" name="tags" value="魚料理">
-                            <label for="tag-fish">#魚料理</label>
+                            <label for="tag-fish" class="tag-food-title">#魚料理</label>
                             <input type="checkbox" id="tag-meat" name="tags" value="肉料理">
-                            <label for="tag-meat">#肉料理</label>
+                            <label for="tag-meat" class="tag-food-title">#肉料理</label>
                             <input type="checkbox" id="tag-yakiniku" name="tags" value="焼肉">
-                            <label for="tag-yakiniku">#焼肉</label>
+                            <label for="tag-yakiniku" class="tag-food-title">#焼肉</label>
                             <input type="checkbox" id="tag-sushi" name="tags" value="寿司">
-                            <label for="tag-sushi">#寿司</label>
+                            <label for="tag-sushi" class="tag-food-title">#寿司</label>
                             <input type="checkbox" id="tag-katsu" name="tags" value="かつ">
-                            <label for="tag-katsu">#かつ</label>
+                            <label for="tag-katsu" class="tag-food-title">#かつ</label>
                             <input type="checkbox" id="tag-udon" name="tags" value="うどん">
-                            <label for="tag-udon">#うどん</label>
+                            <label for="tag-udon" class="tag-food-title">#うどん</label>
                             <input type="checkbox" id="tag-soba" name="tags" value="そば">
-                            <label for="tag-soba">#そば</label>
+                            <label for="tag-soba" class="tag-food-title">#そば</label>
                         </div>
                     </div>
                     <div class="form-group">
@@ -118,27 +118,27 @@
                     </div>
                     <div class="form-group">
                         <label for="recommendation" class="post-label">推しポイント<sup class="required-red">*</sup></label>
-                        <input type="text" id="recommendation" name="recommendation" placeholder="例：うなぎなのに安くて、美味しい！お昼で予約ができて便利です。" required>
+                        <input type="text" id="recommendation" name="recommendation" class="recommendation-form" placeholder="例：うなぎなのに安くて、美味しい！お昼で予約ができて便利です。" required>
                     </div>
                     <div class="form-group">
                         <label for="atmosphere" class="post-label">雰囲気</label>
-                        <input type="text" id="atmosphere" name="atmosphere" placeholder="例：老舗のような雰囲気、アットホームな雰囲気、立ち食い...">
+                        <input type="text" id="atmosphere" name="atmosphere" class="atmosphere-form" placeholder="例：老舗のような雰囲気、アットホームな雰囲気、立ち食い...">
                     </div>
                     <div class="form-group">
                         <label for="google-map-link" class="post-label">Google Map link</label>
                         <input type="url" id="google-map-link" name="google-map-link">
                     </div>
                     <div class="form-group image-upload-group">
-                        <div class="image-uploader-container">
+                        <div class="image-upload-container">
                             <label class="image-upload-title">画像をアップロード</label>
                             <div class="image-upload">
                                 <input type="file" name="image-upload" id="image-upload">
                                 <label for="image-upload" class="image-upload-label">+</label>
                             </div>
                         </div>
-                        <span>OR</span>
-                        <div class="image-uploader-container">
-                            <label class="image-upload-title">デフォルトサムネイルを選択</label>
+                        <span class="image-upload-text">OR</span>
+                        <div class="image-upload-container">
+                            <label class="image-upload-title">サムネイルを選択</label>
                             <div class="image-upload">
                                 <input type="file" name="default-thumbnail" id="default-thumbnail">
                                 <label for="default-thumbnail" class="image-upload-label">+</label>

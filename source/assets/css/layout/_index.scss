@@ -42,7 +42,7 @@
                 }
 
                 @include SP {
-                    @include vw(padding-top, 20, 750, 750);
+                    @include vw(padding-top, 20, 375, 375);
                 }
             }
 
@@ -60,8 +60,8 @@
                     }
 
                     @include SP {
-                        @include vw(padding-top, 30, 750, 1366);
-                        @include vw(padding-bottom, 30, 750, 1366);
+                        @include vw(padding-top, 15, 375, 375);
+                        @include vw(padding-bottom, 15, 375, 375);
                     }
 
                     img {
@@ -72,7 +72,7 @@
                         }
 
                         @include SP {
-                            @include vw(width, 140, 750, 1366);
+                            @include vw(width, 70, 375, 375);
                         }
                     }
                 }
@@ -139,7 +139,7 @@
                     }
 
                     @include SP {
-                        @include vw(width, 110, 750, 1366);
+                        @include vw(width, 55, 375, 375);
                     }
 
                     .btn-main-text {
@@ -150,7 +150,7 @@
                         }
 
                         @include SP {
-                            @include vw(font-size, 30, 750, 1366);
+                            @include vw(font-size, 15, 375, 375);
                         }
                     }
 
@@ -160,7 +160,7 @@
                         }
 
                         @include SP {
-                            @include vw(font-size, 22, 750, 1366);
+                            @include vw(font-size, 11, 375, 375);
                         }
                     }
                 }
@@ -199,7 +199,7 @@
                     }
 
                     @include SP {
-                        @include vw(width, 110, 750, 1366);
+                        @include vw(width, 55, 375, 375);
                     }
 
                     .btn-main-text {
@@ -210,7 +210,7 @@
                         }
 
                         @include SP {
-                            @include vw(font-size, 30, 750, 1366);
+                            @include vw(font-size, 15, 375, 375);
                         }
                     }
 
@@ -220,7 +220,7 @@
                         }
 
                         @include SP {
-                            @include vw(font-size, 22, 750, 1366);
+                            @include vw(font-size, 11, 375, 375);
                         }
                     }
                 }
@@ -231,7 +231,7 @@
                     }
 
                     @include SP {
-                        @include vw(padding-top, 70, 630, 630);
+                        @include vw(padding-top, 35, 375, 375);
                     }
 
                     .menu-list-inner {
@@ -242,7 +242,7 @@
                         }
 
                         @include SP {
-                            max-width: 630px;
+                            max-width: 315px;
                         }
                     }
                 }
@@ -263,7 +263,7 @@
                     .menu-item-link {
                         &:nth-child(n + 5) {
                             @include SP {
-                                @include vw(margin-top, 10, 630, 630);
+                                @include vw(margin-top, 5, 315, 315);
                             }
                         }
                     }
@@ -285,11 +285,11 @@
                         }
 
                         @include SP {
-                            @include vw(width, 150, 630, 630);
-                            @include vw(font-size, 24, 630, 630);
-                            @include vw(padding-top, 20, 630, 630);
-                            @include vw(padding-bottom, 20, 630, 630);
-                            @include vw(margin-right, 10, 630, 630);
+                            @include vw(width, 75, 315, 315);
+                            @include vw(font-size, 12, 315, 315);
+                            @include vw(padding-top, 10, 315, 315);
+                            @include vw(padding-bottom, 10, 315, 315);
+                            @include vw(margin-right, 5, 315, 315);
                         }
                     }
                 }
@@ -300,7 +300,7 @@
                     }
 
                     @include SP {
-                        @include vw(padding-top, 90, 750, 750);
+                        @include vw(padding-top, 90, 375, 375);
                     }
                 }
 
@@ -313,7 +313,7 @@
                     }
 
                     @include SP {
-                        max-width: 640px;
+                        max-width: 320px;
                     }
                 }
 
@@ -327,7 +327,7 @@
 
                     @include SP {
                         grid-template-columns: 1fr 1fr;
-                        @include vw(gap, 50, 640, 640);
+                        @include vw(gap, 25, 320, 320);
                     }
                 }
 
@@ -391,10 +391,10 @@
                         }
 
                         @include SP {
-                            @include vw(width, 300, 640, 640);
-                            @include vw(font-size, 30, 640, 640);
-                            @include vw(padding-top, 30, 640, 640);
-                            @include vw(padding-bottom, 30, 640, 640);
+                            @include vw(width, 150, 320, 320);
+                            @include vw(font-size, 15, 320, 320);
+                            @include vw(padding-top, 15, 320, 320);
+                            @include vw(padding-bottom, 15, 320, 320);
                         }
                     }
                 }
@@ -413,8 +413,8 @@
                     }
 
                     @include SP {
-                        @include vw(padding-top, 420, 640, 640);
-                        @include vw(width, 630, 640, 640);
+                        @include vw(padding-top, 210, 320, 320);
+                        @include vw(width, 315, 320, 320);
                     }
                 }
             }
@@ -434,9 +434,9 @@
 
                     @include SP {
                         justify-content: space-around;
-                        @include vw(font-size, 25, 750, 750);
-                        @include vw(padding-top, 50, 750, 750);
-                        @include vw(padding-bottom, 50, 750, 750);
+                        @include vw(font-size, 12, 375, 375);
+                        @include vw(padding-top, 25, 375, 375);
+                        @include vw(padding-bottom, 25, 375, 375);
                     }
 
                     .link-item {
@@ -447,8 +447,8 @@
                             }
 
                             @include SP {
-                                @include vw(padding-left, 0, 750, 750);
-                                @include vw(padding-right, 0, 750, 750);
+                                @include vw(padding-left, 0, 375, 375);
+                                @include vw(padding-right, 0, 375, 375);
                             }
                         }
 
@@ -458,7 +458,7 @@
                             }
 
                             @include SP {
-                                @include vw(padding-right, 0, 750, 750);
+                                @include vw(padding-right, 0, 375, 375);
                             }
                         }
                     }
@@ -499,8 +499,10 @@
                     }
 
                     &:nth-child(n+1) {
-                        @include vw(margin-left, 20, 1055, 1055);
-                        @include vw(margin-right, 20, 1055, 1055);
+                        @include PC {
+                            @include vw(margin-left, 20, 1055, 1055);
+                            @include vw(margin-right, 20, 1055, 1055);
+                        }
                     }
                 }
             }
@@ -570,8 +572,8 @@
                     }
 
                     @include SP {
-                        @include vw(width, 710, 750, 750);
-                        @include vw(padding-bottom, 60, 750, 750);
+                        @include vw(width, 355, 375, 375);
+                        @include vw(padding-bottom, 30, 375, 375);
                     }
                 }
 
@@ -588,15 +590,13 @@
                         }
 
                         @include SP {
-                            @include vw(width, 320, 750, 750);
+                            @include vw(width, 160, 375, 375);
                         }
                     }
                 }
 
                 .p-modal-close {
                     position: absolute;
-                    right: 9px;
-                    top: 21px;
                     display: flex;
                     flex-direction: row-reverse;
 
@@ -605,12 +605,25 @@
                         @include vw(top, 21, 1055, 1055);
                     }
 
+                    @include SP {
+                        @include vw(right, 5, 375, 375);
+                        @include vw(top, 9, 375, 375);
+                    }
+
                     .close-btn {
                         position: relative;
                         cursor: pointer;
-                        width: 33px;
-                        height: 33px;
                         margin: 0 auto;
+
+                        @include PC {
+                            @include vw(width, 33, 1055, 1055);
+                            @include vw(height, 33, 1055, 1055);
+                        }
+
+                        @include SP {
+                            @include vw(width, 15, 375, 375);
+                            @include vw(height, 15, 375, 375);
+                        }
 
                         span {
                             position: absolute;
@@ -638,8 +651,8 @@
 
                 .contents-block-inner {
                     @include SP {
-                        @include vw(padding-top, 15, 750, 750);
-                        @include vw(padding-left, 15, 750, 750);
+                        @include vw(padding-top, 15, 375, 375);
+                        @include vw(padding-left, 15, 375, 375);
                     }
                 }
 
@@ -656,15 +669,15 @@
                     }
 
                     @include SP {
-                        @include vw(width, 290, 750, 750);
-                        @include vw(font-size, 20, 750, 750);
+                        @include vw(width, 145, 375, 375);
+                        @include vw(font-size, 10, 375, 375);
                     }
                 }
 
                 .food-title-block {
                     @include SP {
-                        @include vw(padding-top, 45, 750, 750);
-                        @include vw(padding-left, 40, 750, 750);
+                        @include vw(padding-top, 20, 375, 375);
+                        @include vw(padding-left, 20, 375, 375);
                     }
 
                     .food-title {
@@ -673,7 +686,7 @@
                         }
 
                         @include SP {
-                            @include vw(font-size, 70, 750, 750);
+                            @include vw(font-size, 35, 375, 375);
                             text-align: center;
                         }
                     }
@@ -685,7 +698,7 @@
 
                         @include SP {
                             text-align: center;
-                            @include vw(font-size, 25, 750, 750);
+                            @include vw(font-size, 12, 375, 375);
                         }
                     }
                 }
@@ -702,7 +715,7 @@
 
                     @include SP {
                         text-align: center;
-                        @include vw(font-size, 25, 750, 750);
+                        @include vw(font-size, 12, 375, 375);
                     }
 
                     .time-text {
@@ -724,7 +737,7 @@
 
                     .modal-btn {
                         @include SP {
-                            @include vw(padding-top, 40, 750, 750);
+                            @include vw(padding-top, 20, 375, 375);
                         }
 
                         &:first-child {
@@ -733,8 +746,8 @@
                             }
 
                             @include SP {
-                                @include vw(padding-right, 30, 750, 750);
-                                @include vw(padding-left, 40, 750, 750);
+                                @include vw(padding-right, 15, 375, 375);
+                                @include vw(padding-left, 20, 375, 375);
                             }
                         }
 
@@ -752,10 +765,10 @@
                             }
 
                             @include SP {
-                                @include vw(font-size, 30, 750, 750);
-                                @include vw(width, 300, 750, 750);
-                                @include vw(padding-top, 20, 750, 750);
-                                @include vw(padding-bottom, 20, 750, 750);
+                                @include vw(font-size, 15, 375, 375);
+                                @include vw(width, 150, 375, 375);
+                                @include vw(padding-top, 10, 375, 375);
+                                @include vw(padding-bottom, 10, 375, 375);
                             }
                         }
                     }
@@ -763,7 +776,7 @@
 
                 .detail-block {
                     @include SP {
-                        @include vw(margin-top, 40, 750, 750);
+                        @include vw(margin-top, 20, 375, 375);
                     }
                 }
 
@@ -773,8 +786,8 @@
 
                     &:nth-child(2) {
                         @include SP {
-                            @include vw(margin-top, 30, 750, 750);
-                            @include vw(margin-bottom, 30, 750, 750);
+                            @include vw(margin-top, 15, 375, 375);
+                            @include vw(margin-bottom, 15, 375, 375);
                         }
                     }
 
@@ -799,11 +812,11 @@
                         }
 
                         @include SP {
-                            @include vw(width, 160, 750, 750);
-                            @include vw(border-width, 2, 750, 750);
-                            @include vw(font-size, 24, 750, 750);
-                            @include vw(padding-top, 5, 750, 750);
-                            @include vw(padding-bottom, 5, 750, 750);
+                            @include vw(width, 80, 375, 375);
+                            @include vw(border-width, 2, 375, 375);
+                            @include vw(font-size, 11, 375, 375);
+                            @include vw(padding-top, 5, 375, 375);
+                            @include vw(padding-bottom, 5, 375, 375);
                         }
 
                         &:nth-child(n+1) {
@@ -813,8 +826,8 @@
                             }
 
                             @include SP {
-                                @include vw(margin-left, 20, 750, 750);
-                                @include vw(margin-right, 20, 750, 750);
+                                @include vw(margin-left, 10, 375, 375);
+                                @include vw(margin-right, 10, 375, 375);
                             }
                         }
                     }
@@ -827,7 +840,7 @@
                         }
 
                         @include SP {
-                            @include vw(font-size, 30, 750, 750);
+                            @include vw(font-size, 15, 375, 375);
                         }
                     }
                 }
@@ -842,7 +855,7 @@
                 }
 
                 @include SP {
-                    @include vw(padding-top, 20, 750, 750);
+                    @include vw(padding-top, 20, 375, 375);
                 }
             }
 
@@ -856,8 +869,8 @@
                     }
 
                     @include SP {
-                        @include vw(padding-top, 30, 750, 1366);
-                        @include vw(padding-bottom, 30, 750, 1366);
+                        @include vw(padding-top, 15, 375, 375);
+                        @include vw(padding-bottom, 15, 375, 375);
                     }
 
                     img {
@@ -868,7 +881,7 @@
                         }
 
                         @include SP {
-                            @include vw(width, 140, 750, 1366);
+                            @include vw(width, 70, 375, 375);
                         }
                     }
                 }
@@ -888,7 +901,7 @@
                     }
 
                     @include SP {
-                        max-width: 630px;
+                        max-width: 315px;
                     }
                 }
 
@@ -899,8 +912,8 @@
                     }
 
                     @include SP {
-                        @include vw(margin-top, 60, 750, 750);
-                        @include vw(margin-bottom, 150, 750, 750);
+                        @include vw(margin-top, 30, 375, 375);
+                        @include vw(margin-bottom, 75, 375, 375);
                     }
                 }
 
@@ -914,8 +927,8 @@
                     }
 
                     @include SP {
-                        @include vw(font-size, 40, 750, 750);
-                        @include vw(margin-bottom, 90, 750, 750);
+                        @include vw(font-size, 20, 375, 375);
+                        @include vw(margin-bottom, 45, 375, 375);
                     }
                 }
 
@@ -925,7 +938,7 @@
                     }
 
                     @include SP {
-                        @include vw(margin-bottom, 50, 750, 750);
+                        @include vw(margin-bottom, 25, 375, 375);
                     }
                 }
 
@@ -939,7 +952,7 @@
                     }
 
                     @include SP {
-                        @include vw(font-size, 30, 750, 750);
+                        @include vw(font-size, 15, 375, 375);
                     }
 
                     .form-group-required {
@@ -950,7 +963,7 @@
                         }
 
                         @include SP {
-                            @include vw(font-size, 20, 750, 750);
+                            @include vw(font-size, 10, 375, 375);
                         }
                     }
                 }
@@ -964,7 +977,7 @@
                     }
 
                     @include SP {
-                        @include vw(font-size, 20, 750, 750);
+                        @include vw(font-size, 10, 375, 375);
                     }
                 }
 
@@ -978,9 +991,9 @@
                     }
 
                     @include SP {
-                        @include vw(font-size, 25, 750, 750);
-                        @include vw(padding, 15, 750, 750);
-                        line-height: calc(41 / 24);
+                        @include vw(font-size, 12, 375, 375);
+                        @include vw(padding, 8, 375, 375);
+                        line-height: calc(20 / 12);
                     }
                 }
 
@@ -992,7 +1005,7 @@
                     }
 
                     @include SP {
-                        @include vw(height, 420, 750, 750);
+                        @include vw(height, 210, 375, 375);
                     }
                 }
 
@@ -1005,7 +1018,7 @@
                         }
 
                         @include SP {
-                            @include vw(width, 630, 750, 750);
+                            @include vw(width, 315, 375, 375);
                         }
                     }
                 }
@@ -1019,7 +1032,7 @@
                         }
 
                         @include SP {
-                            @include vw(width, 630, 750, 750);
+                            @include vw(width, 315, 375, 375);
                         }
                     }
                 }
@@ -1033,7 +1046,7 @@
                         }
 
                         @include SP {
-                            @include vw(width, 630, 750, 750);
+                            @include vw(width, 315, 375, 375);
                         }
                     }
                 }
@@ -1053,8 +1066,8 @@
                     }
 
                     @include SP {
-                        @include vw(width, 300, 750, 750);
-                        @include vw(font-size, 30, 750, 750);
+                        @include vw(width, 150, 375, 375);
+                        @include vw(font-size, 15, 375, 375);
                     }
 
                     &:hover {
@@ -1078,9 +1091,9 @@
 
                     @include SP {
                         justify-content: space-around;
-                        @include vw(font-size, 25, 750, 750);
-                        @include vw(padding-top, 50, 750, 750);
-                        @include vw(padding-bottom, 50, 750, 750);
+                        @include vw(font-size, 12, 375, 375);
+                        @include vw(padding-top, 25, 375, 375);
+                        @include vw(padding-bottom, 25, 375, 375);
                     }
                 }
 
@@ -1092,8 +1105,8 @@
                         }
 
                         @include SP {
-                            @include vw(padding-left, 0, 750, 750);
-                            @include vw(padding-right, 0, 750, 750);
+                            @include vw(padding-left, 0, 375, 375);
+                            @include vw(padding-right, 0, 375, 375);
                         }
                     }
 
@@ -1103,7 +1116,7 @@
                         }
 
                         @include SP {
-                            @include vw(padding-right, 0, 750, 750);
+                            @include vw(padding-right, 0, 375, 375);
                         }
                     }
                 }
@@ -1122,8 +1135,8 @@
                     }
 
                     @include SP {
-                        @include vw(padding-top, 30, 750, 1366);
-                        @include vw(padding-bottom, 30, 750, 1366);
+                        @include vw(padding-top, 15, 375, 375);
+                        @include vw(padding-bottom, 15, 375, 375);
                     }
 
                     img {
@@ -1134,7 +1147,7 @@
                         }
 
                         @include SP {
-                            @include vw(width, 140, 750, 1366);
+                            @include vw(width, 70, 375, 375);
                         }
                     }
                 }
@@ -1153,11 +1166,13 @@
                         max-width: 1055px;
                         @include vw(margin-top, 90, 1366, 1366);
                         @include vw(margin-bottom, 105, 1366, 1366);
+                        @include vw(padding-left, 50, 1366, 1366);
+                        @include vw(padding-right, 50, 1366, 1366);
                     }
 
                     @include SP {
-                        max-width: 630px;
-                        @include vw(margin-top, 60, 750, 750);
+                        max-width: 315px;
+                        @include vw(margin-top, 15, 375, 375);
                     }
                 }
 
@@ -1171,8 +1186,8 @@
                     }
 
                     @include SP {
-                        @include vw(font-size, 40, 750, 750);
-                        @include vw(margin-bottom, 90, 750, 750);
+                        @include vw(font-size, 20, 375, 375);
+                        @include vw(margin-bottom, 11, 375, 375);
                     }
                 }
 
@@ -1186,8 +1201,8 @@
                     }
 
                     @include SP {
-                        @include vw(font-size, 25, 750, 750);
-                        @include vw(margin-bottom, 50, 750, 750);
+                        @include vw(font-size, 12, 375, 375);
+                        @include vw(margin-bottom, 12, 375, 375);
                     }
 
                     img {
@@ -1210,9 +1225,9 @@
                     }
 
                     @include SP {
-                        @include vw(font-size, 30, 750, 750);
-                        @include vw(margin-bottom, 150, 750, 750);
-                        line-height: calc(42 / 30);
+                        @include vw(font-size, 15, 375, 375);
+                        @include vw(margin-bottom, 16, 375, 375);
+                        line-height: calc(26 / 15);
                     }
                 }
 
@@ -1227,8 +1242,8 @@
 
                     @include SP {
                         text-align: center;
-                        @include vw(font-size, 35, 750, 750);
-                        @include vw(margin-bottom, 50, 750, 750);
+                        @include vw(font-size, 16, 375, 375);
+                        @include vw(margin-bottom, 30, 375, 375);
                     }
                 }
 
@@ -1244,7 +1259,7 @@
                         display: grid;
                         grid-template-columns: 1fr 1fr;
                         justify-items: center;
-                        @include vw(margin-bottom, 110, 750, 750);
+                        @include vw(margin-bottom, 27, 375, 375);
                     }
                 }
 
@@ -1256,7 +1271,7 @@
                     }
 
                     @include SP {
-                        @include vw(width, 250, 750, 750);
+                        @include vw(width, 125, 375, 375);
                     }
 
                     &:not(:nth-child(4n)) {
@@ -1267,7 +1282,7 @@
 
                     &:nth-child(-n+2) {
                         @include SP {
-                            @include vw(margin-bottom, 25, 750, 750);
+                            @include vw(margin-bottom, 30, 375, 375);
                         }
                     }
                 }
@@ -1284,9 +1299,9 @@
                     }
 
                     @include SP {
-                        @include vw(font-size, 24, 750, 750);
-                        @include vw(margin-top, 15, 750, 750);
-                        @include vw(margin-bottom, 10, 750, 750);
+                        @include vw(font-size, 12, 375, 375);
+                        @include vw(margin-top, 8, 375, 375);
+                        @include vw(margin-bottom, 5, 375, 375);
                     }
                 }
 
@@ -1300,8 +1315,8 @@
                     }
 
                     @include SP {
-                        @include vw(font-size, 24, 750, 750);
-                        @include vw(margin-bottom, 30, 750, 750);
+                        @include vw(font-size, 12, 375, 375);
+                        @include vw(margin-bottom, 15, 375, 375);
                     }
                 }
 
@@ -1316,8 +1331,8 @@
                     }
 
                     @include SP {
-                        @include vw(font-size, 24, 750, 750);
-                        line-height: calc(41 / 24);
+                        @include vw(font-size, 12, 375, 375);
+                        line-height: calc(13 / 12);
                     }
                 }
 
@@ -1338,9 +1353,9 @@
 
                     @include SP {
                         justify-content: space-around;
-                        @include vw(font-size, 25, 750, 750);
-                        @include vw(padding-top, 50, 750, 750);
-                        @include vw(padding-bottom, 50, 750, 750);
+                        @include vw(font-size, 12, 375, 375);
+                        @include vw(padding-top, 12, 375, 375);
+                        @include vw(padding-bottom, 12, 375, 375);
                     }
                 }
 
@@ -1352,8 +1367,8 @@
                         }
 
                         @include SP {
-                            @include vw(padding-left, 0, 750, 750);
-                            @include vw(padding-right, 0, 750, 750);
+                            @include vw(padding-left, 0, 375, 375);
+                            @include vw(padding-right, 0, 375, 375);
                         }
                     }
 
@@ -1363,7 +1378,7 @@
                         }
 
                         @include SP {
-                            @include vw(padding-right, 0, 750, 750);
+                            @include vw(padding-right, 0, 375, 375);
                         }
                     }
                 }
@@ -1382,8 +1397,8 @@
                     }
 
                     @include SP {
-                        @include vw(padding-top, 30, 750, 1366);
-                        @include vw(padding-bottom, 30, 750, 1366);
+                        @include vw(padding-top, 15, 375, 375);
+                        @include vw(padding-bottom, 15, 375, 375);
                     }
 
                     img {
@@ -1394,7 +1409,7 @@
                         }
 
                         @include SP {
-                            @include vw(width, 140, 750, 1366);
+                            @include vw(width, 70, 375, 375);
                         }
                     }
                 }
@@ -1413,12 +1428,14 @@
                         max-width: 1055px;
                         @include vw(margin-top, 90, 1366, 1366);
                         @include vw(margin-bottom, 105, 1366, 1366);
+                        @include vw(padding-left, 50, 1366, 1366);
+                        @include vw(padding-right, 50, 1366, 1366);
                     }
 
                     @include SP {
-                        max-width: 580px;
-                        @include vw(margin-top, 60, 750, 750);
-                        @include vw(margin-bottom, 20, 750, 750);
+                        max-width: 290px;
+                        @include vw(margin-top, 30, 375, 375);
+                        @include vw(margin-bottom, 10, 375, 375);
                     }
                 }
 
@@ -1432,15 +1449,15 @@
                     }
 
                     @include SP {
-                        @include vw(font-size, 40, 750, 750);
-                        @include vw(margin-bottom, 90, 750, 750);
-                        @include vw(width, 580, 750, 750);
+                        @include vw(font-size, 20, 375, 375);
+                        @include vw(margin-bottom, 45, 375, 375);
+                        @include vw(width, 290, 375, 375);
                     }
                 }
 
                 .tos-content-container {
                     @include SP {
-                        @include vw(width, 580, 750, 750);
+                        @include vw(width, 290, 375, 375);
                     }
                 }
 
@@ -1459,8 +1476,8 @@
                     }
 
                     @include SP {
-                        @include vw(font-size, 30, 750, 750);
-                        @include vw(margin-bottom, 15, 750, 750);
+                        @include vw(font-size, 15, 375, 375);
+                        @include vw(margin-bottom, 15, 375, 375);
                     }
                 }
 
@@ -1470,8 +1487,11 @@
                         background-color: #9B565A;
                         position: relative;
                         transition: transform 0.3s;
-                        @include vw(width, 24, 750, 750);
-                        @include vw(height, 24, 750, 750);
+                        @include vw(width, 24, 375, 375);
+                        @include vw(height, 24, 375, 375);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
                     }
 
                     &::before,
@@ -1488,8 +1508,8 @@
                             top: 50%;
                             left: 50%;
                             transform: translate(-50%, -50%);
-                            @include vw(width, 12, 750, 750);
-                            @include vw(height, 2, 750, 750);
+                            @include vw(width, 12, 375, 375);
+                            @include vw(height, 2, 375, 375);
                         }
                     }
 
@@ -1497,16 +1517,18 @@
                         @include SP {
                             top: 50%;
                             left: 50%;
-                            transform: translate(-50%, -50%);
-                            @include vw(width, 12, 750, 750);
-                            @include vw(height, 2, 750, 750);
+                            transform: translate(-50%, -50%) rotate(90deg); // Rotate for the '+' sign
+                            @include vw(width, 12, 375, 375);
+                            @include vw(height, 2, 375, 375);
                         }
                     }
 
                     &.open {
                         &::after {
                             @include SP {
-                                width: 0;
+                                transform: translate(-50%, -50%) rotate(0deg); // Horizontal line for the '-' sign
+                                @include vw(width, 12, 375, 375);
+                                @include vw(height, 2, 375, 375);
                             }
                         }
                     }
@@ -1524,9 +1546,9 @@
                     }
 
                     @include SP {
-                        @include vw(font-size, 24, 750, 750);
-                        @include vw(margin-bottom, 60, 750, 750);
-                        line-height: calc(34 / 20);
+                        @include vw(font-size, 12, 375, 375);
+                        @include vw(margin-bottom, 30, 375, 375);
+                        line-height: calc(20 / 12);
                     }
                 }
             }
@@ -1546,9 +1568,9 @@
 
                     @include SP {
                         justify-content: space-around;
-                        @include vw(font-size, 25, 750, 750);
-                        @include vw(padding-top, 50, 750, 750);
-                        @include vw(padding-bottom, 50, 750, 750);
+                        @include vw(font-size, 12, 375, 375);
+                        @include vw(padding-top, 25, 375, 375);
+                        @include vw(padding-bottom, 25, 375, 375);
                     }
                 }
 
@@ -1560,8 +1582,8 @@
                         }
 
                         @include SP {
-                            @include vw(padding-left, 0, 750, 750);
-                            @include vw(padding-right, 0, 750, 750);
+                            @include vw(padding-left, 0, 375, 375);
+                            @include vw(padding-right, 0, 375, 375);
                         }
                     }
 
@@ -1571,7 +1593,7 @@
                         }
 
                         @include SP {
-                            @include vw(padding-right, 0, 750, 750);
+                            @include vw(padding-right, 0, 375, 375);
                         }
                     }
                 }
@@ -1590,8 +1612,8 @@
                     }
 
                     @include SP {
-                        @include vw(padding-top, 30, 750, 1366);
-                        @include vw(padding-bottom, 30, 750, 1366);
+                        @include vw(padding-top, 15, 375, 375);
+                        @include vw(padding-bottom, 15, 375, 375);
                     }
 
                     img {
@@ -1602,7 +1624,7 @@
                         }
 
                         @include SP {
-                            @include vw(width, 140, 750, 1366);
+                            @include vw(width, 70, 375, 375);
                         }
                     }
                 }
@@ -1621,12 +1643,49 @@
                         max-width: 1055px;
                         @include vw(margin-top, 90, 1366, 1366);
                         @include vw(margin-bottom, 105, 1366, 1366);
+                        @include vw(padding-left, 50, 1366, 1366);
+                        @include vw(padding-right, 50, 1366, 1366);
                     }
 
                     @include SP {
-                        max-width: 580px;
-                        @include vw(margin-top, 60, 750, 750);
-                        @include vw(margin-bottom, 20, 750, 750);
+                        max-width: 315px;
+                        @include vw(margin-top, 30, 375, 375);
+                        @include vw(margin-bottom, 75, 375, 375);
+                    }
+                }
+
+                .form-group {
+                    @include PC {
+                        @include vw(margin-bottom, 50, 1366, 1366);
+                    }
+                    @include SP {
+                        @include vw(margin-bottom, 40, 375, 375);
+                    }
+
+                    input[type="text"],
+                    input[type="url"] {
+                        width: 100%;
+                        border: 1px solid #707070;
+
+                        @include PC {
+                            @include vw(font-size, 20, 1366, 1366);
+                            @include vw(padding-top, 10, 1366, 1366);
+                            @include vw(padding-bottom, 10, 1366, 1366);
+                            @include vw(padding-left, 10, 1366, 1366);
+                        }
+
+                        @include SP {
+                            @include vw(font-size, 12, 375, 375);
+                            @include vw(padding-top, 10, 375, 375);
+                            @include vw(padding-bottom, 10, 375, 375);
+                            @include vw(padding-left, 10, 375, 375);
+                        }
+                    }
+                }
+
+                .recommendation-form, .atmosphere-form {
+                    @include SP {
+                        @include vw(height, 90, 375, 375);
                     }
                 }
 
@@ -1640,34 +1699,8 @@
                     }
 
                     @include SP {
-                        @include vw(font-size, 40, 750, 750);
-                        @include vw(margin-bottom, 90, 750, 750);
-                    }
-                }
-
-                .form-group {
-                    @include PC {
-                        @include vw(margin-bottom, 50, 1366, 1366);
-                    }
-
-                    &.tag-container {
-                        @include PC {
-                            max-width: 990px;
-                            margin: 0 auto;
-                        }
-                    }
-
-                    .required-red {
-                        @include PC {
-                            @include vw(font-size, 20, 1366, 1366);
-                            color: #FF000F;
-                        }
-                    }
-
-                    .tag-maximum {
-                        @include PC {
-                            @include vw(font-size, 15, 1366, 1366);
-                        }
+                        @include vw(font-size, 20, 375, 375);
+                        @include vw(margin-bottom, 45, 375, 375);
                     }
                 }
 
@@ -1679,26 +1712,10 @@
                         @include vw(font-size, 30, 1366, 1366);
                         @include vw(margin-bottom, 15, 1366, 1366);
                     }
-                }
-
-                input[type="text"],
-                input[type="url"],
-                input[type="file"] {
-                    width: 100%;
-                    padding: 10px;
-                    border: 1px solid #9B565A;
-
-                    @include PC {
-                        @include vw(font-size, 16, 1366, 1366);
-                    }
-
                     @include SP {
-                        @include vw(font-size, 14, 750, 750);
+                        @include vw(font-size, 12, 375, 375);
+                        @include vw(margin-bottom, 7, 375, 375);
                     }
-                }
-
-                .store-name {
-                    max-width: 545px;
                 }
 
                 .radio-group {
@@ -1712,19 +1729,22 @@
                         color: #9B565A;
 
                         @include PC {
-                            @include vw(margin-right, 20, 1366, 1366);
+                            @include vw(margin-right, 130, 1366, 1366);
                             @include vw(font-size, 24, 1366, 1366);
                         }
 
+                        @include SP {
+                            @include vw(margin-right, 27, 375, 375);
+                            @include vw(font-size, 12, 375, 375);
+                        }
+
                         input {
-                            display: none; // Hide the default input
+                            display: none;
                         }
 
                         &::before {
                             content: '';
                             display: inline-block;
-                            width: 16px;
-                            height: 16px;
                             margin-right: 5px;
                             border: 1px solid #9B565A;
                             border-radius: 50%;
@@ -1736,8 +1756,8 @@
                             }
 
                             @include SP {
-                                @include vw(width, 14, 750, 750);
-                                @include vw(height, 14, 750, 750);
+                                @include vw(width, 14, 375, 375);
+                                @include vw(height, 14, 375, 375);
                             }
                         }
 
@@ -1747,22 +1767,70 @@
                     }
                 }
 
+                .tag-container {
+                    margin: 0 auto;
+                    @include PC {
+                        max-width: 990px;
+                    }
+                    @include SP {
+                        max-width: 315px;
+                    }
+                }
+
+                .required-red {
+                    color: #FF000F;
+
+                    @include PC {
+                        @include vw(font-size, 20, 1366, 1366);
+                    }
+                    @include SP {
+                        @include vw(font-size, 10, 375, 375);
+                    }
+                }
+
+                .tag-maximum {
+                    color: #FF000F;
+
+                    @include PC {
+                        @include vw(font-size, 15, 1366, 1366);
+                    }
+                    @include SP {
+                        @include vw(font-size, 10, 375, 375);
+                    }
+                }
+
+                .tag-container {
+                    @include PC {
+                        @include vw(padding-bottom, 50, 1366, 1366);
+                    }
+                    @include SP {
+                        @include vw(padding-bottom, 40, 375, 375);
+                    }
+                }
+
                 .tag-group {
                     display: flex;
                     flex-wrap: wrap;
 
-                    label {
+                    .tag-food-title {
                         display: flex;
                         align-items: center;
-                        margin-right: 15px;
-                        margin-bottom: 10px;
                         border: 1px solid #9B565A;
                         cursor: pointer;
                         color: #9B565A;
 
                         @include PC {
                             @include vw(padding, 15, 1366, 1366);
+                            @include vw(margin-right, 20, 1366, 1366);
+                            @include vw(margin-bottom, 20, 1366, 1366);
                             @include vw(font-size, 24, 1366, 1366);
+                        }
+
+                        @include SP {
+                            @include vw(padding, 7, 375, 375);
+                            @include vw(margin-right, 10, 375, 375);
+                            @include vw(margin-bottom, 10, 375, 375);
+                            @include vw(font-size, 12, 375, 375);
                         }
 
                         input {
@@ -1776,32 +1844,43 @@
                     }
                 }
 
+                .store-name {
+                    @include PC {
+                        max-width: 545px;
+                    }
+                    @include SP {
+                        max-width: 295px;
+                    }
+                }
+
                 .image-upload-group {
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                }
 
-                    span {
-                        margin: 0 20px;
-                        color: #9B565A;
-                        font-size: 24px;
+                .image-upload-text {
+                    color: #9B565A;
 
-                        @include PC {
-                            @include vw(font-size, 24, 1366, 1366);
-                        }
+                    @include PC {
+                        @include vw(font-size, 25, 1366, 1366);
+                    }
 
-                        @include SP {
-                            @include vw(font-size, 20, 750, 750);
-                        }
+                    @include SP {
+                        @include vw(font-size, 15, 375, 375);
                     }
                 }
 
-                .image-uploader-container {
+                .image-upload-container {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
+
                     @include PC {
                         @include vw(margin-bottom, 10, 1366, 1366);
+                    }
+                    @include SP {
+                        @include vw(margin-bottom, 10, 375, 375);
                     }
                 }
 
@@ -1809,10 +1888,16 @@
                     font-weight: bold;
                     text-align: center;
                     color: #9B565A;
+
                     @include PC {
                         @include vw(margin-bottom, 10, 1366, 1366);
                         @include vw(font-size, 25, 1366, 1366);
                         @include vw(width, 370, 1366, 1366);
+                    }
+                    @include SP {
+                        @include vw(margin-bottom, 10,  375, 375);
+                        @include vw(font-size, 12,  375, 375);
+                        @include vw(width, 134,  375, 375);
                     }
                 }
 
@@ -1822,9 +1907,15 @@
                     align-items: center;
                     justify-content: center;
                     position: relative;
+
                     @include PC {
                         @include vw(width, 250, 1366, 1366);
                         @include vw(height, 250, 1366, 1366);
+                    }
+
+                    @include SP {
+                        @include vw(width, 125, 375, 375);
+                        @include vw(height, 125, 375, 375);
                     }
 
                     input[type="file"] {
@@ -1840,8 +1931,12 @@
 
                 .image-upload-label {
                     color: #707070;
+
                     @include PC {
                         @include vw(font-size, 135, 1366, 1366);
+                    }
+                    @include SP {
+                        @include vw(font-size, 65, 375, 375);
                     }
                 }
 
@@ -1862,7 +1957,11 @@
                     }
 
                     @include SP {
-                        @include vw(font-size, 14, 750, 750);
+                        @include vw(font-size, 16, 375, 375);
+                        @include vw(padding-top, 15, 375, 375);
+                        @include vw(padding-bottom, 15, 375, 375);
+                        @include vw(padding-left, 30, 375, 375);
+                        @include vw(padding-right, 30, 375, 375);
                     }
                 }
             }
@@ -1882,9 +1981,9 @@
 
                     @include SP {
                         justify-content: space-around;
-                        @include vw(font-size, 25, 750, 750);
-                        @include vw(padding-top, 50, 750, 750);
-                        @include vw(padding-bottom, 50, 750, 750);
+                        @include vw(font-size, 12, 375, 375);
+                        @include vw(padding-top, 25, 375, 375);
+                        @include vw(padding-bottom, 25, 375, 375);
                     }
                 }
 
@@ -1896,8 +1995,8 @@
                         }
 
                         @include SP {
-                            @include vw(padding-left, 0, 750, 750);
-                            @include vw(padding-right, 0, 750, 750);
+                            @include vw(padding-left, 0, 375, 375);
+                            @include vw(padding-right, 0, 375, 375);
                         }
                     }
 
@@ -1907,7 +2006,7 @@
                         }
 
                         @include SP {
-                            @include vw(padding-right, 0, 750, 750);
+                            @include vw(padding-right, 0, 375, 375);
                         }
                     }
                 }

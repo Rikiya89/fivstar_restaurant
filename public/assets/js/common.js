@@ -19,35 +19,56 @@ if (modalClose) {
     });
 }
 
-function activateAccordion() {
+function setupAccordion() {
     const accordions = document.querySelectorAll(".accordion-toggle");
-    const isSmallScreen = window.innerWidth <= 768;
 
-    accordions.forEach(function(accordion) {
-        const content = accordion.nextElementSibling;
-        const icon = accordion.querySelector('.accordion-icon');
+    // Define the media query
+    const mediaQuery = window.matchMedia("(max-width: 768px)");
 
-        if (isSmallScreen) {
-            accordion.addEventListener("click", function() {
-                // Toggle the content
-                if (content.style.display === "block") {
-                    content.style.display = "none";
-                    icon.classList.remove('open');
-                } else {
-                    content.style.display = "block";
-                    icon.classList.add('open');
-                }
-            });
-        } else {
-            content.style.display = "block"; // Ensure content is displayed on larger screens
-            icon.classList.remove('open'); // Reset icon on larger screens
-            accordion.removeEventListener("click", function() {});
-        }
-    });
+    // Function to apply correct settings based on the media query
+    function handleMediaChange(e) {
+        accordions.forEach(accordion => {
+            const content = accordion.nextElementSibling;
+            const icon = accordion.querySelector('.accordion-icon');
+
+            if (e.matches) { // If the media query matches (small screen)
+                // Ensure the content is not displayed by default
+                content.style.display = "none";
+                icon.classList.remove('open');
+
+                // Add event listener
+                accordion.addEventListener("click", handleAccordionClick);
+            } else { // If the media query does not match (large screen)
+                // Show content and reset icons
+                content.style.display = "block";
+                icon.classList.remove('open');
+
+                // Remove event listener
+                accordion.removeEventListener("click", handleAccordionClick);
+            }
+        });
+    }
+
+    // Attach listener to media query
+    mediaQuery.addListener(handleMediaChange);
+
+    // Call handler initially to set up accordions
+    handleMediaChange(mediaQuery);
 }
 
-// Run on initial load
-activateAccordion();
+function handleAccordionClick() {
+    const content = this.nextElementSibling;
+    const icon = this.querySelector('.accordion-icon');
 
-// Run on resize
-window.addEventListener('resize', activateAccordion);
+    // Toggle visibility and icon state
+    if (content.style.display === "block") {
+        content.style.display = "none";
+        icon.classList.remove('open');
+    } else {
+        content.style.display = "block";
+        icon.classList.add('open');
+    }
+}
+
+// Setup accordions on page load
+setupAccordion();
