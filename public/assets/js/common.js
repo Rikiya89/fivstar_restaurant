@@ -72,3 +72,49 @@ function handleAccordionClick() {
 
 // Setup accordions on page load
 setupAccordion();
+
+class SwiperSixthInstance {
+    constructor() {
+        this.SwiperSixths = document.querySelectorAll(".SwiperSixth");
+        this.initSwiper();
+        window.addEventListener('resize', () => this.initSwiper());
+    }
+
+    initSwiper() {
+        this.SwiperSixths.forEach(SwiperSixths => {
+            if (this.swiper) {
+                this.swiper.destroy(true, true);
+            }
+
+            const slideCount = SwiperSixths.querySelectorAll('.swiper-slide').length;
+
+            if (window.innerWidth >= 768 && slideCount > 4) {
+                this.container = SwiperSixths.closest(".swiper-container");
+                this.swiper = new Swiper(SwiperSixths, {
+                    slidesPerView: 4,
+					spaceBetween: 10,
+                    scrollbar: {
+                        el: '.swiper-scrollbar',
+                        draggable: true,
+                        hide: false,
+                    },
+                });
+            }
+
+            if (window.innerWidth < 768) {
+                this.container = SwiperSixths.closest(".swiper-container");
+                this.swiper = new Swiper(SwiperSixths, {
+                    slidesPerView: 1.4,
+					spaceBetween: 10,
+                    scrollbar: {
+                        el: '.swiper-scrollbar',
+                        draggable: true,
+                        hide: false,
+                    },
+                });
+            }
+        });
+    }
+}
+
+const swiperSixthInstance = new SwiperSixthInstance();
