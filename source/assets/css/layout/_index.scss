@@ -98,6 +98,8 @@
 
                 @include PC {
                     background-image: url('../img/bg-pc.jpg');
+                    @include vw(padding-left, 30, 1366, 1366);
+                    @include vw(padding-right, 30, 1366, 1366);
                 }
 
                 @include SP {
@@ -891,6 +893,7 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
+                
 
                 .main-container-inner {
                     margin-left: auto;

@@ -303,6 +303,18 @@ picture {
 @media screen and (min-width: 768px) {
   * body .l-main-container .main-container {
     background-image: url("../img/bg-pc.jpg");
+    padding-left: 2.196193265vw;
+    padding-right: 2.196193265vw;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1366px) {
+  * body .l-main-container .main-container {
+    padding-left: 30px;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1366px) {
+  * body .l-main-container .main-container {
+    padding-right: 30px;
   }
 }
 @media screen and (max-width: 767px) {
