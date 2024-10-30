@@ -46,48 +46,78 @@
                 }
             }
 
-            .header-top {
-                background-color: #F8F8F8;
+            .header-container {
+                position: relative;
+                .header-top {
+                    background-color: #F8F8F8;
 
-                @include PC {
-                    box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.4);
+                    @include PC {
+                        box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.4);
+                    }
+
+                    .header-logo {
+                        @include PC {
+                            @include vw(padding-top, 15, 1366, 1366);
+                            @include vw(padding-bottom, 15, 1366, 1366);
+                        }
+    
+                        @include SP {
+                            @include vw(padding-top, 15, 375, 375);
+                            @include vw(padding-bottom, 15, 375, 375);
+                        }
+    
+                        img {
+                            margin: 0 auto;
+    
+                            @include PC {
+                                @include vw(width, 90, 1366, 1366);
+                            }
+    
+                            @include SP {
+                                @include vw(width, 70, 375, 375);
+                            }
+                        }
+                    }
                 }
 
-                .header-logo {
+                .fixed-btn-container {
+                    position: absolute;
+                    right: 0;
+                    z-index: 100;
                     @include PC {
-                        @include vw(padding-top, 15, 1366, 1366);
-                        @include vw(padding-bottom, 15, 1366, 1366);
+                        display: block;
+                        @include vw(top, 300, 1366);
                     }
-
                     @include SP {
-                        @include vw(padding-top, 15, 375, 375);
-                        @include vw(padding-bottom, 15, 375, 375);
+                        display: none;
                     }
-
                     img {
-                        margin: 0 auto;
-
-                        @include PC {
-                            @include vw(width, 90, 1366, 1366);
-                        }
-
-                        @include SP {
-                            @include vw(width, 70, 375, 375);
-                        }
+                        @include vw(width, 55, 1366);
                     }
                 }
             }
 
-            .header-mv {
-                background-image: url('../img/mv_morning.png');
-                width: 100%;
-                background-size: contain;
-                background-position: top;
-                background-repeat: no-repeat;
+            .kv-container {
+                picture {
+                    img {
+                        margin: 0 auto;
+                        width: 100%;
+                    }
 
-                img {
-                    margin: 0 auto;
-                    width: 100%;
+                    &.morning {
+                        opacity: 1;
+                        display: block;
+                    }
+
+                    &.lunch {
+                        opacity: 0;
+                        display: none;
+                    }
+
+                    &.night {
+                        opacity: 0;
+                        display: none;
+                    }
                 }
             }
 

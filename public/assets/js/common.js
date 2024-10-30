@@ -87,50 +87,6 @@ class Accordion {
     }
 }
 
-// Swiperのインスタンスを管理するクラス
-class SwiperSixthInstance {
-    constructor() {
-        this.SwiperSixths = document.querySelectorAll(".SwiperSixth"); // Swiper要素を取得
-        this.initSwiper(); // Swiperを初期化
-        window.addEventListener('resize', () => this.initSwiper()); // ウィンドウサイズ変更時にSwiperを再設定
-    }
-
-    initSwiper() {
-        this.SwiperSixths.forEach(SwiperSixths => {
-            // 既存のSwiperインスタンスを破棄
-            if (this.swiper) {
-                this.swiper.destroy(true, true);
-            }
-
-            const slideCount = SwiperSixths.querySelectorAll('.swiper-slide').length; // スライドの数を取得
-
-            this.container = SwiperSixths.closest(".swiper-container"); // Swiperのコンテナを取得
-            if (window.innerWidth >= 768 && slideCount > 4) { // PCサイズでスライド数が多い場合
-                this.swiper = new Swiper(SwiperSixths, {
-                    slidesPerView: 4,
-                    spaceBetween: 10,
-                    scrollbar: {
-                        el: '.swiper-scrollbar',
-                        draggable: true,
-                        hide: false,
-                    },
-                });
-            } else if (window.innerWidth < 768) { // モバイルサイズの場合
-                this.swiper = new Swiper(SwiperSixths, {
-                    slidesPerView: 1.4,
-                    spaceBetween: 10,
-                    scrollbar: {
-                        el: '.swiper-scrollbar',
-                        draggable: true,
-                        hide: false,
-                    },
-                });
-            }
-        });
-    }
-}
-
 // 各クラスのインスタンスを生成
 const modal = new Modal();
 const accordion = new Accordion();
-const swiperSixthInstance = new SwiperSixthInstance();
