@@ -90,3 +90,11 @@ class Accordion {
 // 各クラスのインスタンスを生成
 const modal = new Modal();
 const accordion = new Accordion();
+
+document.addEventListener('DOMContentLoaded', () => {
+    const lunchElement = document.querySelector('.lunch');
+
+    lunchElement.addEventListener('click', () => {
+        lunchElement.classList.add('active'); // Add active class to stay visible
+    });
+});

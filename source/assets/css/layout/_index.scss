@@ -48,6 +48,7 @@
 
             .header-container {
                 position: relative;
+
                 .header-top {
                     background-color: #F8F8F8;
 
@@ -60,19 +61,19 @@
                             @include vw(padding-top, 15, 1366, 1366);
                             @include vw(padding-bottom, 15, 1366, 1366);
                         }
-    
+
                         @include SP {
                             @include vw(padding-top, 15, 375, 375);
                             @include vw(padding-bottom, 15, 375, 375);
                         }
-    
+
                         img {
                             margin: 0 auto;
-    
+
                             @include PC {
                                 @include vw(width, 90, 1366, 1366);
                             }
-    
+
                             @include SP {
                                 @include vw(width, 70, 375, 375);
                             }
@@ -84,13 +85,16 @@
                     position: absolute;
                     right: 0;
                     z-index: 100;
+
                     @include PC {
                         display: block;
                         @include vw(top, 300, 1366);
                     }
+
                     @include SP {
                         display: none;
                     }
+
                     img {
                         @include vw(width, 55, 1366);
                     }
@@ -114,7 +118,7 @@
                         display: none;
                     }
 
-                    &.night {
+                    &.dinner {
                         opacity: 0;
                         display: none;
                     }
@@ -136,7 +140,7 @@
                     background-image: url('../img/bg-sp.jpg');
                 }
 
-                .btn-box {
+                .btn-container {
                     text-align: center;
                     padding-top: 15px;
                     position: relative;
@@ -157,7 +161,29 @@
                     }
                 }
 
-                .btn-lunch {
+                .btn-main-text {
+                    font-weight: bold;
+
+                    @include PC {
+                        @include vw(font-size, 30, 1366, 1366);
+                    }
+
+                    @include SP {
+                        @include vw(font-size, 15, 375, 375);
+                    }
+                }
+
+                .btn-sub-text {
+                    @include PC {
+                        @include vw(font-size, 18, 1366, 1366);
+                    }
+
+                    @include SP {
+                        @include vw(font-size, 11, 375, 375);
+                    }
+                }
+
+                .lunch {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
@@ -165,35 +191,34 @@
                     line-height: 1.0;
                     margin-left: auto;
                     margin-inline-end: auto;
+                    position: relative;
 
-                    @include PC {
-                        @include vw(width, 145, 1366, 1366);
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        background-color: #9B565A;
+                        border-radius: 50%;
+                        opacity: 0;
+                        @include PC {
+                            left: 50%;
+                            transform: translateX(-50%);
+                            @include vw(top, -50, 1366, 1366);
+                            @include vw(width, 20, 1366, 1366);
+                            @include vw(height, 20, 1366, 1366);
+                            transition: opacity 0.3s ease-in;
+                        }
+                    }
+
+                    &:hover:after {
+                        opacity: 1;
+                    }
+
+                    &.active:after {
+                        opacity: 1;
                     }
 
                     @include SP {
                         @include vw(width, 55, 375, 375);
-                    }
-
-                    .btn-main-text {
-                        font-weight: bold;
-
-                        @include PC {
-                            @include vw(font-size, 30, 1366, 1366);
-                        }
-
-                        @include SP {
-                            @include vw(font-size, 15, 375, 375);
-                        }
-                    }
-
-                    .btn-sub-text {
-                        @include PC {
-                            @include vw(font-size, 18, 1366, 1366);
-                        }
-
-                        @include SP {
-                            @include vw(font-size, 11, 375, 375);
-                        }
                     }
                 }
 
@@ -203,6 +228,7 @@
                     max-width: 1090px;
                     margin-left: auto;
                     margin-right: auto;
+                    position: relative;
 
                     @include PC {
                         @include vw(padding-top, 35, 1366, 1366);
@@ -211,10 +237,68 @@
 
                 .morning {
                     color: #B89D9C;
+                    position: relative;
+
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        background-color: #BC9E9E;
+                        border-radius: 50%;
+                        opacity: 0;
+                        @include PC {
+                            left: 50%;
+                            transform: translateX(-50%);
+                            @include vw(top, -40, 1366, 1366);
+                            @include vw(left, -105, 1366, 1366);
+                            @include vw(width, 20, 1366, 1366);
+                            @include vw(height, 20, 1366, 1366);
+                            transition: opacity 0.3s ease-in;
+                        }
+                    }
+
+                    &:hover:after {
+                        opacity: 1;
+                    }
+
+                    &.active:after {
+                        opacity: 1;
+                    }
+
+                    @include SP {
+                        @include vw(width, 55, 375, 375);
+                    }
                 }
 
                 .dinner {
                     color: #490E2A;
+                    position: relative;
+
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        background-color: #490E2A;
+                        border-radius: 50%;
+                        opacity: 0;
+                        @include PC {
+                            @include vw(top, -40, 1366, 1366);
+                            @include vw(right, -105, 1366, 1366);
+                            @include vw(width, 20, 1366, 1366);
+                            @include vw(height, 20, 1366, 1366);
+                            transition: opacity 0.3s ease-in;
+                        }
+                    }
+
+                    &:hover:after {
+                        opacity: 1;
+                    }
+
+                    &.active:after {
+                        opacity: 1;
+                    }
+
+                    @include SP {
+                        @include vw(width, 55, 375, 375);
+                    }
                 }
 
                 .morning,
@@ -226,34 +310,30 @@
                     align-items: center;
                     flex-direction: column;
 
-                    @include PC {
-                        @include vw(width, 145, 1366, 1366);
-                    }
-
                     @include SP {
                         @include vw(width, 55, 375, 375);
                     }
+                }
 
-                    .btn-main-text {
-                        font-weight: bold;
+                .btn-main-text {
+                    font-weight: bold;
 
-                        @include PC {
-                            @include vw(font-size, 30, 1366, 1366);
-                        }
-
-                        @include SP {
-                            @include vw(font-size, 15, 375, 375);
-                        }
+                    @include PC {
+                        @include vw(font-size, 30, 1366, 1366);
                     }
 
-                    .btn-sub-text {
-                        @include PC {
-                            @include vw(font-size, 18, 1366, 1366);
-                        }
+                    @include SP {
+                        @include vw(font-size, 15, 375, 375);
+                    }
+                }
 
-                        @include SP {
-                            @include vw(font-size, 11, 375, 375);
-                        }
+                .btn-sub-text {
+                    @include PC {
+                        @include vw(font-size, 18, 1366, 1366);
+                    }
+
+                    @include SP {
+                        @include vw(font-size, 11, 375, 375);
                     }
                 }
 
@@ -314,6 +394,10 @@
                             @include vw(font-size, 20, 1090, 1090);
                             @include vw(padding-top, 20, 1090, 1090);
                             @include vw(padding-bottom, 20, 1090, 1090);
+                            &:hover {
+                                background: #9B565A;
+                                color: #F9F7F7;
+                            }
                         }
 
                         @include SP {
@@ -457,6 +541,14 @@
                     color: #fff;
                     align-items: center;
                     background: #B89D9C;
+
+                    &.lunch {
+                        background: #9B565A;
+                    }
+
+                    &.dinner {
+                        background: #480A29;
+                    }
 
                     @include PC {
                         @include vw(font-size, 25, 1366, 1366);
@@ -923,7 +1015,7 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                
+
 
                 .main-container-inner {
                     margin-left: auto;
@@ -1691,6 +1783,7 @@
                     @include PC {
                         @include vw(margin-bottom, 50, 1366, 1366);
                     }
+
                     @include SP {
                         @include vw(margin-bottom, 40, 375, 375);
                     }
@@ -1716,7 +1809,8 @@
                     }
                 }
 
-                .recommendation-form, .atmosphere-form {
+                .recommendation-form,
+                .atmosphere-form {
                     @include SP {
                         @include vw(height, 90, 375, 375);
                     }
@@ -1745,6 +1839,7 @@
                         @include vw(font-size, 30, 1366, 1366);
                         @include vw(margin-bottom, 15, 1366, 1366);
                     }
+
                     @include SP {
                         @include vw(font-size, 12, 375, 375);
                         @include vw(margin-bottom, 7, 375, 375);
@@ -1802,9 +1897,11 @@
 
                 .tag-container {
                     margin: 0 auto;
+
                     @include PC {
                         max-width: 990px;
                     }
+
                     @include SP {
                         max-width: 315px;
                     }
@@ -1816,6 +1913,7 @@
                     @include PC {
                         @include vw(font-size, 20, 1366, 1366);
                     }
+
                     @include SP {
                         @include vw(font-size, 10, 375, 375);
                     }
@@ -1827,6 +1925,7 @@
                     @include PC {
                         @include vw(font-size, 15, 1366, 1366);
                     }
+
                     @include SP {
                         @include vw(font-size, 10, 375, 375);
                     }
@@ -1836,6 +1935,7 @@
                     @include PC {
                         @include vw(padding-bottom, 50, 1366, 1366);
                     }
+
                     @include SP {
                         @include vw(padding-bottom, 40, 375, 375);
                     }
@@ -1881,6 +1981,7 @@
                     @include PC {
                         max-width: 545px;
                     }
+
                     @include SP {
                         max-width: 295px;
                     }
@@ -1912,6 +2013,7 @@
                     @include PC {
                         @include vw(margin-bottom, 10, 1366, 1366);
                     }
+
                     @include SP {
                         @include vw(margin-bottom, 10, 375, 375);
                     }
@@ -1927,10 +2029,11 @@
                         @include vw(font-size, 25, 1366, 1366);
                         @include vw(width, 370, 1366, 1366);
                     }
+
                     @include SP {
-                        @include vw(margin-bottom, 10,  375, 375);
-                        @include vw(font-size, 12,  375, 375);
-                        @include vw(width, 134,  375, 375);
+                        @include vw(margin-bottom, 10, 375, 375);
+                        @include vw(font-size, 12, 375, 375);
+                        @include vw(width, 134, 375, 375);
                     }
                 }
 
@@ -1968,6 +2071,7 @@
                     @include PC {
                         @include vw(font-size, 135, 1366, 1366);
                     }
+
                     @include SP {
                         @include vw(font-size, 65, 375, 375);
                     }

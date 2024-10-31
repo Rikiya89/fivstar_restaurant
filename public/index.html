@@ -50,38 +50,44 @@
 			</div>
 		</header>
 		<section class="kv-container">
-			<picture class="morning">
+			<picture class="morning" id="morning">
 				<source media="(max-width: 768px)" srcset="./assets/img/morning.jpg">
 				<img src="./assets/img/morning.jpg" alt="">
 			</picture>
-			<picture class="lunch">
+			<picture class="lunch" id="lunch">
 				<source media="(max-width: 768px)" srcset="./assets/img/morning.jpg">
 				<img src="./assets/img/lunch.jpg" alt="">
 			</picture>
-			<picture class="night">
+			<picture class="dinner" id="dinner">
 				<source media="(max-width: 768px)" srcset="./assets/img/morning.jpg">
 				<img src="./assets/img/night.jpg" alt="">
 			</picture>
 		</section>
 		<main class="main-container">
 			<section class="menu-container">
-				<div class="btn-box">
+				<div class="btn-container">
 					<div class="btn-top">
-						<a href="" class="btn-lunch">
-							<p class="btn-main-text">LUNCH</p>
-							<p class="btn-sub-text">ランチ</p>
-						</a>
+						<div class="lunch">
+							<a href="" class="links">
+								<p class="btn-main-text">LUNCH</p>
+								<p class="btn-sub-text">ランチ</p>
+							</a>
+						</div>
 					</div>
 					<div class="btn-bottom">
 						<div class="btn-bottom-inner">
-							<a href="" class="morning">
-								<p class="btn-main-text">MORNING</p>
-								<p class="btn-sub-text">モーニング</p>
-							</a>
-							<a href="" class="dinner">
-								<p class="btn-main-text">DINNER</p>
-								<p class="btn-sub-text">ディナー</p>
-							</a>
+							<div class="morning">
+								<a href="" class="links">
+									<p class="btn-main-text">MORNING</p>
+									<p class="btn-sub-text">モーニング</p>
+								</a>
+							</div>
+							<div class="dinner">
+								<a href="" class="links">
+									<p class="btn-main-text">DINNER</p>
+									<p class="btn-sub-text">ディナー</p>
+								</a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -282,7 +288,7 @@
 			</section>
 		</main>
 		<footer class="footer-container">
-			<ul class="link-list">
+			<ul class="link-list lunch dinner">
 				<li class="link-item">
 					<a href="form" class="link">
 					お問い合わせ
@@ -375,5 +381,3 @@
 <script src="/assets/js/common.js"></script>
 
 </html>
-
-<!--Why didn't work style? -->
