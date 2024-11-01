@@ -92,9 +92,46 @@ const modal = new Modal();
 const accordion = new Accordion();
 
 document.addEventListener('DOMContentLoaded', () => {
-    const lunchElement = document.querySelector('.lunch');
+    const lunchButton = document.querySelector('.btn-top .lunch');
+    const morningButton = document.querySelector('.btn-bottom-inner .morning');
+    const dinnerButton = document.querySelector('.btn-bottom-inner .dinner');
 
-    lunchElement.addEventListener('click', () => {
-        lunchElement.classList.add('active'); // Add active class to stay visible
+    const lunchImage = document.getElementById('lunch');
+    const morningImage = document.getElementById('morning');
+    const dinnerImage = document.getElementById('dinner');
+    const kvContainer = document.querySelector('.kv-container');
+
+    function resetActiveClasses() {
+        lunchButton.classList.remove('active');
+        morningButton.classList.remove('active');
+        dinnerButton.classList.remove('active');
+
+        lunchImage.classList.remove('active');
+        morningImage.classList.remove('active');
+        dinnerImage.classList.remove('active');
+
+        kvContainer.classList.remove('morning-active', 'lunch-active', 'dinner-active');
+    }
+
+    function activateSection(button, image, timeOfDay) {
+        resetActiveClasses();
+        button.classList.add('active');
+        image.classList.add('active');
+        kvContainer.classList.add(`${timeOfDay}-active`);
+    }
+
+    lunchButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        activateSection(lunchButton, lunchImage, 'lunch');
+    });
+
+    morningButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        activateSection(morningButton, morningImage, 'morning');
+    });
+
+    dinnerButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        activateSection(dinnerButton, dinnerImage, 'dinner');
     });
 });

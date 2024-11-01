@@ -102,25 +102,32 @@
             }
 
             .kv-container {
+                transition: background-color 1s ease;
+                &.morning-active {
+                    background: linear-gradient(135deg, #FFDDC1, #FFD59E);
+                }
+                &.lunch-active {
+                    background: linear-gradient(135deg, #FFD9B3, #FFB88C);
+                }
+                &.dinner-active {
+                    background: linear-gradient(135deg, #FF8C8C, #660033);
+                }
+
                 picture {
+                    opacity: 0;
+                    display: none;
+                    transition: opacity 0.5s ease-in-out, transform 1s ease-in-out;
+                    transform: scale(1.05);
+
                     img {
                         margin: 0 auto;
                         width: 100%;
                     }
 
-                    &.morning {
+                    &.active {
                         opacity: 1;
                         display: block;
-                    }
-
-                    &.lunch {
-                        opacity: 0;
-                        display: none;
-                    }
-
-                    &.dinner {
-                        opacity: 0;
-                        display: none;
+                        transform: scale(1);
                     }
                 }
             }
@@ -159,181 +166,171 @@
                             background-repeat: no-repeat;
                         }
                     }
-                }
 
-                .btn-main-text {
-                    font-weight: bold;
+                    .btn-main-text {
+                        font-weight: bold;
 
-                    @include PC {
-                        @include vw(font-size, 30, 1366, 1366);
-                    }
-
-                    @include SP {
-                        @include vw(font-size, 15, 375, 375);
-                    }
-                }
-
-                .btn-sub-text {
-                    @include PC {
-                        @include vw(font-size, 18, 1366, 1366);
-                    }
-
-                    @include SP {
-                        @include vw(font-size, 11, 375, 375);
-                    }
-                }
-
-                .lunch {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    color: #9B565A;
-                    line-height: 1.0;
-                    margin-left: auto;
-                    margin-inline-end: auto;
-                    position: relative;
-
-                    &:after {
-                        content: '';
-                        position: absolute;
-                        background-color: #9B565A;
-                        border-radius: 50%;
-                        opacity: 0;
                         @include PC {
-                            left: 50%;
-                            transform: translateX(-50%);
-                            @include vw(top, -50, 1366, 1366);
-                            @include vw(width, 20, 1366, 1366);
-                            @include vw(height, 20, 1366, 1366);
-                            transition: opacity 0.3s ease-in;
+                            @include vw(font-size, 30, 1366, 1366);
+                        }
+
+                        @include SP {
+                            @include vw(font-size, 15, 375, 375);
+                        }
+
+                        transition: transform 0.3s ease,
+                        color 0.3s ease;
+                        transform: translateY(2px);
+
+                        &:hover {
+                            transform: translateY(0);
+                            color: #ff5a5a;
                         }
                     }
 
-                    &:hover:after {
-                        opacity: 1;
-                    }
-
-                    &.active:after {
-                        opacity: 1;
-                    }
-
-                    @include SP {
-                        @include vw(width, 55, 375, 375);
-                    }
-                }
-
-                .btn-bottom-inner {
-                    display: flex;
-                    justify-content: space-between;
-                    max-width: 1090px;
-                    margin-left: auto;
-                    margin-right: auto;
-                    position: relative;
-
-                    @include PC {
-                        @include vw(padding-top, 35, 1366, 1366);
-                    }
-                }
-
-                .morning {
-                    color: #B89D9C;
-                    position: relative;
-
-                    &:after {
-                        content: '';
-                        position: absolute;
-                        background-color: #BC9E9E;
-                        border-radius: 50%;
-                        opacity: 0;
+                    .btn-sub-text {
                         @include PC {
-                            left: 50%;
-                            transform: translateX(-50%);
-                            @include vw(top, -40, 1366, 1366);
-                            @include vw(left, -105, 1366, 1366);
-                            @include vw(width, 20, 1366, 1366);
-                            @include vw(height, 20, 1366, 1366);
-                            transition: opacity 0.3s ease-in;
+                            @include vw(font-size, 18, 1366, 1366);
+                        }
+
+                        @include SP {
+                            @include vw(font-size, 11, 375, 375);
                         }
                     }
 
-                    &:hover:after {
-                        opacity: 1;
-                    }
+                    .btn {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        position: relative;
+                        cursor: pointer;
 
-                    &.active:after {
-                        opacity: 1;
-                    }
-
-                    @include SP {
-                        @include vw(width, 55, 375, 375);
-                    }
-                }
-
-                .dinner {
-                    color: #490E2A;
-                    position: relative;
-
-                    &:after {
-                        content: '';
-                        position: absolute;
-                        background-color: #490E2A;
-                        border-radius: 50%;
-                        opacity: 0;
-                        @include PC {
-                            @include vw(top, -40, 1366, 1366);
-                            @include vw(right, -105, 1366, 1366);
-                            @include vw(width, 20, 1366, 1366);
-                            @include vw(height, 20, 1366, 1366);
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            border-radius: 50%;
+                            opacity: 0;
                             transition: opacity 0.3s ease-in;
+                        }
+
+                        &:hover:after,
+                        &.active:after {
+                            opacity: 1;
+                            animation: pulse 1s infinite;
                         }
                     }
 
-                    &:hover:after {
+                    .lunch {
+                        color: #9B565A;
+                        line-height: 1.0;
+                        margin-left: auto;
+                        margin-inline-end: auto;
+                        position: relative;
+                        @include PC {
+                            @include vw(width, 108, 1366);
+                        }
+
+                        &:after {
+                            background-color: #9B565A;
+
+                            @include PC {
+                                // left: 50%;
+                                // transform: translateX(-50%);
+                                @include vw(top, -50, 1366);
+                                @include vw(width, 20, 1366);
+                                @include vw(height, 20, 1366);
+                            }
+                        }
+
+                        @include SP {
+                            @include vw(width, 55, 375, 375);
+                        }
+                    }
+
+                    .btn-bottom-inner {
+                        display: flex;
+                        justify-content: space-between;
+                        max-width: 1090px;
+                        margin-left: auto;
+                        margin-right: auto;
+                        position: relative;
+
+                        @include PC {
+                            @include vw(padding-top, 35, 1366, 1366);
+                        }
+                    }
+
+                    .morning {
+                        color: #B89D9C;
+                        position: relative;
+
+                        &:after {
+                            background-color: #BC9E9E;
+
+                            @include PC {
+                                left: 50%;
+                                transform: translateX(-50%);
+                                @include vw(top, -40, 1366);
+                                @include vw(left, -105, 1366);
+                                @include vw(width, 20, 1366);
+                                @include vw(height, 20, 1366);
+                            }
+                        }
+
+                        @include SP {
+                            @include vw(width, 55, 375, 375);
+                        }
+                    }
+
+                    .dinner {
+                        color: #490E2A;
+                        position: relative;
+
+                        &:after {
+                            background-color: #490E2A;
+
+                            @include PC {
+                                @include vw(top, -40, 1366);
+                                @include vw(right, -105, 1366);
+                                @include vw(width, 20, 1366);
+                                @include vw(height, 20, 1366);
+                            }
+                        }
+
+                        @include SP {
+                            @include vw(width, 55, 375, 375);
+                        }
+                    }
+
+                    .morning,
+                    .dinner {
+                        display: flex;
+                        line-height: 1.0;
+                        margin-left: auto;
+                        margin-inline-end: auto;
+                        align-items: center;
+                        flex-direction: column;
+
+                        @include SP {
+                            @include vw(width, 55, 375, 375);
+                        }
+                    }
+                }
+
+                @keyframes pulse {
+                    0% {
+                        transform: scale(1);
                         opacity: 1;
                     }
 
-                    &.active:after {
+                    50% {
+                        transform: scale(1.1);
+                        opacity: 0.7;
+                    }
+
+                    100% {
+                        transform: scale(1);
                         opacity: 1;
-                    }
-
-                    @include SP {
-                        @include vw(width, 55, 375, 375);
-                    }
-                }
-
-                .morning,
-                .dinner {
-                    display: flex;
-                    line-height: 1.0;
-                    margin-left: auto;
-                    margin-inline-end: auto;
-                    align-items: center;
-                    flex-direction: column;
-
-                    @include SP {
-                        @include vw(width, 55, 375, 375);
-                    }
-                }
-
-                .btn-main-text {
-                    font-weight: bold;
-
-                    @include PC {
-                        @include vw(font-size, 30, 1366, 1366);
-                    }
-
-                    @include SP {
-                        @include vw(font-size, 15, 375, 375);
-                    }
-                }
-
-                .btn-sub-text {
-                    @include PC {
-                        @include vw(font-size, 18, 1366, 1366);
-                    }
-
-                    @include SP {
-                        @include vw(font-size, 11, 375, 375);
                     }
                 }
 
@@ -394,6 +391,7 @@
                             @include vw(font-size, 20, 1090, 1090);
                             @include vw(padding-top, 20, 1090, 1090);
                             @include vw(padding-bottom, 20, 1090, 1090);
+
                             &:hover {
                                 background: #9B565A;
                                 color: #F9F7F7;
