@@ -102,9 +102,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const kvContainer = document.querySelector('.kv-container');
 
     function resetActiveClasses() {
-        lunchButton.classList.remove('active');
-        morningButton.classList.remove('active');
-        dinnerButton.classList.remove('active');
+        lunchButton?.classList.remove('active');
+        morningButton?.classList.remove('active');
+        dinnerButton?.classList.remove('active');
 
         lunchImage.classList.remove('active');
         morningImage.classList.remove('active');
@@ -115,22 +115,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function activateSection(button, image, timeOfDay) {
         resetActiveClasses();
-        button.classList.add('active');
+        button?.classList.add('active');
         image.classList.add('active');
         kvContainer.classList.add(`${timeOfDay}-active`);
     }
 
-    lunchButton.addEventListener('click', (event) => {
+    lunchButton?.addEventListener('click', (event) => {
         event.preventDefault();
         activateSection(lunchButton, lunchImage, 'lunch');
     });
 
-    morningButton.addEventListener('click', (event) => {
+    morningButton?.addEventListener('click', (event) => {
         event.preventDefault();
         activateSection(morningButton, morningImage, 'morning');
     });
 
-    dinnerButton.addEventListener('click', (event) => {
+    dinnerButton?.addEventListener('click', (event) => {
         event.preventDefault();
         activateSection(dinnerButton, dinnerImage, 'dinner');
     });

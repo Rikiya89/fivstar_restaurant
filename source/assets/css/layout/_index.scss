@@ -34,6 +34,12 @@
         background-color: #fff;
         font-family: "Shippori Mincho B1", serif, "Yu Gothic", sans-serif;
 
+        .shippori-mincho-b1-regular {
+            font-family: "Shippori Mincho B1", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
         //Top Page Style
         .l-main-container {
             .pt {
@@ -101,36 +107,40 @@
                 }
             }
 
+            /* styles.css */
+
             .kv-container {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                width: 100%;
                 transition: background-color 1s ease;
-                &.morning-active {
-                    background: linear-gradient(135deg, #FFDDC1, #FFD59E);
-                }
-                &.lunch-active {
-                    background: linear-gradient(135deg, #FFD9B3, #FFB88C);
-                }
-                &.dinner-active {
-                    background: linear-gradient(135deg, #FF8C8C, #660033);
-                }
-
-                picture {
-                    opacity: 0;
-                    display: none;
-                    transition: opacity 0.5s ease-in-out, transform 1s ease-in-out;
-                    transform: scale(1.05);
-
-                    img {
-                        margin: 0 auto;
-                        width: 100%;
-                    }
-
-                    &.active {
-                        opacity: 1;
-                        display: block;
-                        transform: scale(1);
-                    }
-                }
+                height: calc(940 / 1366 * 100vw); /* Scales height proportionally with viewport width */
             }
+
+            .kv-container picture {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+            }
+
+            .kv-container picture.active {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .kv-container picture img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+
 
             .main-container {
                 width: 100%;
@@ -183,8 +193,10 @@
                         transform: translateY(2px);
 
                         &:hover {
-                            transform: translateY(0);
-                            color: #ff5a5a;
+                            @include PC {
+                                transform: translateY(0);
+                                color: #ff5a5a;
+                            }
                         }
                     }
 
@@ -234,8 +246,6 @@
                             background-color: #9B565A;
 
                             @include PC {
-                                // left: 50%;
-                                // transform: translateX(-50%);
                                 @include vw(top, -50, 1366);
                                 @include vw(width, 20, 1366);
                                 @include vw(height, 20, 1366);

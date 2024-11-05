@@ -201,6 +201,14 @@ picture {
   background-color: #fff;
   font-family: "Shippori Mincho B1", serif, "Yu Gothic", sans-serif;
 }
+* body .shippori-mincho-b1-regular {
+  font-family: "Shippori Mincho B1", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+* body .l-main-container {
+  /* styles.css */
+}
 @media screen and (min-width: 768px) {
   * body .l-main-container .pt {
     padding-top: 0.9478672986vw;
@@ -307,31 +315,32 @@ picture {
   width: 4.0263543192vw;
 }
 * body .l-main-container .kv-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
   transition: background-color 1s ease;
-}
-* body .l-main-container .kv-container.morning-active {
-  background: linear-gradient(135deg, #FFDDC1, #FFD59E);
-}
-* body .l-main-container .kv-container.lunch-active {
-  background: linear-gradient(135deg, #FFD9B3, #FFB88C);
-}
-* body .l-main-container .kv-container.dinner-active {
-  background: linear-gradient(135deg, #FF8C8C, #660033);
+  height: 68.8140556369vw; /* Scales height proportionally with viewport width */
 }
 * body .l-main-container .kv-container picture {
-  opacity: 0;
-  display: none;
-  transition: opacity 0.5s ease-in-out, transform 1s ease-in-out;
-  transform: scale(1.05);
-}
-* body .l-main-container .kv-container picture img {
-  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
 }
 * body .l-main-container .kv-container picture.active {
   opacity: 1;
+  visibility: visible;
+}
+* body .l-main-container .kv-container picture img {
+  width: 100%;
+  height: auto;
   display: block;
-  transform: scale(1);
 }
 * body .l-main-container .main-container {
   width: 100%;
@@ -414,9 +423,11 @@ picture {
     font-size: 15px;
   }
 }
-* body .l-main-container .main-container .btn-container .btn-main-text:hover {
-  transform: translateY(0);
-  color: #ff5a5a;
+@media screen and (min-width: 768px) {
+  * body .l-main-container .main-container .btn-container .btn-main-text:hover {
+    transform: translateY(0);
+    color: #ff5a5a;
+  }
 }
 @media screen and (min-width: 768px) {
   * body .l-main-container .main-container .btn-container .btn-sub-text {
