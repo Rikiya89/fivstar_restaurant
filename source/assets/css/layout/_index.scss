@@ -107,8 +107,6 @@
                 }
             }
 
-            /* styles.css */
-
             .kv-container {
                 position: relative;
                 display: flex;
@@ -117,30 +115,26 @@
                 overflow: hidden;
                 width: 100%;
                 transition: background-color 1s ease;
-                height: calc(940 / 1366 * 100vw); /* Scales height proportionally with viewport width */
+                height: calc(940 / 1366 * 100vw);
+                picture {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+                    &.active {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                    img {
+                        width: 100%;
+                        height: auto;
+                        display: block;
+                    }
+                }
             }
-
-            .kv-container picture {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                opacity: 0;
-                visibility: hidden;
-                transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
-            }
-
-            .kv-container picture.active {
-                opacity: 1;
-                visibility: visible;
-            }
-
-            .kv-container picture img {
-                width: 100%;
-                height: auto;
-                display: block;
-            }
-
 
             .main-container {
                 width: 100%;

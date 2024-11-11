@@ -206,9 +206,6 @@ picture {
   font-weight: 400;
   font-style: normal;
 }
-* body .l-main-container {
-  /* styles.css */
-}
 @media screen and (min-width: 768px) {
   * body .l-main-container .pt {
     padding-top: 0.9478672986vw;
@@ -322,7 +319,7 @@ picture {
   overflow: hidden;
   width: 100%;
   transition: background-color 1s ease;
-  height: 68.8140556369vw; /* Scales height proportionally with viewport width */
+  height: 68.8140556369vw;
 }
 * body .l-main-container .kv-container picture {
   position: absolute;
