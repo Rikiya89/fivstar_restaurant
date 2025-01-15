@@ -87,51 +87,65 @@ class Accordion {
     }
 }
 
+class FadeInAnimation {
+    constructor() {
+        // ボタンと画像の要素を取得
+        this.lunchButton = document.querySelector('.btn-top .lunch');
+        this.morningButton = document.querySelector('.btn-bottom-inner .morning');
+        this.dinnerButton = document.querySelector('.btn-bottom-inner .dinner');
+
+        this.lunchImage = document.getElementById('lunch');
+        this.morningImage = document.getElementById('morning');
+        this.dinnerImage = document.getElementById('dinner');
+        this.kvContainer = document.querySelector('.kv-container');
+
+        this.initEvents(); // イベントを初期化
+    }
+
+    // 全てのアクティブなクラスをリセットする関数
+    resetActiveClasses() {
+        this.lunchButton?.classList.remove('active');
+        this.morningButton?.classList.remove('active');
+        this.dinnerButton?.classList.remove('active');
+
+        this.lunchImage.classList.remove('active');
+        this.morningImage.classList.remove('active');
+        this.dinnerImage.classList.remove('active');
+
+        this.kvContainer.classList.remove('morning-active', 'lunch-active', 'dinner-active');
+    }
+
+    // 特定のセクションをアクティブにする関数
+    activateSection(button, image, timeOfDay) {
+        this.resetActiveClasses(); // リセット関数を呼び出し
+        button?.classList.add('active'); // ボタンにアクティブクラスを追加
+        image.classList.add('active'); // 画像にアクティブクラスを追加
+        this.kvContainer.classList.add(`${timeOfDay}-active`); // コンテナに特定のクラスを追加
+    }
+
+    // イベントを初期化する関数
+    initEvents() {
+        // ランチボタンのクリックイベントを設定
+        this.lunchButton?.addEventListener('click', (event) => {
+            event.preventDefault(); // デフォルト動作を無効化
+            this.activateSection(this.lunchButton, this.lunchImage, 'lunch'); // ランチセクションをアクティブに
+        });
+
+        // モーニングボタンのクリックイベントを設定
+        this.morningButton?.addEventListener('click', (event) => {
+            event.preventDefault();
+            this.activateSection(this.morningButton, this.morningImage, 'morning'); // モーニングセクションをアクティブに
+        });
+
+        // ディナーボタンのクリックイベントを設定
+        this.dinnerButton?.addEventListener('click', (event) => {
+            event.preventDefault();
+            this.activateSection(this.dinnerButton, this.dinnerImage, 'dinner'); // ディナーセクションをアクティブに
+        });
+    }
+}
+
 // 各クラスのインスタンスを生成
 const modal = new Modal();
 const accordion = new Accordion();
-
-document.addEventListener('DOMContentLoaded', () => {
-    const lunchButton = document.querySelector('.btn-top .lunch');
-    const morningButton = document.querySelector('.btn-bottom-inner .morning');
-    const dinnerButton = document.querySelector('.btn-bottom-inner .dinner');
-
-    const lunchImage = document.getElementById('lunch');
-    const morningImage = document.getElementById('morning');
-    const dinnerImage = document.getElementById('dinner');
-    const kvContainer = document.querySelector('.kv-container');
-
-    function resetActiveClasses() {
-        lunchButton?.classList.remove('active');
-        morningButton?.classList.remove('active');
-        dinnerButton?.classList.remove('active');
-
-        lunchImage.classList.remove('active');
-        morningImage.classList.remove('active');
-        dinnerImage.classList.remove('active');
-
-        kvContainer.classList.remove('morning-active', 'lunch-active', 'dinner-active');
-    }
-
-    function activateSection(button, image, timeOfDay) {
-        resetActiveClasses();
-        button?.classList.add('active');
-        image.classList.add('active');
-        kvContainer.classList.add(`${timeOfDay}-active`);
-    }
-
-    lunchButton?.addEventListener('click', (event) => {
-        event.preventDefault();
-        activateSection(lunchButton, lunchImage, 'lunch');
-    });
-
-    morningButton?.addEventListener('click', (event) => {
-        event.preventDefault();
-        activateSection(morningButton, morningImage, 'morning');
-    });
-
-    dinnerButton?.addEventListener('click', (event) => {
-        event.preventDefault();
-        activateSection(dinnerButton, dinnerImage, 'dinner');
-    });
-});
+const fadeinanimation = new FadeInAnimation();
